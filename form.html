@@ -8,8 +8,9 @@
     <header class="page-header">
       <nav class="navbar">
         <img class="navbar__logo" src="http://placehold.it/150x80">
-        <input type="checkbox" class="navbar__show-menu-button"> <!-- will be stylezed using ::after -->
-        <ul class="navbar__menu"> <!-- menu is hidden by default in mobile viewport-->
+        <input type="checkbox" class="navbar__show-menu-button" id="navbar__checkbox">
+        <label for="navbar__checkbox"><img src="http://placehold.it/20x15" alt="открыть меню"></label>
+        <ul class="navbar__menu navbar__menu--hidden"> <!-- in mobile viewport menu is hidden by default -->
           <li class="navbar__menu-item">
             <a href="catalog.html">Каталог товаров</a>
           </li>
@@ -99,3 +100,5 @@
         <img src="http://placehold.it/30x35" alt="html-academy">
       </div>
     </footer>
+  </body>
+</html>

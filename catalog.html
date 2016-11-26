@@ -8,8 +8,9 @@
     <header class="page-header">
       <nav class="navbar">
         <img class="navbar__logo" src="http://placehold.it/150x80">
-        <input type="checkbox" class="navbar__show-menu-button"> <!-- will be stylezed using ::after -->
-        <ul class="navbar__menu"> <!-- menu is hidden by default in mobile viewport-->
+        <input type="checkbox" class="navbar__show-menu-button" id="navbar__checkbox">
+        <label for="navbar__checkbox"><img src="http://placehold.it/20x15" alt="открыть меню"></label>
+        <ul class="navbar__menu navbar__menu--hidden"> <!-- in mobile viewport menu is hidden by default -->
           <li class="navbar__menu-item">
             <a href="catalog.html">Каталог товаров</a>
           </li>
@@ -100,3 +101,23 @@
         <img src="http://placehold.it/30x35" alt="html-academy">
       </div>
     </footer>
+
+    <!-- modal window unhides when "add to cart" button pressed-->
+    <div class="modal modal--hidden">
+      <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
+      <div class="modal__wrapper">
+        <h2>Добавить в корзину</h2>
+        <p>Выберите размер:</p>
+        <form class="modal__form">
+          <input type="radio" name="modal-size" id="modal-size-s" checked>
+          <label for="modal-size-s">S</label>
+          <input type="radio" name="modal-size" id="modal-size-m">
+          <label for="modal-size-m">M</label>
+          <input type="radio" name="modal-size" id="modal-size-l">
+          <label for="modal-size-l">L</label>
+          <button type="button" name="button" class="big-button big-button__modal">Добавить</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
