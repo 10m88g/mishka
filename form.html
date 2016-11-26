@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="navbar">
+        <img class="navbar__logo" src="http://placehold.it/150x80">
+        <input type="checkbox" class="navbar__show-menu-button"> <!-- will be stylezed using ::after -->
+        <ul class="navbar__menu"> <!-- menu is hidden by default in mobile viewport-->
+          <li class="navbar__menu-item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="search.html">
+              <img src="http://placehold.it/20">
+              <span>Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="cart.html">
+              <img src="http://placehold.it/20">
+              <span>Корзина: пока пуста</span>
+            </a>
+          </li>
+        </ul> <!-- end of menu -->
+      </nav>
+      <h1 class="page-header__main-header page-header__main-header--form">Вязание на заказ</h1>
+    </header>
+    <main>
+      <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="main-form">
+        <fieldset>
+          <legend>Тип</legend>
+          <input type="radio" name="kind-of-product" id="product-interior" checked>
+          <label for="product-interior">Аксессуар для интерьера</label>
+          <input type="radio" name="kind-of-product" id="product-toy">
+          <label for="product-toy">Детская игрушка</label>
+        </fieldset>
+        <fieldset>
+          <legend>Цвет</legend>
+          <input type="checkbox" id="color-white">
+          <label for="color-white">Белый</label>
+          <input type="checkbox" id="color-gray">
+          <label for="color-gray">Серый</label>
+          <input type="checkbox" id="color-tiffany">
+          <label for="color-tiffany">«Тиффани»</label>
+          <input type="checkbox" id="color-black">
+          <label for="color-black">Чёрный</label>
+          <input type="checkbox" id="color-pink">
+          <label for="color-pink">Розовый</label>
+          <input type="checkbox" id="color-orange">
+          <label for="color-orange">Оранжевый</label>
+        </fieldset>
+        <fieldset>
+          <legend>ФИО</legend>
+          <label for="fullname-name">Имя:</label>
+          <input type="text" placeholder="Введите ваше имя*" id="fullname-name" required>
+          <label for="fullname-lastname">Отчество:</label>
+          <input type="text" placeholder="Укажите фамилию*" id="fullname-lastname" required>
+          <label for="fullname-middlename">Фамилия:</label>
+          <input type="text" placeholder="Отчество, если желаете" id="fullname-middlename">
+        </fieldset>
+        <fieldset>
+          <legend>Тел</legend>
+          <input type="tel" placeholder="+7 XXX XX XX*" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" required>
+        </fieldset>
+        <fieldset>
+          <legend>E-Mail</legend>
+          <input type="email" placeholder="Ваш Email*" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
+        </fieldset>
+        <fieldset>
+          <legend>Доп</legend>
+          <textarea>Опишите все ваши пожелания к заказу</textarea>
+        </fieldset>
+        <p>*Поля обязательны для заполнения</p>
+        <button class="big-button main-form__big-button">Отправить заказ</button>
+      </form>
+    </main>
+    <footer>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#"><img class="social__icon" src="http://placehold.it/30" alt="instagram"></a>
+        </li>
+        <li class="social__item">
+          <a href="#"><img class="social__icon" src="http://placehold.it/30" alt="facebook"></a>
+        </li>
+        <li class="social__item">
+          <a href="#"><img class="social__icon" src="http://placehold.it/30" alt="twitter"></a>
+        </li>
+      </ul>
+      <div class="html-academy-caption">
+        <p>Разработано</p>
+        <img src="http://placehold.it/30x35" alt="html-academy">
+      </div>
+    </footer>
