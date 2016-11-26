@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="navbar">
+        <img class="navbar__logo" src="http://placehold.it/150x80">
+        <input type="checkbox" class="navbar__show-menu-button"> <!-- will be stylezed using ::after -->
+        <ul class="navbar__menu"> <!-- menu is hidden by default in mobile viewport-->
+          <li class="navbar__menu-item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="search.html">
+              <img src="http://placehold.it/20">
+              <span>Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="cart.html">
+              <img src="http://placehold.it/20">
+              <span>Корзина: пока пуста</span>
+            </a>
+          </li>
+        </ul> <!-- end of menu -->
+      </nav>
+      <h1 class="page-header__main-header page-header__main-header--catalog">Каталог товаров</h1>
+    </header>
+    <section class="catalog-items">
+      <article class="catalog-item">
+        <img src="http://placehold.it/260x195">
+        <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
+        <div class="catalog-item__wrapper">
+          <p class="catalog-item__description">Рост 30 см, вес 200 г</p>
+          <div class="catalog-item__price">
+            <b>1 200 руб</b>
+            <a href="#"><img alt="to cart" src="http://placehold.it/20x20"></a>
+          </div>
+        </div>
+      </article>
+      <article class="catalog-item">
+        <img src="http://placehold.it/260x195">
+        <h2 class="catalog-item__title">Корзинка для белья</h2>
+        <div class="catalog-item__wrapper">
+          <p class="catalog-item__description">Диаметр 15 см, высота 10 см</p>
+          <div class="catalog-item__price">
+            <b>690 руб.</b>
+            <a href="#"><img alt="to cart" src="http://placehold.it/20x20"></a>
+          </div>
+        </div>
+      </article>
+      <article class="catalog-item">
+        <img src="http://placehold.it/260x195">
+        <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
+        <div class="catalog-item__wrapper">
+          <p class="catalog-item__description">Диаметр 30 см, высота 30 см</p>
+          <div class="catalog-item__price">
+            <b>1 500 руб</b>
+            <a href="#"><img alt="to cart" src="http://placehold.it/20x20"></a>
+          </div>
+        </div>
+      </article>
+      <article class="catalog-item catalog-item--production-video">
+        <h2>Процесс производства</h2> <!-- icon will be added using ::before -->
+        <div id="video-container">
+          <video id="video">
+            <!-- video sources needed here -->
+            <p>Your browser doesn't support HTML5 video. <a href="#">Download</a> the video instead.</p>
+          </video>
+          <div id="video-controls">
+            <button type="button" id="play-pause">Play</button>
+          </div>
+        </div>
+        <div class="catalog-item__wrapper">
+          <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="big-button catalog-item__big-button">Сделать заказ</button>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#"><img class="social__icon" src="http://placehold.it/30"></a>
+        </li>
+        <li class="social__item">
+          <a href="#"><img class="social__icon" src="http://placehold.it/30"></a>
+        </li>
+        <li class="social__item">
+          <a href="#"><img class="social__icon" src="http://placehold.it/30"></a>
+        </li>
+      </ul>
+      <div class="html-academy-caption">
+        <p>Разработано</p>
+        <img src="http://placehold.it/30x35">
+      </div>
+    </footer>

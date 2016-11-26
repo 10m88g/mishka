@@ -5,8 +5,137 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="page-header">
+      <nav class="navbar">
+        <img class="navbar__logo" src="http://placehold.it/150x80">
+        <input type="checkbox" class="navbar__show-menu-button"> <!-- will be stylezed using ::after -->
+        <ul class="navbar__menu"> <!-- menu is hidden by default in mobile viewport-->
+          <li class="navbar__menu-item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="search.html">
+              <img src="http://placehold.it/20">
+              <span>Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="navbar__menu-item">
+            <a href="cart.html">
+              <img src="http://placehold.it/20">
+              <span>Корзина: пока пуста</span>
+            </a>
+          </li>
+        </ul> <!-- end of menu -->
+      </nav>
+      <h1 class="page-header__main-header page-header__main-header--index">Милые штучки ручной работы для дома</h1>
+      <ul class="catalog-buttons">
+        <li class="catalog-buttons__item">
+          <a href="catalog.html">
+            <span class="catalog-buttons__title">Предметы интерьера</span>
+            <img class="catalog-buttons__icon" src="http://placehold.it/70">
+          </a>
+        </li>
+        <li class="catalog-buttons__item">
+          <a href="catalog.html">
+            <span class="catalog-buttons__title">Детские игрушки</span>
+            <img class="catalog-buttons__icon" src="http://placehold.it/70">
+          </a>
+        </li>
+      </ul>
+    </header>
+    <article class="week-product">
+      <h2>Вязаные корзинки</h2>
+      <h3>Товар недели</h3>
+      <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+      <ul class="week-product__table">
+        <li class="week-product__table-column">
+          <p>Цвет</p>
+          <p>Диаметр</p>
+          <p>Высота</p>
+        </li>
+        <li class="week-product__table-column">
+          <p>«Тиффани»/серый</p>
+          <p>25 см</p>
+          <p>15 см</p>
+        </li>
+      </ul>
+      <img src="http://placehold.it/260x315">
+      <p class="week-product__price-caption">Цена: <span class="week-product__price-number">990 руб.</span></p>
+      <button class="big-button week-product__big-button">Заказать</button>
+    </article>
+    <section class="about-us">
+      <h2>Коротко о нас</h2>
+      <ul class="about-us__list">
+        <li class="about-us__item">
+          <img class="about-us__item-icon" src="http://placehold.it/35">
+          <p class="about-us__item-caption">Экологически чистые материалы</p>
+        </li>
+        <li class="about-us__item">
+          <img class="about-us__item-icon" src="http://placehold.it/35">
+          <p class="about-us__item-caption">Скандинавский стиль по российской цене</p>
+        </li>
+        <li class="about-us__item">
+          <img class="about-us__item-icon" src="http://placehold.it/35">
+          <p class="about-us__item-caption">Увеличивает лайки на фотографиях</p>
+        </li>
+        <li class="about-us__item">
+          <img class="about-us__item-icon" src="http://placehold.it/35">
+          <p class="about-us__item-caption">Связано вручную с любовью и умением</p>
+        </li>
+        <li class="about-us__item">
+          <img class="about-us__item-icon" src="http://placehold.it/35">
+          <p class="about-us__item-caption">Поддержка отечественного производителя</p>
+        </li>
+        <li class="about-us__item">
+          <img class="about-us__item-icon" src="http://placehold.it/35">
+          <p class="about-us__item-caption">Поставляется в подарочной упаковке</p>
+        </li>
+      </ul>
+    </section>
+    <section class="feedback">
+      <h2>Отзывы</h2>
+      <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+      <b class="feedback__customer-name">Анастасия Красильникова</b>
+      <p class="feedback__customer-profile">@misssssiskras</p>
+      <div class="feedback__nav-buttons">
+        <button class="feedback__previous"><img src="http://placehold.it/50x30"></button>
+        <button class="feedback__next"><img src="http://placehold.it/50x30"></button>
+      </div>
+      <button class="big-button feedback__big-button">Написать</button>
+    </section>
+    <section class="contacts">
+      <ul class="contacts__table">
+        <li class="contacts__table-row">
+          <p class="contacts__table-cell">e-mail:</p>
+          <a class="contacts__table-cell" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        </li>
+        <li class="contacts__table-row">
+          <p class="contacts__table-cell">адрес:</p>
+          <p class="contacts__table-cell">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+        </li>
+      </ul>
+      <div class="map" id="google-map"><img class="map__static-image" src="http://placehold.it/320x460"></div>
+      <button class="big-button contacts__big-button">Напишите нам</button>
+    </section>
+    <footer>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#"><img class="social__icon" src="http://placehold.it/30"></a>
+        </li>
+        <li class="social__item">
+          <a href="#"><img class="social__icon" src="http://placehold.it/30"></a>
+        </li>
+        <li class="social__item">
+          <a href="#"><img class="social__icon" src="http://placehold.it/30"></a>
+        </li>
+      </ul>
+      <div class="html-academy-caption">
+        <p>Разработано</p>
+        <img src="http://placehold.it/30x35">
+      </div>
+    </footer>
   </body>
 </html>
