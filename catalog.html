@@ -14,22 +14,16 @@
         <label for="navbar__checkbox"><img src="http://placehold.it/20x15" alt="открыть меню"></label>
         <ul class="navbar__menu navbar__menu--hidden"> <!-- in mobile viewport menu is hidden by default -->
           <li class="navbar__menu-item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="navbar__menu-link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="navbar__menu-item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="navbar__menu-link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navbar__menu-item">
-            <a href="search.html">
-              <img src="http://placehold.it/20">
-              <span>Поиск по сайту</span>
-            </a>
+            <a class="navbar__menu-link" href="search.html">Поиск по сайту</a> <!-- icon will be added in css -->
           </li>
           <li class="navbar__menu-item">
-            <a href="cart.html">
-              <img src="http://placehold.it/20">
-              <span>Корзина: пока пуста</span>
-            </a>
+            <a class="navbar__menu-link" href="cart.html">Корзина: пока пуста</a> <!-- icon will be added in css -->
           </li>
         </ul> <!-- end of menu -->
       </nav>
@@ -39,52 +33,52 @@
     <!-- STARTS CATALOG LIST-->
     <section class="catalog-items">
       <article class="catalog-item">
-        <img src="http://placehold.it/260x195">
+        <img class="catalog-item__image" src="http://placehold.it/260x195">
         <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
         <div class="catalog-item__info">
           <span class="catalog-item__description">Рост 30 см, вес 200 г</span>
-          <div class="catalog-item__price">
-            <span>1 200 руб</span>
-            <a href="#"><img alt="to cart" src="http://placehold.it/20x20"></a>
+          <div class="catalog-item__wrapper">
+            <span class="catalog-item__price">1 200 руб</span>
+            <a class="catalog-item__to-cart-link" href="#"><img class="catalog-item__to-cart-icon" alt="to cart" src="http://placehold.it/20x20"></a>
           </div>
         </div>
       </article>
       <article class="catalog-item">
-        <img src="http://placehold.it/260x195">
+        <img class="catalog-item__image" src="http://placehold.it/260x195">
         <h2 class="catalog-item__title">Корзинка для белья</h2>
         <div class="catalog-item__info">
           <span class="catalog-item__description">Диаметр 15 см, высота 10 см</span>
-          <div class="catalog-item__price">
-            <span>690 руб.</span>
-            <a href="#"><img alt="to cart" src="http://placehold.it/20x20"></a>
+          <div class="catalog-item__wrapper">
+            <span class="catalog-item__price">690 руб.</span>
+            <a class="catalog-item__to-cart-link" href="#"><img class="catalog-item__to-cart-icon" alt="to cart" src="http://placehold.it/20x20"></a>
           </div>
         </div>
       </article>
       <article class="catalog-item">
-        <img src="http://placehold.it/260x195">
+        <img class="catalog-item__image" src="http://placehold.it/260x195">
         <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
         <div class="catalog-item__info">
           <span class="catalog-item__description">Диаметр 30 см, высота 30 см</span>
-          <div class="catalog-item__price">
-            <span>1 500 руб</span>
-            <a href="#"><img alt="to cart" src="http://placehold.it/20x20"></a>
+          <div class="catalog-item__wrapper">
+            <span class="catalog-item__price">1 500 руб</span>
+            <a class="catalog-item__to-cart-link" href="#"><img class="catalog-item__to-cart-icon" alt="to cart" src="http://placehold.it/20x20"></a>
           </div>
         </div>
       </article>
       <!-- STARTS CATALOG VIDEO-->
       <article class="catalog-item catalog-item--production-video">
-        <h2>Процесс производства</h2> <!-- icon will be added using ::before -->
-        <div id="video-container">
-          <video id="video">
+        <h2 class="catalog-item__title">Процесс производства</h2> <!-- icon will be added using ::before -->
+        <div class="catalog-item__video-container" id="video-container">
+          <video class="catalog-item__video" id="video">
             <!-- video sources needed here -->
-            <p>Your browser doesn't support HTML5 video. <a href="#">Download</a> the video instead.</p>
+            <p class="catalog-item__no-html5-message">Your browser doesn't support HTML5 video. <a href="#">Download</a> the video instead.</p>
           </video>
-          <div id="video-controls">
-            <button type="button" id="play-pause">Play</button>
+          <div class="catalog-item__video-controls" id="video-controls">
+            <button class="catalog-item__play-button" type="button" id="play-pause">Play</button>
           </div>
         </div>
         <div class="catalog-item__info">
-          <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <p class="catalog-item__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <button class="button button--big catalog-item__button">Сделать заказ</button>
         </div>
       </article>
@@ -92,21 +86,21 @@
     </section>
     <!-- ENDS CATALOG LIST-->
     <!-- STARTS FOOTER-->
-    <footer>
-      <ul class="social">
+    <footer class="page-footer">
+      <ul class="social page-footer__social">
         <li class="social__item">
-          <a href="#"><img class="social__icon" src="http://placehold.it/30" alt="instagram"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="instagram"></a>
         </li>
         <li class="social__item">
-          <a href="#"><img class="social__icon" src="http://placehold.it/30" alt="facebook"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="facebook"></a>
         </li>
         <li class="social__item">
-          <a href="#"><img class="social__icon" src="http://placehold.it/30" alt="twitter"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="twitter"></a>
         </li>
       </ul>
       <div class="html-academy-caption">
-        <span>Разработано</span>
-        <img src="http://placehold.it/30x35" alt="html-academy">
+        <span class="html-academy-caption__title">Разработано</span>
+        <img class="html-academy-caption__logo" src="http://placehold.it/30x35" alt="html-academy">
       </div>
     </footer>
     <!-- ENDS FOOTER-->
@@ -116,15 +110,15 @@
     <div class="modal modal--hidden">
       <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
       <div class="modal__wrapper">
-        <h2>Добавить в корзину</h2>
-        <span>Выберите размер:</span>
+        <h2 class="modal__main-header">Добавить в корзину</h2>
+        <span class="modal__caption">Выберите размер:</span>
         <form class="modal__form">
-          <input type="radio" name="modal-size" id="modal-size-s" checked>
-          <label for="modal-size-s">S</label>
-          <input type="radio" name="modal-size" id="modal-size-m">
-          <label for="modal-size-m">M</label>
-          <input type="radio" name="modal-size" id="modal-size-l">
-          <label for="modal-size-l">L</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
+          <label class="modal__label" for="modal-size-s">S</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-m">
+          <label class="modal__label" for="modal-size-m">M</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
+          <label class="modal__label" for="modal-size-l">L</label>
           <button type="button" name="button" class="button button--big button__modal">Добавить</button>
         </form>
       </div>

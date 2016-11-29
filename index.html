@@ -14,22 +14,16 @@
         <label for="navbar__checkbox"><img src="http://placehold.it/20x15" alt="открыть меню"></label>
         <ul class="navbar__menu navbar__menu--hidden"> <!-- in mobile viewport menu is hidden by default -->
           <li class="navbar__menu-item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="navbar__menu-link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="navbar__menu-item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="navbar__menu-link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navbar__menu-item">
-            <a href="search.html">
-              <img src="http://placehold.it/20">
-              <span>Поиск по сайту</span>
-            </a>
+            <a class="navbar__menu-link" href="search.html">Поиск по сайту</a> <!-- icon will be added in css -->
           </li>
           <li class="navbar__menu-item">
-            <a href="cart.html">
-              <img src="http://placehold.it/20">
-              <span>Корзина: пока пуста</span>
-            </a>
+            <a class="navbar__menu-link" href="cart.html">Корзина: пока пуста</a> <!-- icon will be added in css -->
           </li>
         </ul> <!-- end of menu -->
       </nav>
@@ -42,29 +36,29 @@
     <!-- ENDS HEADER-->
     <!-- STARTS PRODUCT OF THE WEEK-->
     <article class="week-product">
-      <h2>Вязаные корзинки</h2>
-      <h3>Товар недели</h3>
-      <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+      <h2 class="week-product__main-header">Вязаные корзинки</h2>
+      <h3 class="week-product__sub-header">Товар недели</h3>
+      <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
       <ul class="week-product__table">
         <li class="week-product__table-column">
-          <span>Цвет</span>
-          <span>Диаметр</span>
-          <span>Высота</span>
+          <span class="week-product__table-cell">Цвет</span>
+          <span class="week-product__table-cell">Диаметр</span>
+          <span class="week-product__table-cell">Высота</span>
         </li>
         <li class="week-product__table-column">
-          <span>«Тиффани»/серый</span>
-          <span>25 см</span>
-          <span>15 см</span>
+          <span class="week-product__table-cell">«Тиффани»/серый</span>
+          <span class="week-product__table-cell">25 см</span>
+          <span class="week-product__table-cell">15 см</span>
         </li>
       </ul>
-      <img src="http://placehold.it/260x315">
+      <img class="week-product__product-image" src="http://placehold.it/260x315">
       <p class="week-product__price-caption">Цена: <span class="week-product__price-number">990 руб.</span></p>
       <button class="button button--big week-product__button">Заказать</button>
     </article>
     <!-- ENDS PRODUCT OF THE WEEK-->
     <!-- STARTS ABOUT US-->
     <section class="about-us">
-      <h2>Коротко о нас</h2>
+      <h2 class="about-us__main-header">Коротко о нас</h2>
       <ul class="about-us__list">
         <li class="about-us__item">
           <p class="about-us__item-caption">Экологически чистые материалы</p>
@@ -89,8 +83,8 @@
     <!-- ENDS ABOUT US-->
     <!-- STARTS FEEDBACK-->
     <section class="feedback">
-      <h2>Отзывы</h2>
-      <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+      <h2 class="feedback__main-header">Отзывы</h2>
+      <p class="feedback__description">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
       <span class="feedback__customer-name">Анастасия Красильникова</span>
       <span class="feedback__customer-profile">@misssssiskras</span>
       <div class="feedback__nav-buttons">
@@ -115,21 +109,21 @@
     </section>
     <!-- ENDS FEEDBACK-->
     <!-- STARTS FOOTER-->
-    <footer>
-      <ul class="social">
+    <footer class="page-footer">
+      <ul class="social page-footer__social">
         <li class="social__item">
-          <a href="#"><img class="social__icon" src="http://placehold.it/30" alt="instagram"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="instagram"></a>
         </li>
         <li class="social__item">
-          <a href="#"><img class="social__icon" src="http://placehold.it/30" alt="facebook"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="facebook"></a>
         </li>
         <li class="social__item">
-          <a href="#"><img class="social__icon" src="http://placehold.it/30" alt="twitter"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="twitter"></a>
         </li>
       </ul>
       <div class="html-academy-caption">
-        <span>Разработано</span>
-        <img src="http://placehold.it/30x35" alt="html-academy">
+        <span class="html-academy-caption__title">Разработано</span>
+        <img class="html-academy-caption__logo" src="http://placehold.it/30x35" alt="html-academy">
       </div>
     </footer>
     <!-- ENDS FOOTER-->
@@ -139,15 +133,15 @@
     <div class="modal modal--hidden">
       <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
       <div class="modal__wrapper">
-        <h2>Добавить в корзину</h2>
-        <span>Выберите размер:</span>
+        <h2 class="modal__main-header">Добавить в корзину</h2>
+        <span class="modal__caption">Выберите размер:</span>
         <form class="modal__form">
-          <input type="radio" name="modal-size" id="modal-size-s" checked>
-          <label for="modal-size-s">S</label>
-          <input type="radio" name="modal-size" id="modal-size-m">
-          <label for="modal-size-m">M</label>
-          <input type="radio" name="modal-size" id="modal-size-l">
-          <label for="modal-size-l">L</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
+          <label class="modal__label" for="modal-size-s">S</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-m">
+          <label class="modal__label" for="modal-size-m">M</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
+          <label class="modal__label" for="modal-size-l">L</label>
           <button type="button" name="button" class="button button--big button__modal">Добавить</button>
         </form>
       </div>
