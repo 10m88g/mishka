@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <!-- STARTS HEADER-->
+    <header class="page-header">
+      <img class="navbar__logo" src="http://placehold.it/150x80">
+      <button class="button navbar__button " type="button" name="navbar__button">Открыть меню</button>
+      <nav class="navbar">
+      <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
+        <ul class="navbar__menu">
+          <li class="navbar__menu-item">
+            <a class="navbar__menu-link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a class="navbar__menu-link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="navbar__menu-item">
+            <a class="navbar__menu-link" href="search.html">Поиск по сайту</a> <!-- icon will be added in css -->
+          </li>
+          <li class="navbar__menu-item">
+            <a class="navbar__menu-link" href="cart.html">Корзина: пока пуста</a> <!-- icon will be added in css -->
+          </li>
+        </ul>
+      </nav> <!-- end of menu -->
+      <h1 class="page-header__main-header page-header__main-header--catalog">Каталог товаров</h1>
+    </header>
+    <!-- ENDS HEADER-->
+    <!-- STARTS CATALOG LIST-->
+    <section class="catalog-items">
+      <article class="catalog-item">
+        <img class="catalog-item__image" src="http://placehold.it/260x195">
+        <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
+        <div class="catalog-item__info">
+          <span class="catalog-item__description">Рост 30 см, вес 200 г</span>
+          <div class="catalog-item__wrapper">
+            <span class="catalog-item__price">1 200 руб</span>
+            <a class="catalog-item__to-cart-link" href="#"><img class="catalog-item__to-cart-icon" alt="to cart" src="http://placehold.it/20x20"></a>
+          </div>
+        </div>
+      </article>
+      <article class="catalog-item">
+        <img class="catalog-item__image" src="http://placehold.it/260x195">
+        <h2 class="catalog-item__title">Корзинка для белья</h2>
+        <div class="catalog-item__info">
+          <span class="catalog-item__description">Диаметр 15 см, высота 10 см</span>
+          <div class="catalog-item__wrapper">
+            <span class="catalog-item__price">690 руб.</span>
+            <a class="catalog-item__to-cart-link" href="#"><img class="catalog-item__to-cart-icon" alt="to cart" src="http://placehold.it/20x20"></a>
+          </div>
+        </div>
+      </article>
+      <article class="catalog-item">
+        <img class="catalog-item__image" src="http://placehold.it/260x195">
+        <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
+        <div class="catalog-item__info">
+          <span class="catalog-item__description">Диаметр 30 см, высота 30 см</span>
+          <div class="catalog-item__wrapper">
+            <span class="catalog-item__price">1 500 руб</span>
+            <a class="catalog-item__to-cart-link" href="#"><img class="catalog-item__to-cart-icon" alt="to cart" src="http://placehold.it/20x20"></a>
+          </div>
+        </div>
+      </article>
+      <!-- STARTS CATALOG VIDEO-->
+      <article class="catalog-item catalog-item--production-video">
+        <h2 class="catalog-item__title">Процесс производства</h2> <!-- icon will be added using ::before -->
+        <div class="catalog-item__video-container" id="video-container">
+          <video class="catalog-item__video" id="video">
+            <!-- video sources needed here -->
+            <p class="catalog-item__no-html5-message">Your browser doesn't support HTML5 video. <a href="#">Download</a> the video instead.</p>
+          </video>
+          <div class="catalog-item__video-controls" id="video-controls">
+            <button class="catalog-item__play-button" type="button" id="play-pause">Play</button>
+          </div>
+        </div>
+        <div class="catalog-item__info">
+          <p class="catalog-item__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="button button--big catalog-item__button">Сделать заказ</button>
+        </div>
+      </article>
+      <!-- ENDS CATALOG VIDEO-->
+    </section>
+    <!-- ENDS CATALOG LIST-->
+    <!-- STARTS FOOTER-->
+    <footer class="page-footer">
+      <ul class="social page-footer__social">
+        <li class="social__item">
+          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="instagram"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="facebook"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="twitter"></a>
+        </li>
+      </ul>
+      <div class="html-academy-caption">
+        <span class="html-academy-caption__title">Разработано</span>
+        <img class="html-academy-caption__logo" src="http://placehold.it/30x35" alt="html-academy">
+      </div>
+    </footer>
+    <!-- ENDS FOOTER-->
+
+    <!-- STARTS MODAL WINDOW-->
+    <!-- modal window unhides when "add to cart" button pressed-->
+    <div class="modal modal--hidden">
+      <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
+      <div class="modal__wrapper">
+        <h2 class="modal__main-header">Добавить в корзину</h2>
+        <span class="modal__caption">Выберите размер:</span>
+        <form class="modal__form">
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
+          <label class="modal__label" for="modal-size-s">S</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-m">
+          <label class="modal__label" for="modal-size-m">M</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
+          <label class="modal__label" for="modal-size-l">L</label>
+          <button type="button" name="button" class="button button--big button__modal">Добавить</button>
+        </form>
+      </div>
+    </div>
+    <!-- ENDS MODAL WINDOW-->
+  </body>
+</html>
