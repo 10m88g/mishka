@@ -9,10 +9,10 @@
     <!-- STARTS HEADER-->
     <header class="page-header">
       <img class="navbar__logo" src="http://placehold.it/150x80">
+      <button class="button navbar__button " type="button" name="navbar__button">Открыть меню</button>
       <nav class="navbar">
-        <input type="checkbox" class="navbar__show-menu-button" id="navbar__checkbox">
-        <label for="navbar__checkbox"><img src="http://placehold.it/20x15" alt="открыть меню"></label>
-        <ul class="navbar__menu navbar__menu--hidden"> <!-- in mobile viewport menu is hidden by default -->
+      <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
+        <ul class="navbar__menu">
           <li class="navbar__menu-item">
             <a class="navbar__menu-link" href="catalog.html">Каталог товаров</a>
           </li>
@@ -25,8 +25,8 @@
           <li class="navbar__menu-item">
             <a class="navbar__menu-link" href="cart.html">Корзина: пока пуста</a> <!-- icon will be added in css -->
           </li>
-        </ul> <!-- end of menu -->
-      </nav>
+        </ul>
+      </nav> <!-- end of menu -->
       <h1 class="page-header__main-header page-header__main-header--form">Вязание на заказ</h1>
     </header>
     <!-- ENDS HEADER-->
