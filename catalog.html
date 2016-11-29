@@ -6,6 +6,7 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+    <!-- STARTS HEADER-->
     <header class="page-header">
       <img class="navbar__logo" src="http://placehold.it/150x80">
       <nav class="navbar">
@@ -34,6 +35,8 @@
       </nav>
       <h1 class="page-header__main-header page-header__main-header--catalog">Каталог товаров</h1>
     </header>
+    <!-- ENDS HEADER-->
+    <!-- STARTS CATALOG LIST-->
     <section class="catalog-items">
       <article class="catalog-item">
         <img src="http://placehold.it/260x195">
@@ -68,6 +71,7 @@
           </div>
         </div>
       </article>
+      <!-- STARTS CATALOG VIDEO-->
       <article class="catalog-item catalog-item--production-video">
         <h2>Процесс производства</h2> <!-- icon will be added using ::before -->
         <div id="video-container">
@@ -84,7 +88,10 @@
           <button class="button button--big catalog-item__button">Сделать заказ</button>
         </div>
       </article>
+      <!-- ENDS CATALOG VIDEO-->
     </section>
+    <!-- ENDS CATALOG LIST-->
+    <!-- STARTS FOOTER-->
     <footer>
       <ul class="social">
         <li class="social__item">
@@ -102,7 +109,9 @@
         <img src="http://placehold.it/30x35" alt="html-academy">
       </div>
     </footer>
+    <!-- ENDS FOOTER-->
 
+    <!-- STARTS MODAL WINDOW-->
     <!-- modal window unhides when "add to cart" button pressed-->
     <div class="modal modal--hidden">
       <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
