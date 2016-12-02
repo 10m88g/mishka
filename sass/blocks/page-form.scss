@@ -1,3 +1,8 @@
-.page-catalog {
+.page-form {
   @include width-container;
+  padding: 0 30px;
+}
+.page-form__description {
+  text-align: left;
+  font-size: 13px;
 }

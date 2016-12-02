@@ -10,9 +10,9 @@
   box-sizing: border-box;
   display: block;
   font-size: 27px;
-  padding-left: 40px;
-  padding-right: 40px;
   margin: 0;
+  background-color: $light-gray;
+  padding: 75px 40px;
 }
 .page-header__main-header--index {
   height: 285px;
@@ -22,10 +22,6 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.page-header__main-header--catalog {
-  background-color: $light-gray;
-  padding: 75px 40px;
-}
 .page-header__logo {
   padding-top: 25px;
   padding-bottom: 20px;
@@ -34,7 +30,7 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 30px;
+  top: 32px;
   right: 30px;
   border: none;
   font-size: 0px;
