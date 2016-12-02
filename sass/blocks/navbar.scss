@@ -1,0 +1,18 @@
+.navbar--hidden {
+  display: none;
+}
+.navbar__menu-item {
+  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-size: 17px;
+  text-align: left;
+  list-style: none;
+}
+.navbar__menu-link {
+  display: block;
+  padding: 30px;
+  padding-left: 35px;
+  text-decoration: none;
+  &:link, &:visited, &:active {
+    color: black;
+  }
+}

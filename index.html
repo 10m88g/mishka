@@ -9,8 +9,8 @@
   <body>
     <!-- STARTS HEADER-->
     <header class="page-header">
-      <img class="navbar__logo" src="http://placehold.it/150x80">
-      <button class="button navbar__button " type="button" name="navbar__button">Открыть меню</button>
+      <img class="page-header__logo" src="img/logo-mobile.svg">
+      <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
       <nav class="navbar">
       <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
@@ -28,10 +28,10 @@
           </li>
         </ul>
       </nav> <!-- end of menu -->
-      <h1 class="page-header__main-header page-header__main-header--index">Милые штучки ручной работы для дома</h1>
+      <h1 class="page-header__main-header page-header__main-header--index">Милые штуки ручной работы для дома</h1>
       <div class="page-header__catalog-list">
         <button class="button page-header__button" href="catalog.html">Предметы интерьера</button>
-        <button class="button page-header__button" href="catalog.html">Детские игрушки</button>
+        <button class="button page-header__button page-header__button--right" href="catalog.html">Детские игрушки</button>
       </div>
     </header>
     <!-- ENDS HEADER-->
@@ -41,19 +41,21 @@
       <h3 class="title week-product__title">Товар недели</h3>
       <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
       <ul class="week-product__table">
-        <li class="week-product__table-column">
+        <li class="week-product__table-row">
           <span class="week-product__table-cell">Цвет</span>
-          <span class="week-product__table-cell">Диаметр</span>
-          <span class="week-product__table-cell">Высота</span>
-        </li>
-        <li class="week-product__table-column">
           <span class="week-product__table-cell">«Тиффани»/серый</span>
+        </li>
+        <li class="week-product__table-row">
+          <span class="week-product__table-cell">Диаметр</span>
           <span class="week-product__table-cell">25 см</span>
+        </li>
+        <li class="week-product__table-row">
+          <span class="week-product__table-cell">Высота</span>
           <span class="week-product__table-cell">15 см</span>
         </li>
       </ul>
-      <img class="week-product__product-image" src="http://placehold.it/260x315">
-      <p class="week-product__price-caption">Цена: <span class="week-product__price-number">990 руб.</span></p>
+      <img class="week-product__product-image" src="img/triple-set-mobile@1x.jpg">
+      <p class="week-product__price title">Цена: 990 руб.</p>
       <button class="button button--big week-product__button">Заказать</button>
     </article>
     <!-- ENDS PRODUCT OF THE WEEK-->
@@ -86,14 +88,16 @@
     <section class="feedback">
       <h2 class="title">Отзывы</h2>
       <p class="feedback__description">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-      <span class="feedback__customer-name">Анастасия Красильникова</span>
+      <span class="feedback__customer-name ">Анастасия Красильникова</span>
       <span class="feedback__customer-profile">@misssssiskras</span>
       <div class="feedback__nav-buttons">
-        <button class="feedback__previous"><img src="http://placehold.it/50x30"></button>
-        <button class="feedback__next"><img src="http://placehold.it/50x30"></button>
+        <button class="button feedback__nav-button"><img src="img/icon-left-arrow.svg"></button>
+        <button class="button feedback__nav-button"><img src="img/icon-right-arrow.svg"></button>
       </div>
       <button class="button button--big feedback__button">Написать</button>
     </section>
+    <!-- ENDS FEEDBACK-->
+    <!-- STARTS CONTACTS-->
     <section class="contacts">
       <h2 class="title contacts__title">Контакты</h2>
       <ul class="contacts__table">
@@ -106,26 +110,26 @@
           <span class="contacts__table-cell">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
         </li>
       </ul>
-      <div class="map" id="google-map"><img class="map__static-image" src="http://placehold.it/320x460"></div>
+      <div class="map" id="google-map"><img class="map__static-image" src="img/map-mobile@1x.jpg"></div>
       <button class="button button--big contacts__button">Напишите нам</button>
     </section>
-    <!-- ENDS FEEDBACK-->
+    <!-- ENDS CONTACTS-->
     <!-- STARTS FOOTER-->
     <footer class="page-footer">
       <ul class="social page-footer__social">
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="instagram"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="img/icon-insta.svg" alt="instagram"></a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="facebook"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="img/icon-fb.svg" alt="facebook"></a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="twitter"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="img/icon-twitter.svg" alt="twitter"></a>
         </li>
       </ul>
-      <div class="html-academy-caption">
-        <span class="html-academy-caption__title">Разработано</span>
-        <img class="html-academy-caption__logo" src="http://placehold.it/30x35" alt="html-academy">
+      <div class="page-footer__html-academy">
+        <span class="page-footer__html-academy-title">Разработано</span>
+        <img class="page-footer__html-academy-logo" src="/img/htmlacademy.svg" alt="htmlacademy logo">
       </div>
     </footer>
     <!-- ENDS FOOTER-->

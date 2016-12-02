@@ -1,0 +1,32 @@
+
+.week-product {
+  @include width-container;
+  padding: 0 30px;
+}
+.week-product__description {
+  font-size: 15px;
+}
+.week-product__title {
+  margin: 0;
+  font-size: 17px;
+  color: #63d1bb;
+  text-transform: uppercase;
+}
+.week-product__table {
+  display: table;
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  font-size: 15px;
+}
+.week-product__table-row {
+  display: table-row;
+}
+.week-product__table-cell {
+  display: table-cell;
+  padding: 10px;
+  border-bottom: 1px solid $light-gray;
+}
+.week-product__price {
+  font-size: 17px;
+}

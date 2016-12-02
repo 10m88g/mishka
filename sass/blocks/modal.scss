@@ -1,0 +1,6 @@
+.modal {
+  @include width-container;
+}
+.modal--hidden {
+  display: none;
+}

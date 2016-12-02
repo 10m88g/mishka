@@ -1,0 +1,27 @@
+.feedback {
+  @include width-container;
+  padding: 0 30px;
+  text-align: left;
+}
+.feedback__description {
+  font-size: 15px;
+}
+.feedback__customer-name {
+  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-size: 18px;
+}
+.feedback__customer-profile {
+  font-size: 18px;
+}
+.feedback__nav-buttons {
+  text-align: center;
+  margin: 30px 0;
+
+}
+.feedback__nav-button {
+  padding: 10px;
+  border: 1px solid $light-gray;
+}
+.feedback__button {
+  margin-top: 10px;
+}
