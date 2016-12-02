@@ -9,8 +9,8 @@
   <body>
     <!-- STARTS HEADER-->
     <header class="page-header">
-      <img class="navbar__logo" src="http://placehold.it/150x80">
-      <button class="button navbar__button " type="button" name="navbar__button">Открыть меню</button>
+      <img class="page-header__logo" src="img/logo-mobile.svg">
+      <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
       <nav class="navbar">
       <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
@@ -87,20 +87,40 @@
     <footer class="page-footer">
       <ul class="social page-footer__social">
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="instagram"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="img/icon-insta.svg" alt="instagram"></a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="facebook"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="img/icon-fb.svg" alt="facebook"></a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="twitter"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="img/icon-twitter.svg" alt="twitter"></a>
         </li>
       </ul>
-      <div class="html-academy-caption">
-        <span class="html-academy-caption__title">Разработано</span>
-        <img class="html-academy-caption__logo" src="http://placehold.it/30x35" alt="html-academy">
+      <div class="page-footer__html-academy">
+        <span class="page-footer__html-academy-title">Разработано</span>
+        <img class="page-footer__html-academy-logo" src="/img/htmlacademy.svg" alt="htmlacademy logo">
       </div>
     </footer>
     <!-- ENDS FOOTER-->
+
+    <!-- STARTS MODAL WINDOW-->
+    <!-- modal window unhides when "add to cart" button pressed-->
+    <div class="modal modal--hidden">
+      <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
+      <div class="modal__wrapper">
+        <h2 class="modal__main-header">Добавить в корзину</h2>
+        <span class="modal__caption">Выберите размер:</span>
+        <form class="modal__form">
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
+          <label class="modal__label" for="modal-size-s">S</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-m">
+          <label class="modal__label" for="modal-size-m">M</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
+          <label class="modal__label" for="modal-size-l">L</label>
+          <button type="button" name="button" class="button button--big button__modal">Добавить</button>
+        </form>
+      </div>
+    </div>
+    <!-- ENDS MODAL WINDOW-->
   </body>
 </html>

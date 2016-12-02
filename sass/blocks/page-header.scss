@@ -12,15 +12,19 @@
   font-size: 27px;
   padding-left: 40px;
   padding-right: 40px;
-  padding-top: 80px;
   margin: 0;
 }
 .page-header__main-header--index {
   height: 285px;
   width: 320px;
+  padding-top: 80px;
   background-image: url("/img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+.page-header__main-header--catalog {
+  background-color: $light-gray;
+  padding: 75px 40px;
 }
 .page-header__logo {
   padding-top: 25px;
