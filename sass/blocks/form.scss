@@ -8,6 +8,12 @@
   margin: 0;
   padding-top: 40px;
 }
+.form__fieldset--narrow {
+  padding-top: 25px;
+}
+.form__fieldset--single-field {
+  padding-top: 14px;
+}
 .form__legend {
   color: $cyan;
   text-transform: uppercase;
@@ -15,7 +21,7 @@
 .form__notice {
   display: inline-block;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .form__checkbox,
 .form__radio {
@@ -23,22 +29,28 @@
   opacity: 0;
 }
 .form__text-input {
-  width: 92%;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  margin-bottom: 15px;
   border: none;
   border-bottom: 2px solid $button-border-color;
-  padding: 10px;
-  margin-bottom: 15px;
 }
+
 .form__textarea {
-  width: 252px;
-  height: 138px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 134px;
+  padding: 16px;
   border: 2px solid $button-border-color;
   resize: none;
 }
 .form__checkbox-label {
   display: block;
   padding-left: 60px;
-  padding-bottom: 45px;
+  padding-bottom: 30px;
 }
 .form__radio-label {
   display: block;
