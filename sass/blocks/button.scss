@@ -1,12 +1,13 @@
 .button {
   font-family: "Open Sans Bold", "Tahoma", sans-serif;
   background: none;
-  border: 2px solid $button-border-color;
+  border: 2px solid $dark-gray;
 }
 .button--big {
   width: 100%;
   min-height: 50px;
   font-size: 17px;
   text-transform: uppercase;
+  color: $dark-gray;
   margin: 30px 0;
 }
