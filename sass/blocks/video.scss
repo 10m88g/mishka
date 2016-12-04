@@ -1,0 +1,15 @@
+.video {
+  position: relative;
+}
+.video__play-button {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  height: 80px;
+  width: 100px;
+  border: none;
+  font-size: 0;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

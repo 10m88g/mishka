@@ -1,0 +1,17 @@
+.social {
+  list-style: none;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 0;
+  margin: 0 30px;
+}
+.social__item {
+  display: inline-block;
+}
+.social__link {
+  display: inline-block;
+  width: 40px;
+  height: 70px;
+  padding: 5px 5px;
+  line-height: 80px;
+}

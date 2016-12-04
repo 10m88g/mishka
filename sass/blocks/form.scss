@@ -1,0 +1,67 @@
+.form__fieldset {
+  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-size: 17px;
+  border: none;
+  border-top: 1px solid $cyan;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  padding-top: 40px;
+}
+.form__fieldset--narrow {
+  padding-top: 25px;
+}
+.form__fieldset--single-field {
+  padding-top: 14px;
+}
+.form__legend {
+  color: $cyan;
+  text-transform: uppercase;
+  padding-right: 22px;
+}
+.form__notice {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  color: $dark-gray;
+  margin-top: 17px;
+}
+.form__checkbox,
+.form__radio {
+  position: absolute;
+  opacity: 0;
+}
+.form__text-input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid $dark-gray;
+}
+.form__textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 134px;
+  padding: 16px;
+  margin-top: 10px;
+  border: 2px solid $dark-gray;
+  resize: none;
+}
+
+.form__checkbox-label {
+  display: block;
+  padding-left: 60px;
+  padding-bottom: 40px;
+}
+.form__radio-label {
+  display: block;
+  padding-left: 60px;
+  padding-bottom: 30px;
+}
+.form__text-input-label {
+  display: block;
+  padding-bottom: 5px;
+}

@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!-- STARTS HEADER-->
     <header class="page-header">
-      <img class="navbar__logo" src="http://placehold.it/150x80">
-      <button class="button navbar__button " type="button" name="navbar__button">Открыть меню</button>
+      <img class="page-header__logo" src="img/logo-mobile.svg">
+      <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
       <nav class="navbar">
       <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
@@ -31,54 +32,54 @@
     </header>
     <!-- ENDS HEADER-->
     <!-- STARTS MAIN FORM-->
-    <main class="form-main-content">
-      <p class="form-main-content__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      <form class="main-form">
-        <fieldset class="main-form__fieldset">
-          <legend class="main-form__legend">Тип</legend>
-          <input class="main-form__input" type="radio" name="kind-of-product" id="product-interior" checked>
-          <label class="main-form__label" for="product-interior">Аксессуар для интерьера</label>
-          <input class="main-form__input" type="radio" name="kind-of-product" id="product-toy">
-          <label class="main-form__label" for="product-toy">Детская игрушка</label>
+    <main class="page-form">
+      <p class="page-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="form">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Тип</legend>
+          <input class="form__radio" type="radio" name="kind-of-product" id="product-interior">
+          <label class="form__radio-label" for="product-interior">Аксессуар для интерьера</label>
+          <input class="form__radio" type="radio" name="kind-of-product" id="product-toy">
+          <label class="form__radio-label" for="product-toy">Детская игрушка</label>
         </fieldset>
-        <fieldset class="main-form__fieldset">
-          <legend class="main-form__legend">Цвет</legend>
-          <input class="main-form__input" type="checkbox" id="color-white">
-          <label class="main-form__label" for="color-white">Белый</label>
-          <input class="main-form__input" type="checkbox" id="color-gray">
-          <label class="main-form__label" for="color-gray">Серый</label>
-          <input class="main-form__input" type="checkbox" id="color-tiffany">
-          <label class="main-form__label" for="color-tiffany">«Тиффани»</label>
-          <input class="main-form__input" type="checkbox" id="color-black">
-          <label class="main-form__label" for="color-black">Чёрный</label>
-          <input class="main-form__input" type="checkbox" id="color-pink">
-          <label class="main-form__label" for="color-pink">Розовый</label>
-          <input class="main-form__input" type="checkbox" id="color-orange">
-          <label class="main-form__label" for="color-orange">Оранжевый</label>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Цвет</legend>
+          <input class="form__checkbox" type="checkbox" id="color-white">
+          <label class="form__checkbox-label" for="color-white">Белый</label>
+          <input class="form__checkbox" type="checkbox" id="color-gray">
+          <label class="form__checkbox-label" for="color-gray">Серый</label>
+          <input class="form__checkbox" type="checkbox" id="color-tiffany">
+          <label class="form__checkbox-label" for="color-tiffany">«Тиффани»</label>
+          <input class="form__checkbox" type="checkbox" id="color-black">
+          <label class="form__checkbox-label" for="color-black">Чёрный</label>
+          <input class="form__checkbox" type="checkbox" id="color-pink">
+          <label class="form__checkbox-label" for="color-pink">Розовый</label>
+          <input class="form__checkbox" type="checkbox" id="color-orange">
+          <label class="form__checkbox-label" for="color-orange">Оранжевый</label>
         </fieldset>
-        <fieldset class="main-form__fieldset">
-          <legend class="main-form__legend">ФИО</legend>
-          <label class="main-form__label" for="fullname-name">Имя:</label>
-          <input class="main-form__input" type="text" placeholder="Введите ваше имя*" id="fullname-name" required>
-          <label class="main-form__label" for="fullname-lastname">Отчество:</label>
-          <input class="main-form__input" type="text" placeholder="Укажите фамилию*" id="fullname-lastname" required>
-          <label class="main-form__label" for="fullname-middlename">Фамилия:</label>
-          <input class="main-form__input" type="text" placeholder="Отчество, если желаете" id="fullname-middlename">
+        <fieldset class="form__fieldset form__fieldset--narrow">
+          <legend class="form__legend">ФИО</legend>
+          <label class="form__text-input-label" for="fullname-name">Имя:</label>
+          <input class="form__text-input" type="text" placeholder="Введите ваше имя*" id="fullname-name" required>
+          <label class="form__text-input-label" for="fullname-lastname">Отчество:</label>
+          <input class="form__text-input" type="text" placeholder="Укажите фамилию*" id="fullname-lastname" required>
+          <label class="form__text-input-label" for="fullname-middlename">Фамилия:</label>
+          <input class="form__text-input" type="text" placeholder="Отчество, если желаете" id="fullname-middlename">
         </fieldset>
-        <fieldset class="main-form__fieldset">
-          <legend class="main-form__legend">Тел</legend>
-          <input class="main-form__input" type="tel" placeholder="+7 XXX XX XX*" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" required>
+        <fieldset class="form__fieldset form__fieldset--single-field">
+          <legend class="form__legend">Тел</legend>
+          <input class="form__text-input form__text-input--tel" type="tel" placeholder="+7 XXX XX XX*" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" required>
         </fieldset>
-        <fieldset class="main-form__fieldset">
-          <legend class="main-form__legend">E-Mail</legend>
-          <input class="main-form__input" type="email" placeholder="Ваш Email*" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
+        <fieldset class="form__fieldset form__fieldset--single-field">
+          <legend class="form__legend">E-Mail</legend>
+          <input class="form__text-input form__text-input--email" type="email" placeholder="Ваш Email*" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
         </fieldset>
-        <fieldset class="main-form__fieldset">
-          <legend class="main-form__legend">Доп</legend>
-          <textarea class="main-form__textarea">Опишите все ваши пожелания к заказу</textarea>
+        <fieldset class="form__fieldset form__fieldset--single-field">
+          <legend class="form__legend">Доп</legend>
+          <textarea class="form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
-        <span class="main-form__notice">*Поля обязательны для заполнения</span>
-        <button class="button button--big main-form__button">Отправить заказ</button>
+        <span class="form__notice">*Поля обязательны для заполнения</span>
+        <button class="button button--big page-form__button">Отправить заказ</button>
       </form>
     </main>
     <!-- ENDS MAIN FORM-->
@@ -86,20 +87,40 @@
     <footer class="page-footer">
       <ul class="social page-footer__social">
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="instagram"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="img/icon-insta.svg" alt="instagram"></a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="facebook"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="img/icon-fb.svg" alt="facebook"></a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="http://placehold.it/30" alt="twitter"></a>
+          <a class="social__link" href="#"><img class="social__icon" src="img/icon-twitter.svg" alt="twitter"></a>
         </li>
       </ul>
-      <div class="html-academy-caption">
-        <span class="html-academy-caption__title">Разработано</span>
-        <img class="html-academy-caption__logo" src="http://placehold.it/30x35" alt="html-academy">
+      <div class="page-footer__html-academy">
+        <span class="page-footer__html-academy-title">Разработано</span>
+        <img class="page-footer__html-academy-logo" src="img/htmlacademy.svg" alt="htmlacademy logo">
       </div>
     </footer>
     <!-- ENDS FOOTER-->
+
+    <!-- STARTS MODAL WINDOW-->
+    <!-- modal window unhides when "add to cart" button pressed-->
+    <div class="modal modal--hidden">
+      <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
+      <div class="modal__wrapper">
+        <h2 class="modal__main-header">Добавить в корзину</h2>
+        <span class="modal__caption">Выберите размер:</span>
+        <form class="modal__form">
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
+          <label class="modal__label" for="modal-size-s">S</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-m">
+          <label class="modal__label" for="modal-size-m">M</label>
+          <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
+          <label class="modal__label" for="modal-size-l">L</label>
+          <button type="button" name="button" class="button button--big button__modal">Добавить</button>
+        </form>
+      </div>
+    </div>
+    <!-- ENDS MODAL WINDOW-->
   </body>
 </html>

@@ -1,0 +1,38 @@
+.contacts {
+  @include width-container;
+  padding: 0 30px;
+}
+.contacts__title {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+.contacts__table {
+  display: table;
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+  line-height: 30px;
+  color: $dark-gray;
+}
+.contacts__table-row {
+  display: table-row;
+}
+.contacts__table-cell {
+  display: table-cell;
+  padding: 20px 0;
+  text-decoration: none;
+  &:link, :visited {
+    color: black;
+  }
+}
+.contacts__table-cell:first-of-type {
+  width: 80px;
+}
+.contacts__table-cell a {
+  color: black;
+}
+.contacts__button {
+  margin-top: 37px;
+  margin-bottom: 40px;
+}
