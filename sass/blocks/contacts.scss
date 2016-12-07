@@ -1,19 +1,21 @@
 .contacts {
   @include width-container;
-  padding: 0 30px;
 }
 .contacts__title {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 0;
+  margin-left: 30px;
 }
 .contacts__table {
   display: table;
   list-style: none;
   padding: 0;
+  text-align: left;
   font-size: 15px;
   line-height: 30px;
   color: $dark-gray;
+  margin-left: 30px;
 }
 .contacts__table-row {
   display: table-row;
@@ -35,4 +37,109 @@
 .contacts__button {
   margin-top: 37px;
   margin-bottom: 40px;
+  margin-left: 30px;
+  width: 260px;
 }
+.contacts__map {
+  height: 457px;
+  width: 320px;
+  background: url("../img/map-mobile@1x.jpg") no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+
+  .contacts {
+    position: relative;
+    width: 768px;
+    padding: 0;
+    padding-top: 70px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+
+  .contacts::before{
+    position: absolute;
+    content: "";
+    top: 40px;
+    right: 50px;
+    height: 80px;
+    width: 50px;
+    background: url("../img/icon-flag.svg") no-repeat;
+  }
+  .contacts__title {
+    position: relative;
+    margin: 0;
+    margin-left: 50px;
+    margin-right: 130px;
+    margin-bottom: 28px;
+    font-size: 43px;
+    text-align: left;
+  }
+  .contacts__map {
+    height: 457px;
+    width: 768px;
+  }
+
+}
+
+  @media (min-width: 768px) and (max-width: 1149px) {
+
+    .contacts__table-row:nth-of-type(1){
+      float: left;
+      margin-left: 20px;
+    }
+    .contacts__table-row:nth-of-type(2){
+      float: right;
+      margin-left: 55px;
+    }
+    .contacts__table-cell {
+      width: 200px;
+      font-size: 17px;
+      line-height: 30px;
+    }
+    .contacts__table-cell:first-of-type {
+      width: 72px;
+    }
+
+} //ends tablet styles
+
+@media (min-width: 1150px) {
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+    min-height: 457px;
+    width: 1150px;
+    padding-right: 650px;
+    padding-left: 225px;
+  }
+
+
+  .contacts::before {
+    left: 113px;
+  }
+  .contacts__map {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    width: 525px;
+    height: 100%;
+  }
+  .contacts__table {
+    margin: 0;
+  }
+  .contacts__title {
+    margin-left: 0;
+  }
+  .contacts__button {
+    margin: 0;
+    margin-top: auto;
+    width: 230px;
+  }
+
+
+} // ends desktop styles
