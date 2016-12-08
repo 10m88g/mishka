@@ -120,16 +120,21 @@
     border-top: none;
     padding: 0 42px;
   }
-}
+
+
+} // ends tablet styles
 
 @media (min-width: 1150px) {
 
   .catalog-item {
     width: 316px;
+    padding-top: 50px;
     position: relative;
     display: flex;
     flex-direction: column;
   }
+
+
   .catalog-item__image {
     margin: 0;
     width: 316px;
@@ -151,42 +156,64 @@
     bottom: 25px;
   }
 
-    .catalog-item--production-video {
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-bottom: 65px;
-      padding: 0;
-      width: 100%;
-    }
-    .catalog-item__video {
-      order: -1;
-      width: 682px;
-      min-height: 455px;
-      padding: 0;
-      margin: 0;
-      flex-shrink: 0;
-    }
-    .catalog-item__title--video {
-      order: 0;
-      padding: 0;
-      margin: 0;
-      //padding-top: 40px;
-      //padding-bottom: 30px;
-      //padding-left: 107px;
-      border-right: none;
-      border-left: none;
-    }
-    .catalog-item__info--video {
-      width: 100%;
-      border-left: none;
-      margin: 0;
-      padding: 0;
-      //padding: 0 42px;
-    }
-    .catalog-item__description--narrow {
-      padding: 0;
-      min-width: 250px
-    }
+
+  .catalog-item--production-video {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 105px;
+    padding: 0;
+    width: 100%;
+    border: 1px solid $light-gray;
+    @include clearfix;
+  }
 
 
-}
+  .catalog-item__video {
+    width: 680px;
+    height: 100%;
+    min-height: 455px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+  }
+  .catalog-item__video-screen {
+    background: url("../img/video-mobile@1x.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    width: 100%;
+    min-height: 455px;
+  }
+
+
+  .catalog-item__title--video {
+    float: right;
+    width: 150px;
+    padding-top: 100px;
+    padding-left: 80px;
+    padding-right: 134px;
+    padding-bottom: 0;
+    border: none;
+  }
+  .catalog-item__info--video {
+    float: right;
+    box-sizing: border-box;
+    width: 365px;
+    border: none;
+    padding-right: 60px;
+    padding-bottom: 0px;
+    padding-left: 80px;
+  }
+  .catalog-item__description--narrow {
+    padding: 0;
+  }
+  .catalog-item__button {
+    margin-top: 46px;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+
+
+} // ends desktop styles
