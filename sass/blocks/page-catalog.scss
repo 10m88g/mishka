@@ -3,3 +3,24 @@
   padding: 0 30px;
   padding-bottom: 30px;
 }
+
+@media (min-width: 768px) {
+
+  .page-catalog {
+    width: 768px;
+    padding: 0 50px;
+  }
+
+}
+
+@media (min-width: 1150px) {
+
+  .page-catalog {
+    width: 1150px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+}

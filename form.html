@@ -9,22 +9,33 @@
   <body>
     <!-- STARTS HEADER-->
     <header class="page-header">
-      <img class="page-header__logo" src="img/logo-mobile.svg">
-      <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
       <nav class="navbar">
       <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="catalog.html">Каталог товаров</a>
+          <li class="navbar__menu-item navbar__logo-wrapper">
+            <img class="page-header__logo" src="img/logo-mobile.svg" alt="mishka">
+            <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
           </li>
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="form.html">Вязание на заказ</a>
+          <li class="navbar__menu-item  navbar__menu-item--catalog">
+            <a class="navbar__menu-link  navbar__menu-link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="search.html">Поиск по сайту</a> <!-- icon will be added in css -->
+          <li class="navbar__menu-item navbar__menu-item--form">
+            <a class="navbar__menu-link  navbar__menu-link--form" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="cart.html">Корзина: пока пуста</a> <!-- icon will be added in css -->
+          <li class="navbar__menu-item  navbar__menu-item--search">
+            <a class="navbar__menu-link  navbar__menu-link--search" href="#"><img class="navbar__menu-icon navbar__menu-icon--search" src="img/icon-search.svg">Поиск по сайту</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--cart">
+            <a class="navbar__menu-link  navbar__menu-link--cart" href="#"><img class="navbar__menu-icon" src="img/icon-cart.svg">Корзина: пока пуста</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--arrivals  navbar__menu-item--desktop-visible">
+            <a class="navbar__menu-link  navbar__menu-link--desktop-visible" href="#">Новые поступления</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--desktop-visible">
+            <a class="navbar__menu-link  navbar__menu-link--desktop-visible" href="#">Распродажа</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--tablet-visible">
+            <span class="navbar__menu-caption">Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav> <!-- end of menu -->
@@ -36,55 +47,80 @@
       <p class="page-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="form">
         <fieldset class="form__fieldset">
+
           <legend class="form__legend">Тип</legend>
+
           <input class="form__radio" type="radio" name="kind-of-product" id="product-interior">
           <label class="form__radio-label" for="product-interior">Аксессуар для интерьера</label>
+
           <input class="form__radio" type="radio" name="kind-of-product" id="product-toy">
           <label class="form__radio-label" for="product-toy">Детская игрушка</label>
+
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset role="group" class="form__fieldset  form__fieldset--gray">
+
           <legend class="form__legend">Цвет</legend>
+
           <input class="form__checkbox" type="checkbox" id="color-white">
           <label class="form__checkbox-label" for="color-white">Белый</label>
+
           <input class="form__checkbox" type="checkbox" id="color-gray">
           <label class="form__checkbox-label" for="color-gray">Серый</label>
+
           <input class="form__checkbox" type="checkbox" id="color-tiffany">
           <label class="form__checkbox-label" for="color-tiffany">«Тиффани»</label>
+
           <input class="form__checkbox" type="checkbox" id="color-black">
           <label class="form__checkbox-label" for="color-black">Чёрный</label>
+
           <input class="form__checkbox" type="checkbox" id="color-pink">
           <label class="form__checkbox-label" for="color-pink">Розовый</label>
+
           <input class="form__checkbox" type="checkbox" id="color-orange">
           <label class="form__checkbox-label" for="color-orange">Оранжевый</label>
+
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--narrow">
+
           <legend class="form__legend">ФИО</legend>
-          <label class="form__text-input-label" for="fullname-name">Имя:</label>
-          <input class="form__text-input" type="text" placeholder="Введите ваше имя*" id="fullname-name" required>
-          <label class="form__text-input-label" for="fullname-lastname">Отчество:</label>
-          <input class="form__text-input" type="text" placeholder="Укажите фамилию*" id="fullname-lastname" required>
-          <label class="form__text-input-label" for="fullname-middlename">Фамилия:</label>
-          <input class="form__text-input" type="text" placeholder="Отчество, если желаете" id="fullname-middlename">
+          <div class="form__flex-wrapper" role="group" >
+            <label class="form__text-input-label" for="fullname-name">Имя:</label>
+            <input class="form__text-input" type="text" placeholder="Введите ваше имя*" id="fullname-name" required>
+
+            <label class="form__text-input-label" for="fullname-lastname">Отчество:</label>
+            <input class="form__text-input" type="text" placeholder="Укажите фамилию*" id="fullname-lastname" required>
+
+            <label class="form__text-input-label" for="fullname-middlename">Фамилия:</label>
+            <input class="form__text-input" type="text" placeholder="Отчество, если желаете" id="fullname-middlename">
+          </div>
+
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--single-field">
+        <fieldset class="form__fieldset  form__fieldset--single-field  form__fieldset--gray">
+
           <legend class="form__legend">Тел</legend>
-          <input class="form__text-input form__text-input--tel" type="tel" placeholder="+7 XXX XX XX*" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" required>
+          <input class="form__text-input  form__text-input--tel" type="tel" placeholder="+7 XXX XX XX*" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" required>
+
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--single-field">
+        <fieldset class="form__fieldset  form__fieldset--single-field  form__fieldset--gray  form__fieldset--email">
+
           <legend class="form__legend">E-Mail</legend>
-          <input class="form__text-input form__text-input--email" type="email" placeholder="Ваш Email*" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
+          <input class="form__text-input  form__text-input--email" type="email" placeholder="Ваш Email*" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
+
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--single-field">
+
           <legend class="form__legend">Доп</legend>
           <textarea class="form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+
         </fieldset>
         <span class="form__notice">*Поля обязательны для заполнения</span>
-        <button class="button button--big page-form__button">Отправить заказ</button>
+        <button class="button  button--big  form__button">Отправить заказ</button>
       </form>
     </main>
     <!-- ENDS MAIN FORM-->
     <!-- STARTS FOOTER-->
     <footer class="page-footer">
+      <img class="page-footer__logo" src="img/logo-mobile.svg">
       <ul class="social page-footer__social">
         <li class="social__item">
           <a class="social__link" href="#"><img class="social__icon" src="img/icon-insta.svg" alt="instagram"></a>
@@ -98,7 +134,7 @@
       </ul>
       <div class="page-footer__html-academy">
         <span class="page-footer__html-academy-title">Разработано</span>
-        <img class="page-footer__html-academy-logo" src="img/htmlacademy.svg" alt="htmlacademy logo">
+        <img class="page-footer__html-academy-logo" src="img/htmlacademy.svg" alt="htmlacademy">
       </div>
     </footer>
     <!-- ENDS FOOTER-->

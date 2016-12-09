@@ -9,3 +9,92 @@
   text-align: left;
   padding: 0;
 }
+.about-us__item-caption {
+  padding-right: 30px;
+  margin: 0;
+}
+.about-us__item {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+  &--1::before {
+    @include about-us-icon("../img/icon-feature-1.svg");
+  }
+  &--2::before {
+    @include about-us-icon("../img/icon-feature-3.svg");
+  }
+  &--3::before {
+    @include about-us-icon("../img/icon-feature-5.svg");
+  }
+  &--4::before {
+    @include about-us-icon("../img/icon-feature-2.svg");
+  }
+  &--5::before {
+    @include about-us-icon("../img/icon-feature-4.svg");
+  }
+  &--6::before {
+    @include about-us-icon("../img/icon-feature-6.svg");
+  }
+}
+
+@media (min-width: 768px) {
+
+  .about-us {
+    width: 768px;
+    padding: 0 50px;
+    padding-top: 60px;
+    margin-top: 10px;
+  }
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-top: 0;
+  }
+
+
+  .about-us__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .about-us__item {
+    width: 334px;
+    font-size: 20px;
+    padding-bottom: 64px;
+
+    // changing orders to set elements in two columns
+    // without setting limited heigh for block
+    &--1 {
+      order: 1;
+    }
+    &--2 {
+      order: 3;
+    }
+    &--3 {
+      order: 5;
+    }
+    &--4 {
+      order: 2;
+    }
+    &--5 {
+      order: 4;
+    }
+    &--6 {
+      order: 6;
+    }
+  }
+
+} // ends tablet styles
+
+@media (min-width: 1150px) {
+
+  .about-us {
+    width: 1150px;
+    padding-left: 225px;
+    padding-right: 225px;
+    padding-top: 70px;
+  }
+
+
+} //ends desktop styles

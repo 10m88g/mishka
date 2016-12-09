@@ -9,22 +9,33 @@
   <body>
     <!-- STARTS HEADER-->
     <header class="page-header">
-      <img class="page-header__logo" src="img/logo-mobile.svg">
-      <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
       <nav class="navbar">
       <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="catalog.html">Каталог товаров</a>
+          <li class="navbar__menu-item navbar__logo-wrapper">
+            <img class="page-header__logo" src="img/logo-mobile.svg" alt="mishka">
+            <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
           </li>
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="form.html">Вязание на заказ</a>
+          <li class="navbar__menu-item  navbar__menu-item--catalog">
+            <a class="navbar__menu-link  navbar__menu-link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="search.html">Поиск по сайту</a> <!-- icon will be added in css -->
+          <li class="navbar__menu-item navbar__menu-item--form">
+            <a class="navbar__menu-link  navbar__menu-link--form" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link navbar__menu-link--bottom" href="cart.html">Корзина: пока пуста</a> <!-- icon will be added in css -->
+          <li class="navbar__menu-item  navbar__menu-item--search">
+            <a class="navbar__menu-link  navbar__menu-link--search" href="#"><img class="navbar__menu-icon navbar__menu-icon--search" src="img/icon-search.svg">Поиск по сайту</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--cart">
+            <a class="navbar__menu-link  navbar__menu-link--cart" href="#"><img class="navbar__menu-icon" src="img/icon-cart.svg">Корзина: пока пуста</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--arrivals  navbar__menu-item--desktop-visible">
+            <a class="navbar__menu-link  navbar__menu-link--desktop-visible" href="#">Новые поступления</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--desktop-visible">
+            <a class="navbar__menu-link  navbar__menu-link--desktop-visible" href="#">Распродажа</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--tablet-visible">
+            <span class="navbar__menu-caption">Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav> <!-- end of menu -->
@@ -33,6 +44,7 @@
     <!-- ENDS HEADER-->
     <!-- STARTS CATALOG LIST-->
     <section class="page-catalog">
+
       <article class="catalog-item">
         <img class="catalog-item__image" src="img/photo-1-mobile@1x.jpg">
         <div class="catalog-item__info">
@@ -44,6 +56,7 @@
           </div>
         </div>
       </article>
+
       <article class="catalog-item">
         <img class="catalog-item__image" src="img/photo-2-mobile@1x.jpg">
         <div class="catalog-item__info">
@@ -55,6 +68,7 @@
           </div>
         </div>
       </article>
+
       <article class="catalog-item">
         <img class="catalog-item__image" src="img/photo-3-mobile@1x.jpg">
         <div class="catalog-item__info">
@@ -66,26 +80,29 @@
           </div>
         </div>
       </article>
+
       <!-- STARTS CATALOG VIDEO-->
-      <article class="catalog-item catalog-item--production-video">
-        <h2 class="catalog-item__title catalog-item__title--video">Процесс производства</h2>
-        <div class="video" id="video-container">
-          <video class="video__screen catalog-item__video" id="video">
+      <article class="catalog-item  catalog-item--production-video">
+        <h2 class="catalog-item__title  catalog-item__title--video">Процесс производства</h2>
+        <div class="video  catalog-item__video" id="video-container">
+          <video class="video__screen  catalog-item__video-screen" id="video">
             <!-- video sources needed here -->
             <p class="video__no-html5-message">Your browser doesn't support HTML5 video. <a href="#">Download</a> the video instead.</p>
           </video>
-          <button class="button video__play-button" type="button" id="play-pause">Play</button>
+          <button class="button  video__play-button" type="button" id="play-pause">Play</button>
         </div>
-        <div class="catalog-item__info">
-          <p class="catalog-item__description catalog-item__description--narrow">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <button class="button button--big catalog-item__button">Сделать заказ</button>
+        <div class="catalog-item__info catalog-item__info--video">
+          <p class="catalog-item__description  catalog-item__description--narrow">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="button button--big  catalog-item__button">Сделать заказ</button>
         </div>
       </article>
       <!-- ENDS CATALOG VIDEO-->
+
     </section>
     <!-- ENDS CATALOG LIST-->
     <!-- STARTS FOOTER-->
     <footer class="page-footer">
+      <img class="page-footer__logo" src="img/logo-mobile.svg">
       <ul class="social page-footer__social">
         <li class="social__item">
           <a class="social__link" href="#"><img class="social__icon" src="img/icon-insta.svg" alt="instagram"></a>
@@ -99,7 +116,7 @@
       </ul>
       <div class="page-footer__html-academy">
         <span class="page-footer__html-academy-title">Разработано</span>
-        <img class="page-footer__html-academy-logo" src="img/htmlacademy.svg" alt="htmlacademy logo">
+        <img class="page-footer__html-academy-logo" src="img/htmlacademy.svg" alt="htmlacademy">
       </div>
     </footer>
     <!-- ENDS FOOTER-->

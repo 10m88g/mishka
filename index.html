@@ -9,26 +9,37 @@
   <body>
     <!-- STARTS HEADER-->
     <header class="page-header">
-      <img class="page-header__logo" src="img/logo-mobile.svg">
-      <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
       <nav class="navbar">
       <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="catalog.html">Каталог товаров</a>
+          <li class="navbar__menu-item navbar__logo-wrapper">
+            <img class="page-header__logo" src="img/logo-mobile.svg" alt="mishka">
+            <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
           </li>
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="form.html">Вязание на заказ</a>
+          <li class="navbar__menu-item  navbar__menu-item--catalog">
+            <a class="navbar__menu-link  navbar__menu-link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link" href="search.html">Поиск по сайту</a> <!-- icon will be added in css -->
+          <li class="navbar__menu-item navbar__menu-item--form">
+            <a class="navbar__menu-link  navbar__menu-link--form" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="navbar__menu-item">
-            <a class="navbar__menu-link navbar__menu-link--bottom" href="cart.html">Корзина: пока пуста</a> <!-- icon will be added in css -->
+          <li class="navbar__menu-item  navbar__menu-item--search">
+            <a class="navbar__menu-link  navbar__menu-link--search" href="#"><img class="navbar__menu-icon navbar__menu-icon--search" src="img/icon-search.svg">Поиск по сайту</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--cart">
+            <a class="navbar__menu-link  navbar__menu-link--cart" href="#"><img class="navbar__menu-icon" src="img/icon-cart.svg">Корзина: пока пуста</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--arrivals  navbar__menu-item--desktop-visible">
+            <a class="navbar__menu-link  navbar__menu-link--desktop-visible" href="#">Новые поступления</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--desktop-visible">
+            <a class="navbar__menu-link  navbar__menu-link--desktop-visible" href="#">Распродажа</a>
+          </li>
+          <li class="navbar__menu-item  navbar__menu-item--tablet-visible">
+            <span class="navbar__menu-caption">Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav> <!-- end of menu -->
-      <h1 class="page-header__main-header page-header__main-header--index">Милые штуки ручной<br> работы для дома</h1>
+      <h1 class="page-header__main-header page-header__main-header--index">Милые штуки ручной работы для дома</h1>
       <div class="page-header__catalog-list">
         <a class="button page-header__button" href="catalog.html">Предметы интерьера</a>
         <a class="button page-header__button page-header__button--right" href="catalog.html">Детские игрушки</a>
@@ -52,8 +63,9 @@
         <li class="week-product__table-row">
           <span class="week-product__table-cell">Высота</span>
           <span class="week-product__table-cell">15 см</span>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
       <img class="week-product__product-image" src="img/triple-set-mobile@1x.jpg">
       <p class="week-product__price title">Цена: 990 руб.</p>
       <button class="button button--big week-product__button">Заказать</button>
@@ -61,24 +73,24 @@
     <!-- ENDS PRODUCT OF THE WEEK-->
     <!-- STARTS ABOUT US-->
     <section class="about-us">
-      <h2 class="title">Коротко о нас</h2>
+      <h2 class="title about-us__title">Коротко о нас:</h2>
       <ul class="about-us__list">
-        <li class="about-us__item">
+        <li class="about-us__item about-us__item--1 ">
           <p class="about-us__item-caption">Экологически<br> чистые материалы</p>
         </li>
-        <li class="about-us__item">
+        <li class="about-us__item about-us__item--2">
           <p class="about-us__item-caption">Скандинавский стиль<br> по российской цене</p>
         </li>
-        <li class="about-us__item">
+        <li class="about-us__item about-us__item--3">
           <p class="about-us__item-caption">Увеличивает лайки<br> на фотографиях</p>
         </li>
-        <li class="about-us__item">
+        <li class="about-us__item about-us__item--4">
           <p class="about-us__item-caption">Связано вручную с<br> любовью и умением</p>
         </li>
-        <li class="about-us__item">
+        <li class="about-us__item about-us__item--5">
           <p class="about-us__item-caption">Поддержка отечественного<br> производителя</p>
         </li>
-        <li class="about-us__item">
+        <li class="about-us__item about-us__item--6">
           <p class="about-us__item-caption">Поставляется в<br> подарочной упаковке</p>
         </li>
       </ul>
@@ -88,8 +100,7 @@
     <section class="feedback">
       <h2 class="title feedback__title">Отзывы</h2>
       <p class="feedback__description">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-      <span class="feedback__customer-name ">Анастасия Красильникова</span>
-      <span class="feedback__customer-profile">@misssssiskras</span>
+      <p class="feedback__customer-name ">Анастасия Красильникова<br><span class="feedback__customer-profile">@misssssiskras</span></p>
       <div class="feedback__nav-buttons">
         <button class="button feedback__nav-button"><img src="img/icon-left-arrow.svg"></button>
         <button class="button feedback__nav-button feedback__nav-button--right"><img src="img/icon-right-arrow.svg"></button>
@@ -110,12 +121,13 @@
           <span class="contacts__table-cell">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
         </li>
       </ul>
-      <div class="map" id="google-map"><img class="map__static-image" src="img/map-mobile@1x.jpg"></div>
+      <div class="map contacts__map" id="google-map"></div>
       <button class="button button--big contacts__button">Напишите нам</button>
     </section>
     <!-- ENDS CONTACTS-->
     <!-- STARTS FOOTER-->
     <footer class="page-footer">
+      <img class="page-footer__logo" src="img/logo-mobile.svg">
       <ul class="social page-footer__social">
         <li class="social__item">
           <a class="social__link" href="#"><img class="social__icon" src="img/icon-insta.svg" alt="instagram"></a>
@@ -129,7 +141,7 @@
       </ul>
       <div class="page-footer__html-academy">
         <span class="page-footer__html-academy-title">Разработано</span>
-        <img class="page-footer__html-academy-logo" src="img/htmlacademy.svg" alt="htmlacademy logo">
+        <img class="page-footer__html-academy-logo" src="img/htmlacademy.svg" alt="htmlacademy">
       </div>
     </footer>
     <!-- ENDS FOOTER-->

@@ -3,4 +3,24 @@
   width: 320px;
   margin: 0 auto;
   box-sizing: border-box;
+  //outline: 1px solid red;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin about-us-icon($url) {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 40px;
+  top: 0px;
+  background: url($url) no-repeat;
+  background-position: 50% 50%;
 }
