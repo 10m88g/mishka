@@ -24,3 +24,14 @@
   background: url($url) no-repeat;
   background-position: 50% 50%;
 }
+
+@mixin form-element($top, $left) {
+  content: "";
+  display: block;
+  position: absolute;
+  top: $top;
+  left: $left;
+  height: 36px;
+  width: 36px;
+  border: 2px solid $dark-gray;
+}

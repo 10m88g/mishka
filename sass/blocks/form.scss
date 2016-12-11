@@ -6,7 +6,8 @@
   text-align: left;
   padding: 0;
   margin: 0;
-  padding-top: 40px;
+  padding-top: 10px;
+  margin-top: 15px;
 }
 .form__fieldset--narrow {
   padding-top: 25px;
@@ -62,18 +63,45 @@
 
 .form__checkbox-label {
   display: block;
-  padding-left: 60px;
-  padding-bottom: 40px;
+  position: relative;
+  padding-left: 62px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .form__radio-label {
   display: block;
-  padding-left: 60px;
-  padding-bottom: 30px;
+  position: relative;
+  padding-left: 62px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .form__text-input-label {
   display: block;
   padding-bottom: 5px;
 }
+
+
+.form__radio-label::before {
+  @include form-element(10px, 0px);
+  border-radius: 50%;
+}
+.form__radio:checked + .form__radio-label::before {
+  background-color: $cyan;
+  box-shadow: inset 0 0 0 10px white;
+}
+.form__checkbox-label::before {
+  @include form-element(10px, 0px);
+}
+.form__checkbox:checked + .form__checkbox-label::after {
+  @include form-element(15px, 14px);
+  width: 10px;
+  height: 20px;
+  border: 2px solid black;
+  border-top: none;
+  border-left: none;
+  transform: rotate(40deg);
+}
+
 
 @media (min-width: 768px) {
 
