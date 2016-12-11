@@ -46,44 +46,47 @@
     <main class="page-form">
       <p class="page-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="form">
+
         <fieldset class="form__fieldset">
 
           <legend class="form__legend form__legend--radio">Тип</legend>
+          <div class="form__flex-wrapper  form__flex-wrapper--narrow" role="group">
+            <input class="form__radio" type="radio" name="kind-of-product" id="product-interior">
+            <label class="form__radio-label" for="product-interior">Аксессуар для интерьера</label>
 
-          <input class="form__radio" type="radio" name="kind-of-product" id="product-interior">
-          <label class="form__radio-label" for="product-interior">Аксессуар для интерьера</label>
-
-          <input class="form__radio" type="radio" name="kind-of-product" id="product-toy">
-          <label class="form__radio-label" for="product-toy">Детская игрушка</label>
+            <input class="form__radio" type="radio" name="kind-of-product" id="product-toy">
+            <label class="form__radio-label" for="product-toy">Детская игрушка</label>
+          </div>
 
         </fieldset>
         <fieldset class="form__fieldset  form__fieldset--gray">
 
           <legend class="form__legend form__legend--checkbox" >Цвет</legend>
+          <div class="form__flex-wrapper" role="group">
+            <input class="form__checkbox" type="checkbox" id="color-white">
+            <label class="form__checkbox-label" for="color-white">Белый</label>
 
-          <input class="form__checkbox" type="checkbox" id="color-white">
-          <label class="form__checkbox-label" for="color-white">Белый</label>
+            <input class="form__checkbox" type="checkbox" id="color-gray">
+            <label class="form__checkbox-label" for="color-gray">Серый</label>
 
-          <input class="form__checkbox" type="checkbox" id="color-gray">
-          <label class="form__checkbox-label" for="color-gray">Серый</label>
+            <input class="form__checkbox" type="checkbox" id="color-tiffany">
+            <label class="form__checkbox-label" for="color-tiffany">«Тиффани»</label>
 
-          <input class="form__checkbox" type="checkbox" id="color-tiffany">
-          <label class="form__checkbox-label" for="color-tiffany">«Тиффани»</label>
+            <input class="form__checkbox" type="checkbox" id="color-black">
+            <label class="form__checkbox-label" for="color-black">Чёрный</label>
 
-          <input class="form__checkbox" type="checkbox" id="color-black">
-          <label class="form__checkbox-label" for="color-black">Чёрный</label>
+            <input class="form__checkbox" type="checkbox" id="color-pink">
+            <label class="form__checkbox-label" for="color-pink">Розовый</label>
 
-          <input class="form__checkbox" type="checkbox" id="color-pink">
-          <label class="form__checkbox-label" for="color-pink">Розовый</label>
-
-          <input class="form__checkbox" type="checkbox" id="color-orange">
-          <label class="form__checkbox-label" for="color-orange">Оранжевый</label>
+            <input class="form__checkbox" type="checkbox" id="color-orange">
+            <label class="form__checkbox-label" for="color-orange">Оранжевый</label>
+          </div>
 
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--narrow">
 
           <legend class="form__legend">ФИО</legend>
-          <div class="form__flex-wrapper" role="group" >
+          <div class="form__flex-wrapper" role="group">
             <label class="form__text-input-label" for="fullname-name">Имя:</label>
             <input class="form__text-input" type="text" placeholder="Введите ваше имя*" id="fullname-name" required>
 
@@ -115,6 +118,7 @@
         </fieldset>
         <span class="form__notice">*Поля обязательны для заполнения</span>
         <button class="button  button--big  form__button">Отправить заказ</button>
+
       </form>
     </main>
     <!-- ENDS MAIN FORM-->
