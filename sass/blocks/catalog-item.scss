@@ -13,14 +13,13 @@
 }
 
 .catalog-item__title {
-  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   margin: 0;
   padding-bottom: 8px;
 }
 .catalog-item__description {
-  font-family: "Open Sans", "Tahoma", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: $dark-gray;
@@ -36,7 +35,7 @@
   margin-top: 25px;
 }
 .catalog-item__price {
-  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 15px;
 }
 .catalog-item__to-cart-link {

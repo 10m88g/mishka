@@ -5,12 +5,10 @@
 }
 
 .page-header__main-header {
-  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-weight: bold;
   text-align: center;
   box-sizing: border-box;
   display: block;
-  font-size: 27px;
-  line-height: 29px;
   margin: 0;
   background-color: $light-gray;
   padding: 74px 30px;
@@ -70,8 +68,6 @@
   }
   .page-header__main-header {
     margin-top: -72px;
-    font-size: 43px;
-    line-height: 49px;
     padding: 161px 130px 0px 130px;
   }
   .page-header__main-header--index {
@@ -104,6 +100,7 @@
 } //ends tablet styles
 
 @media (min-width: 1150px) {
+
   .page-header {
     width: 1150px;
   }

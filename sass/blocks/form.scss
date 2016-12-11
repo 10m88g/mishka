@@ -1,5 +1,5 @@
 .form__fieldset {
-  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 17px;
   border: none;
   border-top: 1px solid $cyan;
@@ -79,7 +79,6 @@
 
   .form {
     position: relative;
-    @include clearfix;
   }
   .form__fieldset {
     border: none;

@@ -47,6 +47,7 @@
 }
 
 @media (min-width: 768px) {
+
   .week-product {
     position: relative;
     width: 768px;
@@ -69,8 +70,6 @@
 
   .week-product__main-title {
     max-width: 600px;
-    font-size: 43px;
-    line-height: 43px;
     margin-bottom: 54px;
   }
   .week-product__title {
@@ -110,6 +109,7 @@
 } //ends tablet styles
 
 @media (min-width: 1150px) {
+
   .week-product {
     width: 1150px;
     padding-left: 225px;
@@ -125,8 +125,6 @@
     top: 0;
   }
   .week-product__main-title {
-    font-size: 53px;
-    line-height: 57px;
     padding-top: 63px;
   }
   .week-product__price {

@@ -9,7 +9,7 @@
   position: relative;
   display: inline-block;
   width: 320px;
-  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 17px;
   text-align: left;
   list-style: none;
@@ -91,7 +91,7 @@
   }
   .navbar__menu-item--tablet-visible {
     display: block;
-    font-family: "Open Sans", "Tahoma", sans-serif;
+    font-weight: normal;
     margin-left: auto;
     margin-right: 49px;
     color: $dark-gray;

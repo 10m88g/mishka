@@ -1,7 +1,25 @@
 .title {
-  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 25px;
   line-height: 25px;
   margin: 35px 0;
   color: black;
+}
+
+@media (min-width: 768px) {
+
+  .title {
+    font-size: 43px;
+    line-height: 48px;
+  }
+
+}
+
+@media (min-width: 1150px) {
+
+  .title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
 }

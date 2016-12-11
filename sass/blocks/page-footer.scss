@@ -14,7 +14,7 @@
 .page-footer__html-academy-title {
   display: table-cell;
   vertical-align: middle;
-  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 19px;
 }
 .page-footer__html-academy-logo {
@@ -55,7 +55,9 @@
 }
 
 @media (min-width: 1150px) {
+
   .page-footer {
     width: 1150px;
   }
+
 }
