@@ -13,7 +13,7 @@
   font-size: 17px;
   text-align: left;
   list-style: none;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $dark-border-gray;
 }
 .navbar__menu-icon {
   position: absolute;
@@ -41,6 +41,16 @@
 
 @media (min-width: 768px) {
 
+  .navbar {
+    background-color: #fbfbfb;
+  }
+  .navbar__menu-item--search,
+  .navbar__menu-item--cart,
+  .navbar__logo-wrapper {
+    background-color: white;
+  }
+
+
   .navbar__menu {
     display: flex;
     flex-direction: row;
@@ -60,8 +70,8 @@
     height: 89px;
     padding-left: 50px;
     text-align: left;
-    border-right: 1px solid #ececec;
-    border-bottom: 1px solid #ececec;
+    border-right: 1px solid $dark-border-gray;
+    border-bottom: 1px solid $dark-border-gray;
   }
   .navbar__menu-link {
     padding: 30px;
@@ -78,7 +88,7 @@
     flex-grow: 2;
     height: 89px;
     text-align: center;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid $dark-border-gray;
   }
   .navbar__menu-item--cart {
     order: 2;
@@ -86,14 +96,15 @@
     height: 89px;
     font-size: 17px;
     padding-left: 64px;
-    border-left: 1px solid #ececec;
-    border-bottom: 1px solid #ececec;
+    border-left: 1px solid $dark-border-gray;
+    border-bottom: 1px solid $dark-border-gray;
   }
   .navbar__menu-item--tablet-visible {
     display: block;
     font-weight: normal;
     margin-left: auto;
-    margin-right: 49px;
+    margin-right: 50px;
+    max-width: 250px;
     color: $dark-gray;
     font-size: 15px;
     line-height: 24px;
@@ -179,8 +190,9 @@
   .navbar__menu-item--catalog {
     order: 0;
     height: 89px;
-    border-bottom: 1px solid #ececec;
-    border-right: 1px solid #ececec;
+    background-color: white;
+    border-bottom: 1px solid $dark-border-gray;
+    border-right: 1px solid $dark-border-gray;
   }
   .navbar__menu-item--cart {
     order: 4;
@@ -189,7 +201,8 @@
   .navbar__menu-item--form {
     order: 1;
     height: 89px;
-    border-bottom: 1px solid #ececec;
+    background-color: white;
+    border-bottom: 1px solid $dark-border-gray;
   }
   .navbar__menu-item--search {
     order: 3;
