@@ -12,7 +12,9 @@
   display: block;
   margin: 0;
   background-color: $light-gray;
-  padding: 74px 30px;
+  padding: 0 30px;
+  padding-top: 70px;
+  padding-bottom: 77px;
   font-size: 27px;
   line-height: 29.3px;
 }
@@ -92,8 +94,10 @@
     padding-bottom: 90px;
   }
   .page-header__main-header--catalog {
-    padding-top: 106px;
+    padding-top: 100px;
     padding-bottom: 78px;
+    padding-left: 140px;
+    margin-bottom: 80px;
   }
 
 
@@ -120,6 +124,7 @@
   .page-header {
     width: 1150px;
     margin-bottom: 60px;
+
   }
   .page-header__main-header--index {
     padding-top: 158px;
@@ -133,8 +138,12 @@
     padding-bottom: 90px;
   }
   .page-header__main-header--catalog {
-    padding-top: 105px;
+    padding-top: 98px;
     padding-bottom: 111px;
+    padding-left: 130px;
+    margin-bottom: 90px;
+    font-size: 53px;
+    line-height: 57px;
   }
   .page-header__button {
     padding-right: 350px;
