@@ -1,41 +1,17 @@
 .contacts {
   @include width-container;
 }
+
+
 .contacts__title {
   font-size: 18px;
   line-height: 30px;
+  margin-top: 0;
   margin-bottom: 0;
   margin-left: 30px;
 }
-.contacts__table {
-  display: table;
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  font-size: 15px;
-  line-height: 30px;
-  color: $dark-gray;
-  margin-left: 30px;
-}
-.contacts__table-row {
-  display: table-row;
-}
-.contacts__table-cell {
-  display: table-cell;
-  padding: 20px 0;
-  text-decoration: none;
-  &:link, :visited {
-    color: black;
-  }
-}
-.contacts__table-cell:first-of-type {
-  width: 80px;
-}
-.contacts__table-cell a {
-  color: black;
-}
 .contacts__button {
-  margin-top: 37px;
+  margin-top: 40px;
   margin-bottom: 40px;
   margin-left: 30px;
   width: 260px;
@@ -45,6 +21,39 @@
   width: 320px;
   background: url("../img/map-mobile@1x.jpg") no-repeat;
   background-size: cover;
+}
+
+
+.contacts__table {
+  display: table;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 15px;
+  line-height: 30px;
+  color: $dark-gray;
+  margin-bottom: 26px;
+  margin-left: 30px;
+}
+.contacts__table-row {
+  display: table-row;
+}
+.contacts__table-cell {
+  display: table-cell;
+  padding: 13px 0;
+  text-decoration: none;
+  &:link, :visited {
+    color: black;
+  }
+}
+.contacts__table-cell--adress {
+  padding-right: 50px;
+}
+.contacts__table-cell:first-of-type {
+  width: 74px;
+}
+.contacts__table-cell a {
+  color: black;
 }
 
 @media (min-width: 768px) {
