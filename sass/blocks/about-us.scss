@@ -45,11 +45,12 @@
   .about-us {
     width: 768px;
     padding: 0 50px;
-    padding-top: 60px;
+    padding-top: 58px;
     margin-top: 10px;
   }
   .about-us__title {
     margin-top: 0;
+    margin-bottom: 48px;
   }
 
 
@@ -61,7 +62,7 @@
   .about-us__item {
     width: 334px;
     font-size: 20px;
-    padding-bottom: 64px;
+    padding-bottom: 55px;
 
     // changing orders to set elements in two columns
     // without setting limited heigh for block
@@ -95,6 +96,9 @@
     padding-right: 225px;
     padding-top: 70px;
   }
-
+  .about-us__item {
+    padding-top: 53px;
+    width: 350px;
+  }
 
 } //ends desktop styles
