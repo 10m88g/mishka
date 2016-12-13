@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/navbar.js"></script>
   </head>
-  <body>
+  <body onload="hideNavbar()">
     <!-- STARTS HEADER-->
     <header class="page-header">
       <nav class="navbar">
@@ -14,7 +15,7 @@
         <ul class="navbar__menu">
           <li class="navbar__menu-item navbar__logo-wrapper">
             <img class="page-header__logo" src="img/logo-mobile.svg" alt="mishka">
-            <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
+            <button class="button page-header__nav-button" onclick="navbarButtonClick()" type="button" name="page-header__nav-button">Открыть меню</button>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--catalog">
             <a class="navbar__menu-link  navbar__menu-link--catalog" href="catalog.html">Каталог товаров</a>
