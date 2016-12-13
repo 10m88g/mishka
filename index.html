@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/navbar.js"></script>
   </head>
   <body onload="hideNavbar()">
     <!-- STARTS HEADER-->
@@ -68,7 +67,7 @@
       </div>
       <img class="week-product__product-image" src="img/triple-set-mobile@1x.jpg">
       <p class="week-product__price title">Цена: 990 руб.</p>
-      <button class="button button--big week-product__button">Заказать</button>
+      <button class="button button--big week-product__button" onclick="viewModal()">Заказать</button>
     </article>
     <!-- ENDS PRODUCT OF THE WEEK-->
     <!-- STARTS ABOUT US-->
@@ -148,12 +147,12 @@
 
     <!-- STARTS MODAL WINDOW-->
     <!-- modal window unhides when "add to cart" button pressed-->
-    <div class="modal modal--hidden">
+    <div class="modal modal--hidden" id="modal-window">
       <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
       <div class="modal__wrapper">
         <h2 class="title modal__main-header">Добавить в корзину</h2>
         <span class="modal__caption">Выберите размер:</span>
-        <form class="modal__form">
+        <form class="modal__form" onsubmit="hideModal()">
 
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
           <label class="modal__label" for="modal-size-s">S</label>
@@ -164,10 +163,14 @@
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
           <label class="modal__label" for="modal-size-l">L</label>
 
-          <button type="button" name="button" class="button button--big  modal__button">Добавить</button>
+          <button type="submit" name="button" class="button button--big  modal__button">Добавить</button>
         </form>
       </div>
     </div>
     <!-- ENDS MODAL WINDOW-->
+
+    <script src="js/navbar.js"></script>
+    <script src="js/modal.js"></script>
+
   </body>
 </html>
