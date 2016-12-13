@@ -11,7 +11,6 @@
     <!-- STARTS HEADER-->
     <header class="page-header">
       <nav class="navbar">
-      <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
           <li class="navbar__menu-item navbar__logo-wrapper">
             <img class="page-header__logo" src="img/logo-mobile.svg" alt="mishka">
@@ -64,7 +63,7 @@
         <li class="week-product__table-row">
           <span class="week-product__table-cell">Высота:</span>
           <span class="week-product__table-cell">15 см</span>
-          </li>
+        </li>
         </ul>
       </div>
       <img class="week-product__product-image" src="img/triple-set-mobile@1x.jpg">
@@ -152,16 +151,20 @@
     <div class="modal modal--hidden">
       <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
       <div class="modal__wrapper">
-        <h2 class="modal__main-header">Добавить в корзину</h2>
+        <h2 class="title modal__main-header">Добавить в корзину</h2>
         <span class="modal__caption">Выберите размер:</span>
         <form class="modal__form">
+
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
           <label class="modal__label" for="modal-size-s">S</label>
+
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-m">
           <label class="modal__label" for="modal-size-m">M</label>
+
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
           <label class="modal__label" for="modal-size-l">L</label>
-          <button type="button" name="button" class="button button--big button__modal">Добавить</button>
+
+          <button type="button" name="button" class="button button--big  modal__button">Добавить</button>
         </form>
       </div>
     </div>

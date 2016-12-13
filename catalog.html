@@ -127,16 +127,20 @@
     <div class="modal modal--hidden">
       <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
       <div class="modal__wrapper">
-        <h2 class="modal__main-header">Добавить в корзину</h2>
+        <h2 class="title modal__main-header">Добавить в корзину</h2>
         <span class="modal__caption">Выберите размер:</span>
         <form class="modal__form">
+
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
           <label class="modal__label" for="modal-size-s">S</label>
+
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-m">
           <label class="modal__label" for="modal-size-m">M</label>
+
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
           <label class="modal__label" for="modal-size-l">L</label>
-          <button type="button" name="button" class="button button--big button__modal">Добавить</button>
+
+          <button type="button" name="button" class="button button--big  modal__button">Добавить</button>
         </form>
       </div>
     </div>
