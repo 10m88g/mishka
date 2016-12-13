@@ -6,4 +6,5 @@ function hideModal() {
 function viewModal() {
   var modal = document.getElementById("modal-window");
   modal.classList.remove("modal--hidden");
+  return false;
 }
