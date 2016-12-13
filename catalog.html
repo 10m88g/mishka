@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/navbar.js"></script>
   </head>
   <body onload="hideNavbar()">
     <!-- STARTS HEADER-->
     <header class="page-header">
       <nav class="navbar">
-      <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
-          <li class="navbar__menu-item navbar__logo-wrapper">
-            <img class="page-header__logo" src="img/logo-mobile.svg" alt="mishka">
-            <button class="button page-header__nav-button " type="button" onclick="navbarButtonClick()" name="page-header__nav-button">Открыть меню</button>
+          <li class="navbar__menu-item  navbar__logo-wrapper">
+            <img class="navbar__logo" src="img/logo-mobile.svg" alt="mishka">
+            <button class="button  navbar__nav-button" onclick="navbarButtonClick()" type="button" name="navbar__nav-button">Открыть меню</button>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--catalog">
             <a class="navbar__menu-link  navbar__menu-link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navbar__menu-item navbar__menu-item--form">
+          <li class="navbar__menu-item  navbar__menu-item--form">
             <a class="navbar__menu-link  navbar__menu-link--form" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--search">
@@ -40,7 +38,7 @@
           </li>
         </ul>
       </nav> <!-- end of menu -->
-      <h1 class="title page-header__main-header page-header__main-header--catalog">Каталог товаров</h1>
+      <h1 class="title  page-header__main-header  page-header__main-header--catalog">Каталог товаров</h1>
     </header>
     <!-- ENDS HEADER-->
     <!-- STARTS CATALOG LIST-->
@@ -92,7 +90,7 @@
           </video>
           <button class="button  video__play-button" type="button" id="play-pause">Play</button>
         </div>
-        <div class="catalog-item__info catalog-item__info--video">
+        <div class="catalog-item__info  catalog-item__info--video">
           <p class="catalog-item__description  catalog-item__description--narrow">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <form onsubmit="modal.html">
             <button class="button button--big  catalog-item__button" onclick="viewModal()" type="submit">Сделать заказ</button>
@@ -142,7 +140,7 @@
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
           <label class="modal__label" for="modal-size-l">L</label>
 
-          <button type="submit" name="button" class="button button--big  modal__button">Добавить</button>
+          <button type="submit" name="button" class="button  button--big  modal__button">Добавить</button>
         </form>
       </div>
     </div>

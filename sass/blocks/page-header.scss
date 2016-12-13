@@ -29,13 +29,6 @@
 }
 
 
-.page-header__logo {
-  padding-top: 22px;
-  padding-bottom: 17px;
-}
-.page-header__logo-wrapper {
-  border-bottom: 1px solid #ececec;
-}
 .page-header__nav-button {
   width: 20px;
   height: 20px;
@@ -72,9 +65,6 @@
 
   .page-header {
     width: 768px;
-  }
-  .page-header__nav-button {
-    display: none;
   }
 
 
@@ -143,7 +133,7 @@
     padding-top: 98px;
     padding-bottom: 111px;
     padding-left: 130px;
-    margin-bottom: 90px;
+    margin-bottom: 85px;
     font-size: 53px;
     line-height: 57px;
   }

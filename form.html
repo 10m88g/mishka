@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/navbar.js"></script>
   </head>
   <body onload="hideNavbar()">
     <!-- STARTS HEADER-->
     <header class="page-header">
       <nav class="navbar">
-      <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
-          <li class="navbar__menu-item navbar__logo-wrapper">
-            <img class="page-header__logo" src="img/logo-mobile.svg" alt="mishka">
-            <button class="button page-header__nav-button " type="button" onclick="navbarButtonClick()" name="page-header__nav-button">Открыть меню</button>
+          <li class="navbar__menu-item  navbar__logo-wrapper">
+            <img class="navbar__logo" src="img/logo-mobile.svg" alt="mishka">
+            <button class="button  navbar__nav-button" onclick="navbarButtonClick()" type="button" name="navbar__nav-button">Открыть меню</button>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--catalog">
             <a class="navbar__menu-link  navbar__menu-link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navbar__menu-item navbar__menu-item--form">
+          <li class="navbar__menu-item  navbar__menu-item--form">
             <a class="navbar__menu-link  navbar__menu-link--form" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--search">
-            <a class="navbar__menu-link  navbar__menu-link--search" href="#"><img class="navbar__menu-icon navbar__menu-icon--search" src="img/icon-search.svg">Поиск по сайту</a>
+            <a class="navbar__menu-link  navbar__menu-link--search" href="#"><img class="navbar__menu-icon  navbar__menu-icon--search" src="img/icon-search.svg">Поиск по сайту</a>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--cart">
             <a class="navbar__menu-link  navbar__menu-link--cart" href="#"><img class="navbar__menu-icon" src="img/icon-cart.svg">Корзина: пока пуста</a>
@@ -144,24 +142,7 @@
     </footer>
     <!-- ENDS FOOTER-->
 
-    <!-- STARTS MODAL WINDOW-->
-    <!-- modal window unhides when "add to cart" button pressed-->
-    <div class="modal modal--hidden">
-      <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
-      <div class="modal__wrapper">
-        <h2 class="modal__main-header">Добавить в корзину</h2>
-        <span class="modal__caption">Выберите размер:</span>
-        <form class="modal__form">
-          <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
-          <label class="modal__label" for="modal-size-s">S</label>
-          <input class="modal__input" type="radio" name="modal-size" id="modal-size-m">
-          <label class="modal__label" for="modal-size-m">M</label>
-          <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
-          <label class="modal__label" for="modal-size-l">L</label>
-          <button type="button" name="button" class="button button--big button__modal">Добавить</button>
-        </form>
-      </div>
-    </div>
-    <!-- ENDS MODAL WINDOW-->
+    <script src="js/navbar.js"></script>
+
   </body>
 </html>
