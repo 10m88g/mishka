@@ -43,11 +43,30 @@
   padding: 13px 0;
   text-decoration: none;
   &:link, :visited {
-    color: black;
+    color: $dark-gray;
   }
 }
 .contacts__table-cell--adress {
   padding-right: 50px;
+}
+.contacts__table-cell--email {
+  &:hover {
+    color: $cyan;
+  }
+  &:active {
+    color: $light-cyan;
+  }
+}
+.contacts__table-cell--email span {
+  display: inline-block;
+  border-bottom: 1px solid $cyan;
+
+  &:hover {
+    border-color: #46c1ae;
+  }
+  &:active {
+    border-color: $light-cyan;
+  }
 }
 .contacts__table-cell:first-of-type {
   width: 70px;
