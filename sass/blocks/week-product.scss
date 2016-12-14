@@ -81,6 +81,7 @@
 
   .week-product__main-title {
     max-width: 600px;
+    margin-top: 46px;
     margin-bottom: 50px;
   }
   .week-product__title {
@@ -137,7 +138,8 @@
     top: 78px;
   }
   .week-product__main-title {
-    padding-top: 60px;
+    padding-top: 65px;
+    margin-left: -2px;
   }
   .week-product__description {
     margin-bottom: 45px;
@@ -145,11 +147,11 @@
   .week-product__product-image {
     height: 636px;
     width: 525px;
-    top: 10px;
+    top: 14px;
   }
-
   .week-product__price {
     margin-top: 110px;
+    margin-bottom: 33px;
   }
 
 } //ends desktop styles
