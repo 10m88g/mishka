@@ -70,6 +70,13 @@
   padding: 16px 0px;
   border: 2px solid $dark-border-gray;
   font-weight: bold;
+
+  &:hover {
+    border-color: $hover-gray;
+  }
+  &:active {
+    border-color: $cyan;
+  }
 }
 .modal__button {
   background-color: $cyan;
@@ -77,6 +84,11 @@
   color: white;
   width: 100%;
   margin-bottom: 0;
+
+  &:hover, &:active {
+    color: white;
+    background-color: $cyan;
+  }
 }
 
 @media (min-width: 768px) {

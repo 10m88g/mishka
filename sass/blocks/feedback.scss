@@ -31,6 +31,13 @@
   width: 50%;
   padding: 10px;
   border: 1px solid $light-gray;
+
+  &:hover polygon {
+    fill: $hover-black;
+  }
+  &:active polygon {
+    fill: $active-black;
+  }
 }
 .feedback__nav-button--right {
   width: 50%;
@@ -41,6 +48,7 @@
   margin-top: 10px;
   margin-bottom: 88px;
 }
+
 
 @media (min-width: 768px) {
 
