@@ -6,7 +6,7 @@
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body onload="hideNavbar()">
+  <body onload="init()">
     <!-- STARTS HEADER-->
     <header class="page-header">
       <nav class="navbar">
@@ -51,7 +51,7 @@
           <span class="catalog-item__description">Рост 30 см, вес 200 г</span>
           <div class="catalog-item__wrapper">
             <span class="catalog-item__price">1 200 руб.</span>
-            <a class="catalog-item__to-cart-link" href="#" onclick="viewModal()"><img class="catalog-item__to-cart-icon" alt="to cart" src="img/icon-cart.svg"></a>
+            <a class="catalog-item__to-cart-link" onclick="viewModal()" href="cart.html"><img class="catalog-item__to-cart-icon" alt="to cart" src="img/icon-cart.svg"></a>
           </div>
         </div>
       </article>
@@ -63,7 +63,7 @@
           <span class="catalog-item__description">Диаметр 15 см, высота 10 см</span>
           <div class="catalog-item__wrapper">
             <span class="catalog-item__price">690 руб.</span>
-            <a class="catalog-item__to-cart-link" href="#" onclick="viewModal()"><img class="catalog-item__to-cart-icon" alt="to cart" src="img/icon-cart.svg"></a>
+            <a class="catalog-item__to-cart-link" onclick="viewModal()" href="cart.html"><img class="catalog-item__to-cart-icon" alt="to cart" src="img/icon-cart.svg"></a>
           </div>
         </div>
       </article>
@@ -75,7 +75,7 @@
           <span class="catalog-item__description">Диаметр 30 см, высота 30 см</span>
           <div class="catalog-item__wrapper">
             <span class="catalog-item__price">1 500 руб.</span>
-            <a class="catalog-item__to-cart-link" href="#" onclick="viewModal()"><img class="catalog-item__to-cart-icon" alt="to cart" src="img/icon-cart.svg"></a>
+            <a class="catalog-item__to-cart-link" onclick="viewModal()" href="cart.html"><img class="catalog-item__to-cart-icon" alt="to cart" src="img/icon-cart.svg"></a>
           </div>
         </div>
       </article>
@@ -92,9 +92,7 @@
         </div>
         <div class="catalog-item__info  catalog-item__info--video">
           <p class="catalog-item__description  catalog-item__description--narrow">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <form onsubmit="modal.html">
-            <button class="button button--big  catalog-item__button" onclick="viewModal()" type="submit">Сделать заказ</button>
-          <form>
+          <button class="button  button--big  catalog-item__button" >Сделать заказ</button>
         </div>
       </article>
       <!-- ENDS CATALOG VIDEO-->
@@ -124,10 +122,10 @@
 
     <!-- STARTS MODAL WINDOW-->
     <!-- modal window unhides when "add to cart" button pressed-->
-    <div class="modal modal--hidden" id="modal-window">
+    <div class="modal  modal--hidden" id="modal-window">
       <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
       <div class="modal__wrapper">
-        <h2 class="title modal__main-header">Добавить в корзину</h2>
+        <h2 class="title  modal__main-header">Добавить в корзину</h2>
         <span class="modal__caption">Выберите размер:</span>
         <form class="modal__form" onsubmit="hideModal()">
 
@@ -140,14 +138,13 @@
           <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
           <label class="modal__label" for="modal-size-l">L</label>
 
-          <button type="submit" name="button" class="button  button--big  modal__button">Добавить</button>
+          <button type="submit" name="button" class="button button--big  modal__button">Добавить</button>
         </form>
       </div>
     </div>
     <!-- ENDS MODAL WINDOW-->
 
-    <script src="js/navbar.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="js/init.js"></script>
 
   </body>
 </html>

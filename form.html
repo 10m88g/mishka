@@ -6,7 +6,7 @@
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body onload="hideNavbar()">
+  <body onload="init()">
     <!-- STARTS HEADER-->
     <header class="page-header">
       <nav class="navbar">
@@ -38,7 +38,7 @@
           </li>
         </ul>
       </nav> <!-- end of menu -->
-      <h1 class="title page-header__main-header page-header__main-header--form">Вязание на заказ</h1>
+      <h1 class="title  page-header__main-header  page-header__main-header--form">Вязание на заказ</h1>
     </header>
     <!-- ENDS HEADER-->
     <!-- STARTS MAIN FORM-->
@@ -48,7 +48,7 @@
 
         <fieldset class="form__fieldset">
 
-          <legend class="form__legend form__legend--radio">Тип</legend>
+          <legend class="form__legend  form__legend--radio">Тип</legend>
           <div class="form__flex-wrapper  form__flex-wrapper--narrow" role="group">
             <input class="form__radio" type="radio" name="kind-of-product" id="product-interior" checked>
             <label class="form__radio-label" for="product-interior">Аксессуар для интерьера</label>
@@ -60,7 +60,7 @@
         </fieldset>
         <fieldset class="form__fieldset  form__fieldset--gray">
 
-          <legend class="form__legend form__legend--checkbox" >Цвет</legend>
+          <legend class="form__legend  form__legend--checkbox" >Цвет</legend>
           <div class="form__flex-wrapper" role="group">
             <input class="form__checkbox" type="checkbox" id="color-white">
             <label class="form__checkbox-label" for="color-white">Белый</label>
@@ -82,7 +82,7 @@
           </div>
 
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--narrow">
+        <fieldset class="form__fieldset  form__fieldset--narrow">
 
           <legend class="form__legend">ФИО</legend>
           <div class="form__flex-wrapper" role="group">
@@ -109,7 +109,7 @@
           <input class="form__text-input  form__text-input--email" type="email" placeholder="Ваш Email*" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
 
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--single-field  form__fieldset--textarea">
+        <fieldset class="form__fieldset  form__fieldset--single-field  form__fieldset--textarea">
 
           <legend class="form__legend">Доп</legend>
           <textarea class="form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
@@ -124,7 +124,7 @@
     <!-- STARTS FOOTER-->
     <footer class="page-footer">
       <img class="page-footer__logo" src="img/logo-mobile.svg">
-      <ul class="social page-footer__social">
+      <ul class="social  page-footer__social">
         <li class="social__item">
           <a class="social__link" href="#"><img class="social__icon" src="img/icon-insta.svg" alt="instagram"></a>
         </li>
@@ -142,7 +142,7 @@
     </footer>
     <!-- ENDS FOOTER-->
 
-    <script src="js/navbar.js"></script>
+    <script src="js/init.js"></script>
 
   </body>
 </html>

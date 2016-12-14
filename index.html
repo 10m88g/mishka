@@ -6,7 +6,7 @@
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body onload="hideNavbar()">
+  <body onload="init()">
     <!-- STARTS HEADER-->
     <header class="page-header">
       <nav class="navbar">
@@ -46,7 +46,7 @@
     </header>
     <!-- ENDS HEADER-->
     <!-- STARTS PRODUCT OF THE WEEK-->
-    <article class="week-product">
+    <article class="week-product" id="week-product">
       <h2 class="title  week-product__main-title">Вязаные корзинки</h2>
       <h3 class="title  week-product__title">Товар недели</h3>
       <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
@@ -67,7 +67,9 @@
       </div>
       <img class="week-product__product-image" src="img/triple-set-mobile@1x.jpg">
       <p class="week-product__price  title">Цена: 990 руб.</p>
-      <button class="button  button--big  week-product__button" onclick="viewModal()">Заказать</button>
+      <form id="week-product-form" action="cart.html">
+        <button class="button  button--big  week-product__button" onclick="return viewModal()">Заказать</button>
+      </form>
     </article>
     <!-- ENDS PRODUCT OF THE WEEK-->
     <!-- STARTS ABOUT US-->
@@ -169,8 +171,7 @@
     </div>
     <!-- ENDS MODAL WINDOW-->
 
-    <script src="js/navbar.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="js/init.js"></script>
 
   </body>
 </html>
