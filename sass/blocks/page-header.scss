@@ -56,9 +56,25 @@
   background-color: #63d1bb;
   color: white;
   border: none;
+
+  &:hover {
+    position: relative;
+    bottom: 5px;
+    padding-bottom: 33px;
+    margin-bottom: -5px;
+  }
+  &:active {
+    bottom: 0;
+    padding-bottom: 28px;
+    margin-bottom: 0px;
+    color: #8be1d0;
+  }
 }
 .page-header__button--right {
   background-color: #56c3b2;
+  &:active {
+    color: #7dd3c6;
+  }
 }
 
 @media (min-width: 768px) {
@@ -92,19 +108,45 @@
 
 
   .page-header__catalog-list {
-    display: table;
+    display: flex;
     box-sizing: border-box;
     width: 100%;
-    vertical-align: middle;
+    flex-flow: row nowrap;
     background-color: #f8f8f8;
     padding: 0 50px;
   }
+  .page-header__button::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 62px;
+    right: 24px;
+    top: 30px;
+    opacity: 0.8;
+    background: url("../img/icon-interior.svg") no-repeat 50% 50%;
+  }
+  .page-header__button--right::after {
+    right: 27px;
+    background-image: url("../img/icon-toy.svg");
+  }
   .page-header__button {
-    display: table-cell;
+    position: relative;
     font-size: 20px;
     line-height: 30px;
-    padding: 30px 160px 35px 35px;
-    width: 50%;
+    padding: 30px 160px 30px 35px;
+
+    &:hover {
+      padding-bottom: 35px;
+    }
+    &:active {
+      padding-bottom: 30px;
+    }
+  }
+  .page-header__button:hover.page-header__button::after {
+    opacity: 1;
+  }
+  .page-header__button:active.page-header__button::after {
+    opacity: 0.5;
   }
 
 } //ends tablet styles
