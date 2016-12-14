@@ -1,16 +1,24 @@
+
 .social {
   list-style: none;
   text-align: center;
   padding: 0;
   margin: 0 30px;
+
 }
 .social__item {
   display: inline-block;
 }
 .social__link {
   display: inline-block;
-  width: 40px;
+  width: 45px;
   height: 70px;
   padding: 5px 5px;
   line-height: 80px;
+}
+.social__link:hover path {
+  fill: #46c1ae;
+}
+.social__link:active path {
+  fill: $light-cyan;
 }

@@ -5,11 +5,10 @@
 @import "global/fonts.scss";
 
 @import "blocks/button.scss";
+@import "blocks/title.scss";
 @import "blocks/catalog-item.scss";
 @import "blocks/map.scss";
 @import "blocks/video.scss";
-@import "blocks/modal.scss";
-@import "blocks/title.scss";
 @import "blocks/form.scss";
 
 @import "blocks/page-footer.scss";
@@ -22,3 +21,4 @@
 @import "blocks/feedback.scss";
 @import "blocks/social.scss";
 @import "blocks/week-product.scss";
+@import "blocks/modal.scss";

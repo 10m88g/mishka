@@ -6,27 +6,36 @@
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body onload="init()">
     <!-- STARTS HEADER-->
     <header class="page-header">
       <nav class="navbar">
-      <!-- in mobile viewport menu is visible by default. If JS is enabled, script adds 'hidden' class and changes button appearance-->
         <ul class="navbar__menu">
-          <li class="navbar__menu-item navbar__logo-wrapper">
-            <img class="page-header__logo" src="img/logo-mobile.svg" alt="mishka">
-            <button class="button page-header__nav-button " type="button" name="page-header__nav-button">Открыть меню</button>
+          <li class="navbar__menu-item  navbar__logo-wrapper">
+            <img class="navbar__logo" src="img/logo-mobile.svg" alt="mishka">
+            <button class="button  navbar__nav-button" onclick="navbarButtonClick()" type="button" name="navbar__nav-button">Открыть меню</button>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--catalog">
             <a class="navbar__menu-link  navbar__menu-link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navbar__menu-item navbar__menu-item--form">
+          <li class="navbar__menu-item  navbar__menu-item--form">
             <a class="navbar__menu-link  navbar__menu-link--form" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--search">
-            <a class="navbar__menu-link  navbar__menu-link--search" href="#"><img class="navbar__menu-icon navbar__menu-icon--search" src="img/icon-search.svg">Поиск по сайту</a>
+            <a class="navbar__menu-link  navbar__menu-link--search" href="#">
+              <svg class="navbar__menu-icon  navbar__menu-icon--search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+                <path fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+              </svg>
+              <span>Поиск по сайту</span>
+            </a>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--cart">
-            <a class="navbar__menu-link  navbar__menu-link--cart" href="#"><img class="navbar__menu-icon" src="img/icon-cart.svg">Корзина: пока пуста</a>
+            <a class="navbar__menu-link  navbar__menu-link--cart" href="#">
+              <svg class="navbar__menu-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+                <path fill="#d3d2d2" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+              </svg>
+              <span>Корзина: пока пуста</span>
+            </a>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--arrivals  navbar__menu-item--desktop-visible">
             <a class="navbar__menu-link  navbar__menu-link--desktop-visible" href="#">Новые поступления</a>
@@ -39,58 +48,61 @@
           </li>
         </ul>
       </nav> <!-- end of menu -->
-      <h1 class="page-header__main-header page-header__main-header--form">Вязание на заказ</h1>
+      <h1 class="title  page-header__main-header  page-header__main-header--form">Вязание на заказ</h1>
     </header>
     <!-- ENDS HEADER-->
     <!-- STARTS MAIN FORM-->
     <main class="page-form">
       <p class="page-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="form">
+
         <fieldset class="form__fieldset">
 
-          <legend class="form__legend">Тип</legend>
+          <legend class="form__legend  form__legend--radio">Тип</legend>
+          <div class="form__flex-wrapper  form__flex-wrapper--narrow" role="group">
+            <input class="form__radio" type="radio" name="kind-of-product" id="product-interior" checked>
+            <label class="form__radio-label" for="product-interior">Аксессуар для интерьера</label>
 
-          <input class="form__radio" type="radio" name="kind-of-product" id="product-interior">
-          <label class="form__radio-label" for="product-interior">Аксессуар для интерьера</label>
-
-          <input class="form__radio" type="radio" name="kind-of-product" id="product-toy">
-          <label class="form__radio-label" for="product-toy">Детская игрушка</label>
-
-        </fieldset>
-        <fieldset role="group" class="form__fieldset  form__fieldset--gray">
-
-          <legend class="form__legend">Цвет</legend>
-
-          <input class="form__checkbox" type="checkbox" id="color-white">
-          <label class="form__checkbox-label" for="color-white">Белый</label>
-
-          <input class="form__checkbox" type="checkbox" id="color-gray">
-          <label class="form__checkbox-label" for="color-gray">Серый</label>
-
-          <input class="form__checkbox" type="checkbox" id="color-tiffany">
-          <label class="form__checkbox-label" for="color-tiffany">«Тиффани»</label>
-
-          <input class="form__checkbox" type="checkbox" id="color-black">
-          <label class="form__checkbox-label" for="color-black">Чёрный</label>
-
-          <input class="form__checkbox" type="checkbox" id="color-pink">
-          <label class="form__checkbox-label" for="color-pink">Розовый</label>
-
-          <input class="form__checkbox" type="checkbox" id="color-orange">
-          <label class="form__checkbox-label" for="color-orange">Оранжевый</label>
+            <input class="form__radio" type="radio" name="kind-of-product" id="product-toy">
+            <label class="form__radio-label" for="product-toy">Детская игрушка</label>
+          </div>
 
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--narrow">
+        <fieldset class="form__fieldset  form__fieldset--gray">
+
+          <legend class="form__legend  form__legend--checkbox" >Цвет</legend>
+          <div class="form__flex-wrapper" role="group">
+            <input class="form__checkbox" type="checkbox" id="color-white">
+            <label class="form__checkbox-label" for="color-white">Белый</label>
+
+            <input class="form__checkbox" type="checkbox" id="color-gray">
+            <label class="form__checkbox-label" for="color-gray">Серый</label>
+
+            <input class="form__checkbox" type="checkbox" id="color-tiffany">
+            <label class="form__checkbox-label" for="color-tiffany">«Тиффани»</label>
+
+            <input class="form__checkbox" type="checkbox" id="color-black">
+            <label class="form__checkbox-label" for="color-black">Чёрный</label>
+
+            <input class="form__checkbox" type="checkbox" id="color-pink">
+            <label class="form__checkbox-label" for="color-pink">Розовый</label>
+
+            <input class="form__checkbox" type="checkbox" id="color-orange">
+            <label class="form__checkbox-label" for="color-orange">Оранжевый</label>
+          </div>
+
+        </fieldset>
+        <fieldset class="form__fieldset  form__fieldset--narrow">
 
           <legend class="form__legend">ФИО</legend>
-          <div class="form__flex-wrapper" role="group" >
+          <div class="form__flex-wrapper" role="group">
             <label class="form__text-input-label" for="fullname-name">Имя:</label>
             <input class="form__text-input" type="text" placeholder="Введите ваше имя*" id="fullname-name" required>
 
-            <label class="form__text-input-label" for="fullname-lastname">Отчество:</label>
+            <label class="form__text-input-label" for="fullname-lastname">Фамилия:</label>
             <input class="form__text-input" type="text" placeholder="Укажите фамилию*" id="fullname-lastname" required>
 
-            <label class="form__text-input-label" for="fullname-middlename">Фамилия:</label>
+            <label class="form__text-input-label" for="fullname-middlename">Отчество:</label>
             <input class="form__text-input" type="text" placeholder="Отчество, если желаете" id="fullname-middlename">
           </div>
 
@@ -107,7 +119,7 @@
           <input class="form__text-input  form__text-input--email" type="email" placeholder="Ваш Email*" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
 
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--single-field">
+        <fieldset class="form__fieldset  form__fieldset--single-field  form__fieldset--textarea">
 
           <legend class="form__legend">Доп</legend>
           <textarea class="form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
@@ -115,48 +127,44 @@
         </fieldset>
         <span class="form__notice">*Поля обязательны для заполнения</span>
         <button class="button  button--big  form__button">Отправить заказ</button>
+
       </form>
     </main>
     <!-- ENDS MAIN FORM-->
     <!-- STARTS FOOTER-->
     <footer class="page-footer">
-      <img class="page-footer__logo" src="img/logo-mobile.svg">
+      <div class="page-footer__logo"></div>
       <ul class="social page-footer__social">
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="img/icon-insta.svg" alt="instagram"></a>
+          <a class="social__link  social__link--insta" href="#">
+            <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" width="21.8" height="21.3" viewBox="53.1 53.2 21.8 21.3">
+              <path fill="#231F20" d="M75 65.3c0-2.4-.5-4.8-.4-7 0-1 0-1.6-.2-2.4v-1c-.4-.3-.3-.8-.6-1-.4-.2-1.2 0-1.7-.2h-1.8c-2-.2-4-.2-6-.2s-4-.2-5.7-.4h-2.2-.2c-.5 0-1 .3-1.5.4l-.7.3c-.2 0-.5 0-.6.3-.2.2.2.4 0 .6v2.6c0 1.3.2 2.4 0 3.7.6 2.8.5 6.6.2 9.4.2.6.4 1 .5 1.8 0 .5.2 1 .5 1.5.5.2 1.3.2 2 .2.3 0 .6.3 1 .3 3-.2 5.6 0 8.5-.2 2.7.2 5.8.2 8.3-.2.2 0 0-.5.2-.7 0-.4.2-.4.2-.7.2-2.4.2-4.8.2-7.3zM62 59l2.3-.2c.7 0 1.3.3 2 .5 0 0-.3.5 0 .6h.2c.5 0 .8.3 1 .5.5 0 .6.5 1.2.3v.8c.3 1.2.4 2.8.3 4.3-.2 0-.3.3-.3.5-.4.4-.5.8-1 1 0 .3 0 .5-.3.6-.2.4-.2.6-.5.7h-1c-.4 0-.8.2-1 .5-1 0-1.8-.2-2.6-.3-.2-.2-.5-.4-.8-.4l-.8-.5h-.5c-.2 0-.2-.3-.5-.3 0-.4-.4-.6-.5-1l-.4-1.3c-.2-1.4 0-2.7.2-3.8l1.2-1.7c.2 0 .3-.2.4-.4h.6c.3 0 .3-.3.5-.5zM60 56.5v-1c0-.4.2-.4.3-.6h-.2c0-.2.7-.2.8 0 .3.4-.2.4-.4.6 0 .2.3 0 .5 0v2.3h-.4c0 .2.2.2.5.2 0 .2.2.3 0 .5 0 .2-.6 0-1 0 0-.5.3-1.3.2-2zm-.7-1.6h.2c.2.3 0 .7 0 1-.3-.2 0-.7-.2-1zm.2 1.8l-.2-.4c.2 0 .2.2.2.4zm0 1.4v-.2.2zm-.2.2c.2 0 0 .2.3.2 0 .2-.3.2-.4 0v-.2zM57.2 57v-.2c-.2-.8 0-1.5 0-2 .2-.2.7 0 1 0v1H58c-.2.4.2.3.3.4v2.5H57c0-.6 0-1.4.5-1.6h-.3zm-.5 0c-.2 0-.3-.5 0-.6.2 0 0 .5 0 .6zm-.2 1v-.7c.3 0 .3.8 0 .7zm.2-2c-.2 0-.2-.3 0-.5 0 0 .2.3 0 .4zm0-1.2v.3h-.3c0-.2.2-.2.3-.2zm-.2 3.7c.2 0 0 .4 0 .2v-.2zm-.7-3.7c0 .2-.4.3-.4 0h.4zm-1 0c0 .3-.3.2-.3.4-.3 0 0-.4.3-.3zm-.4.8l.7-.6v-.2h.4c0 .4-.3.3-.3.5v1.2c-.2 0-.2.3-.5.3 0-.5-.2-.7 0-1.2zm0 3.3v-1.7l.7-.5c.4.4.2 1.3.5 2h-1zm18.3 11c0 1-.2 2-.4 2.8h-9c0 .2-.2 0 0 0h-.6c.2-.2.4-.8 0-1.2-.7 0-.7 1-1 1.3h-2c.3-.7 1-1 1-1.7-.3-.6-1 0-1.2.4l-.7 1.3h-1l.8-1.4c0-.5.6-.7.6-1.3 0-.3-.4 0-.6 0l-.4.5-.7 1c-.2.4-.3 0-.5.4-.4.2-.6.7-1 1-.2 0 0-.4 0-.4.2-.2 0-.6.2-.6 0-.4.2-.7.4-1 0-.7.5-1 .7-1.8-.6 0-.7.6-1 1-.2.4-.6.7-.7 1.2-.2 0 0-.5 0-.8 0-.6.2-1 .3-1.7v-.8c.3-.2.2-.6 0-.7-.2 0-.3 0-.4.3-.2 0-.2.5-.3.3 0-2.5-.5-4.7-.5-7.4 0-.3 0-.4-.2-.7 1.6 0 3 0 4.8.2l-.3.4-.3.3c-.6 1.5-1 3.8-.6 6l1 1.5c1 .4 1.7 1 2.6 1.6 1.7.5 3.8.5 5.5 0 .4 0 .6 0 .8-.3 1.4-1.2 2.8-2.4 3-4.8v-1.5c-.2-1.6-.7-3-1.8-3.6.4-.3 1 0 1.7 0H72.8c.2 0 0 .5.3.7v6.5c0 1 0 2-.3 2.8zm.4-11.2c-.6 0-1.2-.3-1.8-.4 0-.3.8 0 1-.2.3-.2.2-1 .3-1.5v-1c-.4-1-1.8-.5-3-.5 0 .7-.3 1.8-.2 2.6.2.5 1 .3 1.6.5-.3.3-.8 0-1 0h-7.6v-3.6h3c-.4.4-1 .5-1.3 1-.3 0-.8.4-1 .8l.7-.4c.4 0 .5-.3 1-.4.3-.4 1-.6 1.5-1 .4 0 .7 0 1 .2H71c.6.2 1.5 0 2 .4l.3 1-.2 2.6zM67.3 55zm0 0c-.5.2-1 .4-1.4.8.5-.2 1-.3 1.4-.7zm1 .7c.2 0 0 0 0 0zm-1.7 1c.8-.3 1.2-.7 1.8-1-.5 0-.6.3-1 .4-.2.3-.6.3-.8.6zm-.7-1s0 .2 0 0zm-.6.7zm0 0zm-.2 0zm-.8.7c.3 0 .6-.2.8-.5l-.8.6zm2.3 1c.5 0 .7-.3 1.2-.4.3-.3.8-.4 1-.8-.6 0-.8.4-1.3.6-.2.3-.7.4-1 .7zm-2.3-1c-.3 0 0 .4 0 0zm-.6.5s.2 0 0 0zm3 .6c-.3.2 0 .2 0 0zm-1.3 2c-.2-.3-.7-.3-1-.4-.7 0-1.2 0-1.7.2-.3 0-.6.3-1 .5-.2 0-.4.4-.7.5-.3.2-.4.5-.8.6 0 .2 0 .3-.3.4-.2 0-.2.3-.3.3v.5c0 1.5.2 3 .6 4 .3.8 1 1 1.4 1.4.6.2 1.4.4 2.2.4h.8c1.2-.2 2-.8 2.8-1.5 0-.3.2-.6.4-.8-.2-.6.3-1 .5-1.5 0-1.4-.2-2.5-.6-3.5-.4-.5-1-.7-1.5-1V60c-.4 0-1-.2-1.2 0zM62 64.2c-.2 0-.2-.3-.3-.4.3-.2.2 0 .2.3zm0 .3c0 .2 0 0 0 0zm.4-2c0-.2 0 0 0 0zm1.7-2.2c0 .3 0 .6.2.8-.3 0-.6-.8 0-.8zm.5 4zm.7 2.8h0zm2.2-2.5c-.2 0 0 .2-.3 0l.3-.3s.2 0 0 .3zm-1-3.8s.3 0 .5.2c0 .3.2.4.3.6 0 .7.2 1.5 0 2.3 0 .2-.3.4-.5.5-.8 0-1.4-.2-2-.5 0-.2-.3-.5-.5-.7v-1l.5-.7c.2 0 .5-.2.4-.6v-.2s.2 0 .3.2c.4 0 .5-.2.8 0z"/>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="img/icon-fb.svg" alt="facebook"></a>
+          <a class="social__link  social__link--fb" href="#">
+            <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" width="14.96" height="27.72" viewBox="56.52 50 14.96 27.72">
+              <path fill="#231F20" d="M68.18 55.2c1.03.02 2 0 2.68-.3.4-.83.56-1.87.62-3-.2-.02-.06-.34-.2-.4-.04-.2-.28-.2-.32-.4-.27-.16-.45-.42-.72-.6l-2.16-.5c-.85.05-1.9-.1-2.58.1-2.62-.03-4 1.13-5.26 2.4-.02.08 0 .2-.1.2-.58 1.58-.13 3.62-.2 5.58.1.43.1.96.2 1.4-1 .3-2.22.38-3.4.5-.32.32-.2 1.08-.2 1.68.07.6.26 1.06.4 1.6.2.2.6.4.82.5.07.03.08.08.1.1.5.26 1.46 0 2.28.1-.14 1.97.25 3.9 0 5.68 0 .32.3.38.2.8 0 .96-.06 1.98.2 2.68-.28.46-.5 1-.4 1.8.12 0 .1.16.1.3-.07.47.64.17.52.7.16.45-.43.18-.42.5v.9c.53.27 1.47.17 2.27.2 1-.43 2.2-.5 2.8-1.2.5.23.9-.02 1.3-.2 0-.32.3-.34.2-.7 0-.33-.1-.5-.1-.9v-2.9c-.2-2.28 0-4.93-.3-7.17.9-.1 1.9-.07 2.6-.4.4-.44.4-1.22.56-1.9.18-.22.2-.57.2-1 .2-.2.08-.7.1-1.08-.13-.6-.16-1.3-.8-1.4-.9-.23-2.06.6-3 .3.04-1.13-.3-2.33 0-3.38l2.16-.6zm-3.82 4.77c.12.25.26.5.42.7.08.02.2 0 .2.1 1.2.06 2.2-.07 3.1-.3 0 1-.27 1.73-.52 2.5-.66.04-1.47.3-1.96.2-.27.16-.37.5-.62.7-.05.43.14.48 0 .8-.2.12-.05.6-.2.78v1.5c.08.28-.15.26-.1.5v3.48c-.1.28.14.26.1.5v3c.06.26-.14.78.1.9-.07.35-.4-.03-.82.1-.53.1-.93.35-1.55.4.2-.37.4-.64.4-1.1.1-.4-.32-.32-.5-.5.2-.64.6-1.12.77-1.8.2-.5.7-1.3.3-1.8-.52-.1-.52.3-.82.4 0 .1 0 .2-.1.2 0 .1 0 .2-.1.2 0 .13-.14.07 0 0 .04-.07 0-.2.1-.2.04-.07 0-.2.1-.2v-.3c.4-.56.7-1.2.85-1.98.2-.28.3-.66.4-1 .16-.26.35-.87.1-1.2-.5.04-.8.3-.9.7-.34-.2.14-.43.1-.7.12-.22.15-.56.3-.8.2-.4.56-1.3 0-1.6-.44 0-.6.22-.7.5-.24.2-.46.4-.55.7-.36-.06-.13-.72-.2-1.1-.06-.5.1-.9 0-1.18-.55-.8-2.02-.1-3.2-.3-.1-.3-.2-1-.1-1.2 1.05-.08 2.5.2 3.2-.2.03-.07 0-.2.1-.2.1-.72-.26-1-.5-1.4.23-.8.03-2 .1-2.98.23-.2.33-.5.5-.6.1-1 .7-1.5.73-2.5-.26 0-.6-.1-.6.2-.3-.1-.4.4-.52.2-.1-.6.26-.7.3-1 .6-.4 1.23-.9 1.88-1.2 1.76-.3 4.66-.5 6.1.2.05.6-.3.8-.2 1.5h-1.6c-1.1.2-2 .6-3 1-.22 0-.26.3-.5.4-.03.4-.22.6-.3 1-.1 1.4.12 2.5.1 3.9z"/>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#"><img class="social__icon" src="img/icon-twitter.svg" alt="twitter"></a>
+          <a class="social__link  social__link--twitter" href="#">
+            <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" width="23.5" height="20.2" viewBox="52.3 53.8 23.5 20.2">
+              <path fill="#231F20" d="M75.7 58c-.2-.5-1-.4-1.4-.5h-1c0-.4.2-.7.4-1 0-.4.3-.7.2-1.2 0-.2 0-.5.2-.6 0-.2.3-.5 0-.7 0-.2-.2-.2-.5-.2h-.2l-1.3 1.5-.5.3c-.3.2-.5.5-1 .6-.4-.3-1-.4-1.7-.4-1.2 0-2.3.2-3 .7-1 .4-1.6 1-2.2 1.7 0 .3-.4.3-.4.7v1c-1 0-1.6-.6-2.3-1l-2-1c-.7-.4-1.2-1-1.7-1.4-.2-.3-.6-.5-.7-1-.4 0-.2-.8-.7-.8-.5 0-.5.2-.6.4 0 .2-.4.2-.4.5-.2 1.2-.6 2-.6 3.3l.6 1c-.4 0-.7.3-1 .6 0 1 .5 1.6 1 2.3 0 .3.2.6.5 1 0 0 .2 0 .3.3v.2s.4.2.2.2c-.4.2-1 0-1.3.4v1.2c0 .3.3.3.3.5.5.5 1 .8 1.7 1.2.5 0 1.2 0 1.8.2 0 .4-.3.6-.6.8-1 .4-2 .4-2.8.7l-1.6.2c-.3 0-.8 0-1 .2-.2 0-.2 0-.3.2 0 .4 0 .7.4 1 0 0 .3 0 .4.2l.6.4c.5.5 1.2.8 2 1 .7.3 1.5.5 2.4.6l2.8.3h2.8c0-.2.4 0 .6 0 .5-.4 1-.5 1.6-1 .6 0 1-.5 1.5-.8 1-.7 2-1.3 2.6-2.3l.3-1c.3 0 .4-.3.6-.5l1-1.4.8-1.5c0-.4.3-.5.3-1 .3 0 .3-.6.5-.8V63c0-1 0-2.3-.2-3.3.6 0 1-.3 1.6-.6.4 0 1-.5.7-1zm-3.4 4c-.2.8-.6 1.3-1 2v.8c-.3.3-.4.7-.5 1l-.5 1-1.2 1.5c-.3.6-.8 1-1.2 1.5L66.4 71 65 72l-.6.3c0 .2-.5.2-.6.4h-3.6c-1 0-2 0-3-.2s-1.5-.8-2.3-1c0-.3.5-.2.8-.3 0-.3.4 0 .5-.3h.5c.6-.2 1.2-.3 1.7-.6.3 0 .4-.4.7-.5 0-.2 0-.4.2-.5l.2-.8c0-.2.3-.3.2-.6 0-.2 0-.4-.2-.4 0-.2-.4 0-.5-.2h-.5c0-.2-.5 0-.5-.2-.8 0-1.3-.4-2-.7.6-.2 1.2-.3 1.5-.7.5 0 1 0 1-.6 0-.7-.7-.7-1.2-.8-.8-.8-1.2-1.8-1.8-2.7l.7-.4c.5 0 .6-.4.7-.6 0-.5-.4-.6-.7-.8l-.7-.8v-2.4h.2c.2.6.5 1 .8 1.3.5.4 1 1 1.5 1 .6.5 1.3.7 1.7 1.2.6 0 1.2.4 1.7.7.7.2 1 .7 2 .6l.6-.3c.3-.4 0-1 0-1.6.4-.6 1-1 1.4-1.5l.8-.6c.4 0 .7-.2 1-.4h3c.2.2.4.4.7.4.7.7 1.2 1.7 1.3 3V62zm.3-5.7c0 .3-.2.7-.6.8-.2-.3 0-.3 0-.4.3 0 .4-.3.6-.3zm-5.5 3l.6.4c0 .2.3.3.6.4h.4l.3-.4c0-.6-.2-1-.5-1.4-.7-.4-1.7 0-1.4 1z"/>
+            </svg>
+          </a>
         </li>
       </ul>
       <div class="page-footer__html-academy">
         <span class="page-footer__html-academy-title">Разработано</span>
-        <img class="page-footer__html-academy-logo" src="img/htmlacademy.svg" alt="htmlacademy">
+        <img class="page-footer__html-academy-logo" src="img/htmlacademy.svg" height="50" width="50" alt="htmlacademy">
       </div>
     </footer>
     <!-- ENDS FOOTER-->
 
-    <!-- STARTS MODAL WINDOW-->
-    <!-- modal window unhides when "add to cart" button pressed-->
-    <div class="modal modal--hidden">
-      <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
-      <div class="modal__wrapper">
-        <h2 class="modal__main-header">Добавить в корзину</h2>
-        <span class="modal__caption">Выберите размер:</span>
-        <form class="modal__form">
-          <input class="modal__input" type="radio" name="modal-size" id="modal-size-s" checked>
-          <label class="modal__label" for="modal-size-s">S</label>
-          <input class="modal__input" type="radio" name="modal-size" id="modal-size-m">
-          <label class="modal__label" for="modal-size-m">M</label>
-          <input class="modal__input" type="radio" name="modal-size" id="modal-size-l">
-          <label class="modal__label" for="modal-size-l">L</label>
-          <button type="button" name="button" class="button button--big button__modal">Добавить</button>
-        </form>
-      </div>
-    </div>
-    <!-- ENDS MODAL WINDOW-->
+    <script src="js/init.js"></script>
+
   </body>
 </html>

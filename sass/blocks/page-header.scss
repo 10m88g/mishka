@@ -4,33 +4,31 @@
   position: relative;
 }
 
+
 .page-header__main-header {
-  font-family: "Open Sans Bold", "Tahoma", sans-serif;
+  font-weight: bold;
   text-align: center;
   box-sizing: border-box;
   display: block;
-  font-size: 27px;
-  line-height: 29px;
   margin: 0;
   background-color: $light-gray;
-  padding: 74px 30px;
+  padding: 0 30px;
+  padding-top: 70px;
+  padding-bottom: 77px;
+  font-size: 27px;
+  line-height: 29.3px;
 }
 .page-header__main-header--index {
-  height: 280px;
+  min-height: 280px;
   width: 320px;
-  padding-top: 80px;
+  padding-top: 70px;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   overflow: hidden;
 }
-.page-header__logo {
-  padding-top: 22px;
-  padding-bottom: 17px;
-}
-.page-header__logo-wrapper {
-  border-bottom: 1px solid #ececec;
-}
+
+
 .page-header__nav-button {
   width: 20px;
   height: 20px;
@@ -43,7 +41,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+
 .page-header__button {
+  position: relative;
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
@@ -55,9 +56,25 @@
   background-color: #63d1bb;
   color: white;
   border: none;
+
+  &:hover {
+    position: relative;
+    bottom: 5px;
+    padding-bottom: 33px;
+    margin-bottom: -5px;
+  }
+  &:active {
+    bottom: 0;
+    padding-bottom: 28px;
+    margin-bottom: 0px;
+    color: #8be1d0;
+  }
 }
 .page-header__button--right {
   background-color: #56c3b2;
+  &:active {
+    color: #7dd3c6;
+  }
 }
 
 @media (min-width: 768px) {
@@ -65,14 +82,13 @@
   .page-header {
     width: 768px;
   }
-  .page-header__nav-button {
-    display: none;
-  }
+
+
   .page-header__main-header {
-    margin-top: -72px;
     font-size: 43px;
-    line-height: 49px;
-    padding: 161px 130px 0px 130px;
+    line-height: 48px;
+    margin-top: -60px;
+    padding: 160px 130px 0px 130px;
   }
   .page-header__main-header--index {
     width: 100%;
@@ -80,44 +96,88 @@
     background-size: cover;
   }
   .page-header__main-header--form {
-    padding-top: 104px;
+    padding-top: 95px;
     padding-bottom: 90px;
   }
   .page-header__main-header--catalog {
-    padding-top: 106px;
+    padding-top: 100px;
     padding-bottom: 78px;
+    padding-left: 140px;
+    margin-bottom: 80px;
   }
+
+
   .page-header__catalog-list {
-    display: table;
+    display: flex;
     box-sizing: border-box;
     width: 100%;
-    vertical-align: middle;
+    flex-flow: row nowrap;
     background-color: #f8f8f8;
     padding: 0 50px;
   }
+  .page-header__button::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 62px;
+    right: 24px;
+    top: 30px;
+    opacity: 0.8;
+    background: url("../img/icon-interior.svg") no-repeat 50% 50%;
+  }
+  .page-header__button--right::after {
+    right: 27px;
+    background-image: url("../img/icon-toy.svg");
+  }
   .page-header__button {
-    display: table-cell;
-    padding: 31px 160px 32px 30px;
-    width: 50%;
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 30px 160px 30px 35px;
+
+    &:hover {
+      padding-bottom: 35px;
+    }
+    &:active {
+      padding-bottom: 30px;
+    }
+  }
+  .page-header__button:hover.page-header__button::after {
+    opacity: 1;
+  }
+  .page-header__button:active.page-header__button::after {
+    opacity: 0.5;
   }
 
 } //ends tablet styles
 
 @media (min-width: 1150px) {
+
   .page-header {
     width: 1150px;
+    margin-bottom: 60px;
+
   }
   .page-header__main-header--index {
+    padding-top: 158px;
     padding-right: 250px;
     padding-left: 250px;
+    font-size: 53px;
+    line-height: 57px;
   }
   .page-header__main-header--form {
-    padding-top: 104px;
-    padding-bottom: 90px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 53px;
+    line-height: 57px;
   }
   .page-header__main-header--catalog {
-    padding-top: 105px;
+    padding-top: 98px;
     padding-bottom: 111px;
+    padding-left: 130px;
+    margin-bottom: 70px;
+    font-size: 53px;
+    line-height: 57px;
   }
   .page-header__button {
     padding-right: 350px;

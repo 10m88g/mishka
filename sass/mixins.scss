@@ -14,13 +14,35 @@
     clear: both;
   }
 }
+@mixin visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
 
 @mixin about-us-icon($url) {
   content: "";
   position: absolute;
   width: 55px;
   height: 40px;
-  top: 0px;
+  top: -2px;
+  left: -2px;
   background: url($url) no-repeat;
   background-position: 50% 50%;
+}
+
+@mixin form-element($top, $left) {
+  content: "";
+  display: block;
+  position: absolute;
+  top: $top;
+  left: $left;
+  height: 36px;
+  width: 36px;
+  border: 2px solid $dark-gray;
 }
