@@ -76,11 +76,39 @@
     color: #7dd3c6;
   }
 }
+.page-header__button::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 62px;
+  right: 24px;
+  top: 15px;
+  opacity: 0.8;
+  background: url("../img/icon-interior.svg") no-repeat 50% 50%;
+}
+.page-header__button--right::after {
+  right: 27px;
+  background-image: url("../img/icon-toy.svg");
+}
+.page-header__button:hover.page-header__button::after {
+  opacity: 1;
+}
+.page-header__button:active.page-header__button::after {
+  opacity: 0.5;
+}
 
 @media (min-width: 768px) {
 
   .page-header {
     width: 768px;
+  }
+  .page-header:after {
+    @include zigzag;
+    height: 22px;
+    bottom: -12px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    transform: none;
+    z-index: 10;
   }
 
 
@@ -115,21 +143,7 @@
     background-color: #f8f8f8;
     padding: 0 50px;
   }
-  .page-header__button::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 62px;
-    right: 24px;
-    top: 30px;
-    opacity: 0.8;
-    background: url("../img/icon-interior.svg") no-repeat 50% 50%;
-  }
-  .page-header__button--right::after {
-    right: 27px;
-    background-image: url("../img/icon-toy.svg");
-  }
-  .page-header__button {
+    .page-header__button {
     position: relative;
     font-size: 20px;
     line-height: 30px;
@@ -142,11 +156,12 @@
       padding-bottom: 30px;
     }
   }
-  .page-header__button:hover.page-header__button::after {
-    opacity: 1;
+  .page-header__button::after {
+    right: 24px;
+    top: 30px;
   }
-  .page-header__button:active.page-header__button::after {
-    opacity: 0.5;
+  .page-header__button--right::after {
+    right: 27px;
   }
 
 } //ends tablet styles
@@ -156,7 +171,10 @@
   .page-header {
     width: 1150px;
     margin-bottom: 60px;
-
+  }
+  .page-header:after {
+    bottom: -17px;
+    height: 32px;
   }
   .page-header__main-header--index {
     padding-top: 158px;
@@ -173,9 +191,9 @@
   }
   .page-header__main-header--catalog {
     padding-top: 98px;
-    padding-bottom: 111px;
+    padding-bottom: 101px;
     padding-left: 130px;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
     font-size: 53px;
     line-height: 57px;
   }

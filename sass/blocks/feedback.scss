@@ -1,7 +1,13 @@
 .feedback {
   @include width-container;
+  position: relative;
   padding: 0 30px;
   text-align: left;
+}
+.feedback:after {
+  @include zigzag;
+  left: 0px;
+  bottom: 34px;
 }
 .feedback__title {
   margin-top: 28px;
@@ -67,7 +73,10 @@
     background: url("../img/review@1x.jpg") no-repeat 0% 0%;
     background-position: 2px;
   }
-
+  .feedback:after {
+    bottom: -82px;
+    height: 15px;
+  }
 
   .feedback__title {
     order: 1;
@@ -125,6 +134,10 @@
     background-position-x: 50px;
     background-position-y: 20px;
     margin-bottom: 160px;
+  }
+  .feedback:after {
+    bottom: -90px;
+    height: 23px;
   }
   .feedback__button {
     margin-top: 0px;
