@@ -251,6 +251,12 @@
     padding-right: 20px;
     padding-bottom: 5px;
   }
+  .catalog-item__title  .catalog-item__info:hover {
+    box-shadow: 0px 7px 10px 0px $icon-gray;
+  }
+  .catalog-item__info:active + .catalog-item__title {
+    box-shadow: 0px 3px 5px -2px $icon-gray;
+  }
   .catalog-item__title--video:after {
     left: 63px;
     top: 35px;
