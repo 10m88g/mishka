@@ -71,7 +71,6 @@
     opacity: 0.4;
   }
 }
-
 @media (max-width: 767px) {
   .navbar__menu-item {
     width: 100%;
@@ -94,7 +93,12 @@
     background-image: url("../img/icon-menu-open.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: contain;
   }
+  .navbar__menu-logo--close {
+    background-image: url("../img/icon-menu-close.svg");
+  }
+
 } //ends mobile specific styles
 
 @media (min-width: 768px) {
