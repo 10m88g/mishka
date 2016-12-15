@@ -62,7 +62,8 @@
   .about-us__item {
     width: 334px;
     font-size: 20px;
-    padding-bottom: 55px;
+    padding-bottom: 52px;
+    line-height: 25px;
 
     // changing orders to set elements in two columns
     // without setting limited heigh for block
@@ -97,8 +98,9 @@
     padding-top: 70px;
   }
   .about-us__item {
-    padding-top: 53px;
+    padding-top: 55px;
     width: 350px;
+    line-height: 24px;
   }
 
 } //ends desktop styles

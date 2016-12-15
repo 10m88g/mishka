@@ -132,8 +132,8 @@
     border-bottom: 1px solid $dark-border-gray;
   }
   .navbar__logo {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 19px;
+    padding-bottom: 19px;
   }
   .navbar__menu-link {
     padding: 30px;
@@ -219,11 +219,16 @@
     flex-grow: 2;
     min-width: auto;
     text-align: left;
-    padding-left: 75px;
+    padding-left: 46px;
     margin-right: auto;
   }
   .navbar__menu-icon {
     top: 32px;
+  }
+  .navbar__logo {
+    padding-top: 8px;
+    padding-bottom: 0px;
+    padding-left: 0px;
   }
 
 

@@ -12,7 +12,11 @@
       <nav class="navbar">
         <ul class="navbar__menu">
           <li class="navbar__menu-item  navbar__logo-wrapper">
-            <img class="navbar__logo" src="img/logo-mobile.svg" alt="mishka">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="navbar__logo" src="img/logo-mobile.svg" alt="логотип mishka">
+            </picture>
             <button class="button  navbar__nav-button" onclick="navbarButtonClick()" type="button" name="navbar__nav-button">Открыть меню</button>
           </li>
           <li class="navbar__menu-item  navbar__menu-item--catalog">
