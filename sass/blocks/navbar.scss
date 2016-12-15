@@ -90,10 +90,12 @@
     right: 31px;
     border: none;
     font-size: 0px;
+    padding: 10px;
     background-image: url("../img/icon-menu-open.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
+    transition: 100ms;
   }
   .navbar__menu-logo--close {
     background-image: url("../img/icon-menu-close.svg");
