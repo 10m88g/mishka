@@ -28,6 +28,10 @@
   color: #63d1bb;
   text-transform: uppercase;
 }
+.week-product__product-image {
+  width: 260px;
+  height: auto;
+}
 .week-product__price {
   text-align: center;
   font-size: 17px;
@@ -85,7 +89,6 @@
     right: 50px;
     height: 404px;
     width: 333px;
-    z-index: -1;
   }
 
 
@@ -162,6 +165,7 @@
     height: 636px;
     width: 525px;
     top: 14px;
+    z-index: -1;
   }
   .week-product__price {
     margin-top: 110px;
