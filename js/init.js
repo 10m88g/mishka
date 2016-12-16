@@ -30,7 +30,7 @@ function prepareCartButtons() {
 function prepareCartLinks() {
   var buttonsList = document.getElementsByClassName("catalog-item__to-cart-link");
   for (var i = 0; i < buttonsList.length; ++i) {
-    buttonsList[i].href="catalog.html";
+    buttonsList[i].removeAttribute("href");
   }
 }
 
