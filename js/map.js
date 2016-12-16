@@ -10,7 +10,7 @@ function initMap() {
 
   var marker = new google.maps.Marker({
     position: map.getCenter(),
-    icon: { url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg) },
+    icon: { url: "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg) },
     map: map
   });
 }

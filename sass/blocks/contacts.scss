@@ -56,10 +56,11 @@
 }
 .contacts__table-cell--email {
   &:hover {
-    color: $cyan;
+    color: #46c1ae;
   }
   &:active {
-    color: $light-cyan;
+    color: #46c1ae;
+    opacity: 0.3;
   }
 }
 .contacts__table-cell--email span {

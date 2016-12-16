@@ -1,10 +1,11 @@
+//initialise basic functions, that prepare page for js logic
 function init() {
   hideNavbar();
   prepareCartButtons();
   prepareCartLinks();
 }
 
-
+//add --hidden class to all menu elements excluding logo and menu open/close button
 function hideNavbar() {
   var menuOpened = false;
   var elements = document.getElementsByClassName("navbar__menu-item");
@@ -15,6 +16,7 @@ function hideNavbar() {
   });
 }
 
+//removes action attribute of form to disable redirection to cart.html
 function prepareCartButtons() {
   var form = document.getElementById("week-product-form");
   try {
@@ -24,24 +26,28 @@ function prepareCartButtons() {
   }
 }
 
+//changes href of <a> to avoid redirection on click
 function prepareCartLinks() {
   var buttonsList = document.getElementsByClassName("catalog-item__to-cart-link");
   for (var i = 0; i < buttonsList.length; ++i) {
-    buttonsList[i].href="#";
+    buttonsList[i].href="#!";
   }
 }
 
+//adds --hidden class to modal window
 function hideModal() {
   var modal = document.getElementById("modal-window");
   modal.classList.add("modal--hidden");
 }
 
+//removes --hidden class of modal window
 function viewModal() {
   var modal = document.getElementById("modal-window");
   modal.classList.remove("modal--hidden");
   return false;
 }
 
+//hides menu elements on menu button click and changes background of button
 function navbarButtonClick() {
 
   var button = document.getElementsByClassName("navbar__nav-button")[0];
