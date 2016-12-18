@@ -18,7 +18,7 @@
 .about-us__item {
   position: relative;
   padding-top: 54px;
-  padding-bottom: 31px;
+  margin-bottom: 31px;
 
   &--1::before {
     @include about-us-icon("../img/icon-feature-1.svg");
@@ -62,7 +62,7 @@
   .about-us__item {
     width: 334px;
     font-size: 20px;
-    padding-bottom: 52px;
+    margin-bottom: 52px;
     line-height: 25px;
 
     // changing orders to set elements in two columns

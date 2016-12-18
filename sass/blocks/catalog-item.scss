@@ -30,12 +30,14 @@
   line-height: 24px;
   margin: 0;
   padding-bottom: 8px;
+  pointer-events: none;
 }
 .catalog-item__description {
   font-size: 13px;
   line-height: 24px;
   color: $dark-gray;
   margin: 0;
+  pointer-events: none;
 }
 .catalog-item__description--narrow {
   margin-left: 5px;
@@ -48,6 +50,7 @@
   padding-top: 23px;
   margin-top: 22px;
   display: flex;
+  pointer-events: none;
 }
 .catalog-item__price {
   font-weight: bold;
@@ -55,6 +58,7 @@
 }
 .catalog-item__to-cart-link {
   margin-left: auto;
+  pointer-events: auto;
 }
 
 
@@ -229,9 +233,11 @@
     margin-top: 50px;
     margin-right: 50px;
   }
-  .catalog-item:nth-of-type(3n) {
+  .catalog-item:nth-of-type(3n),
+  .catalog-item--production-video {
     margin-right: 0;
   }
+
 
   .catalog-item__image {
     margin: 0;

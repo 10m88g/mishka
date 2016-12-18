@@ -66,6 +66,7 @@
 .contacts__table-cell--email span {
   display: inline-block;
   border-bottom: 1px solid $cyan;
+  pointer-events: none;
 
   &:hover {
     border-color: #46c1ae;
@@ -98,7 +99,7 @@
     position: absolute;
     content: "";
     top: 62px;
-    right: 48px;
+    right: 50px;
     height: 80px;
     width: 50px;
     background: url("../img/icon-flag.svg") no-repeat;
@@ -106,7 +107,7 @@
   .contacts__title {
     position: relative;
     margin: 0;
-    margin-left: 50px;
+    margin-left: 46px;
     margin-right: 130px;
     margin-bottom: 48px;
     font-size: 43px;
@@ -139,8 +140,8 @@
     .contacts__table-row:nth-of-type(1){
       float: left;
       margin-left: 20px;
-      padding-right: 20px;
-      margin-right: 30px;
+      padding-right:18px;
+      margin-right: 36px;
     }
     .contacts__table-row:nth-of-type(2){
       float: right;
@@ -151,7 +152,7 @@
       line-height: 30px;
     }
     .contacts__table-cell:first-of-type {
-      width: 80px;
+      width: 75px;
     }
     .contacts__table-cell--adress {
       width: 250px;
@@ -204,6 +205,7 @@
     margin: 0;
     font-size: 17px;
     line-height: 30px;
+    margin-bottom: 80px; //fixes ie11 margin:auto bug
   }
   .contacts__table-cell {
     padding: 0px;
