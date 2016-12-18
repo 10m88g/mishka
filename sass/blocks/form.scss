@@ -66,8 +66,10 @@
   margin-top: 11px;
   border: 2px solid $dark-gray;
 }
+
 .form__textarea::placeholder,
 .form__text-input::placeholder {
+  font-family: "Open Sans", "Tahoma", sans-serif;
   color: $dark-gray;
   opacity: 0.3;
 }
@@ -257,11 +259,16 @@
     font-size: 19px;
     padding-bottom: 18px;
     padding-left: 18px;
+    letter-spacing: 0.4px;
+  }
+  .form__text-input--tel {
+    letter-spacing: -1.1px;
   }
   .form__textarea {
     margin: 0;
     font-size: 19px;
     padding-top: 10px;
+    letter-spacing: 0.7px;
   }
   .form__fieldset--single-field .form__text-input {
     width: 100%;
@@ -337,6 +344,9 @@
 
   .form__text-input {
     flex-basis: 570px;
+  }
+  .form__text-input--tel {
+    letter-spacing: -1.5px;
   }
   .form__button {
     margin-left: 225px;
