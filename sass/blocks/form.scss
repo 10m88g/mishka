@@ -50,7 +50,7 @@
   color: $dark-gray;
   box-sizing: border-box;
   width: 100%;
-  padding: 12px 10px 12px 0;
+  padding: 10px 10px 14px 0;
   margin-bottom: 23px;
   border: none;
   border-bottom: 2px solid $dark-gray;
@@ -66,14 +66,12 @@
   margin-top: 11px;
   border: 2px solid $dark-gray;
 }
-
 .form__textarea::placeholder,
 .form__text-input::placeholder {
   font-family: "Open Sans", "Tahoma", sans-serif;
   color: $dark-gray;
   opacity: 0.3;
 }
-
 
 .form__radio-label {
   display: block;
@@ -96,13 +94,16 @@
   padding-bottom: 5px;
 }
 .form__text-input--tel {
-  padding-top: 10px;
-  padding-bottom: 13px;
-  background: url("../img/icon-phone.svg") no-repeat 99% 0%;
+  padding-top: 8px;
+  padding-bottom: 14px;
+  background: url("../img/icon-phone.svg") no-repeat 96% 0%;
+  background-size: 25px 25px;
 }
 .form__text-input--email {
-  padding-top: 10px;
-  background: url("../img/icon-mail.svg") no-repeat 100% 0%;
+  padding-top: 8px;
+  padding-bottom: 14px;
+  background: url("../img/icon-mail.svg") no-repeat 97% 0%;
+  background-size: 30px 35px;
 }
 
 
@@ -197,7 +198,7 @@
   }
   .form__fieldset--single-field {
     margin-top: 0;
-    padding-top: 62px;
+    padding-top: 65px;
     padding-bottom: 11px;
   }
   .form__fieldset--email {
@@ -217,7 +218,7 @@
 
   .form__flex-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: baseline;
   }
   .form__flex-wrapper--narrow {
@@ -257,18 +258,23 @@
     flex-basis: 370px;
     flex-grow: 2;
     font-size: 19px;
-    padding-bottom: 18px;
+    padding-top: 12px;
+    padding-bottom: 16px;
     padding-left: 18px;
-    letter-spacing: 0.4px;
+    margin-bottom: 25px;
   }
   .form__text-input--tel {
-    letter-spacing: -1.1px;
+    padding-top: 6px;
+    letter-spacing: -0.2px;
+    background-position: 95% -10%;
+  }
+  .form__text-input--email {
+    background-position: 95% -40%;
   }
   .form__textarea {
     margin: 0;
     font-size: 19px;
     padding-top: 10px;
-    letter-spacing: 0.7px;
   }
   .form__fieldset--single-field .form__text-input {
     width: 100%;
@@ -282,6 +288,7 @@
     padding-left: 80px;
     margin-bottom: 10px;
     font-size: 19px;
+    align-self: flex-start;
   }
   .form__checkbox-label {
     font-size: 19px;
@@ -291,6 +298,7 @@
     padding-bottom: 20px;
     padding-left: 80px;
     margin-bottom: 18px;
+    align-self: flex-start;
   }
   .form__text-input-label {
     margin-right: 26px;
@@ -340,13 +348,19 @@
   .form__fieldset--single-field {
     padding-right: 225px;
   }
+  .form__fieldset--textarea {
+    padding-bottom: 5px;
+  }
 
 
   .form__text-input {
     flex-basis: 570px;
   }
   .form__text-input--tel {
-    letter-spacing: -1.5px;
+    background-position: 99% -10%;
+  }
+  .form__text-input--email {
+    background-position: 99% -5px;
   }
   .form__button {
     margin-left: 225px;
