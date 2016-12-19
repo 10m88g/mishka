@@ -19,13 +19,19 @@
 .contacts__map {
   height: 457px;
   width: 320px;
+  background-color: #eae6dd;
   background: url("../img/map-mobile@1x.jpg") no-repeat;
   background-size: cover;
 }
-
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .contacts__map {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+}
 
 .contacts__table {
   display: table;
+  width: 290px;
   list-style: none;
   padding: 0;
   text-align: left;
@@ -46,20 +52,29 @@
     color: $dark-gray;
   }
 }
+.contacts__table-cell:first-of-type {
+  width: 58px;
+  padding-right: 10px;
+}
+.contacts__table-cell a {
+  color: black;
+}
 .contacts__table-cell--adress {
   padding-right: 50px;
 }
 .contacts__table-cell--email {
   &:hover {
-    color: $cyan;
+    color: #46c1ae;
   }
   &:active {
-    color: $light-cyan;
+    color: #46c1ae;
+    opacity: 0.3;
   }
 }
 .contacts__table-cell--email span {
   display: inline-block;
   border-bottom: 1px solid $cyan;
+  pointer-events: none;
 
   &:hover {
     border-color: #46c1ae;
@@ -67,12 +82,6 @@
   &:active {
     border-color: $light-cyan;
   }
-}
-.contacts__table-cell:first-of-type {
-  width: 70px;
-}
-.contacts__table-cell a {
-  color: black;
 }
 
 @media (min-width: 768px) {
@@ -92,7 +101,7 @@
     position: absolute;
     content: "";
     top: 62px;
-    right: 48px;
+    right: 50px;
     height: 80px;
     width: 50px;
     background: url("../img/icon-flag.svg") no-repeat;
@@ -100,7 +109,7 @@
   .contacts__title {
     position: relative;
     margin: 0;
-    margin-left: 50px;
+    margin-left: 46px;
     margin-right: 130px;
     margin-bottom: 48px;
     font-size: 43px;
@@ -114,6 +123,12 @@
     height: 457px;
     width: 768px;
     margin-bottom: 58px;
+    background-image: url("../img/map-tablet@1x.jpg");
+  }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .contacts__map {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
   .contacts__button {
     margin: 0 auto;
@@ -124,11 +139,16 @@
 
   @media (min-width: 768px) and (max-width: 1149px) {
 
+    .contacts__table {
+      width: 680px;
+      border-collapse: collapse;
+      padding: 0;
+    }
     .contacts__table-row:nth-of-type(1){
       float: left;
       margin-left: 20px;
-      padding-right: 20px;
-      margin-right: 30px;
+      padding-right:0px;
+      margin-right: 0px;
     }
     .contacts__table-row:nth-of-type(2){
       float: right;
@@ -137,9 +157,13 @@
       width: 200px;
       font-size: 17px;
       line-height: 30px;
+      padding-right: 0;
+
     }
-    .contacts__table-cell:first-of-type {
-      width: 80px;
+    .contacts__table-row .contacts__table-cell:first-of-type {
+      width: 65px;
+      padding-right: 10px;
+      padding-left: 0;
     }
     .contacts__table-cell--adress {
       width: 250px;
@@ -173,7 +197,13 @@
     top: 0px;
     right: 50px;
     width: 525px;
-    height: 100%;
+    background-image: url("../img/map-desktop@1x.jpg");
+    background-size: contain;
+  }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .contacts__map {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
   .contacts__button {
     margin: 0;
@@ -183,19 +213,25 @@
 
 
   .contacts__table {
+    width: 350px;
     margin: 0;
     font-size: 17px;
     line-height: 30px;
+    margin-bottom: 76px; //fixes ie11 margin:auto bug
   }
   .contacts__table-cell {
     padding: 0px;
   }
-  .contacts__table-cell:first-of-type {
-    width: 120px;
-    padding-right: 20px;
+  .contacts__table-row .contacts__table-cell:first-child {
+    width: 50px;
+    padding-right: 10px;
+  }
+  .contacts__table-row .contacts__table-cell:nth-child(2) {
+    width: 100px;
+    padding-right: 10px;
+    padding-left: 0;
   }
   .contacts__table-cell--adress {
-    width: 380px;
     padding-top: 30px;
     padding-right: 0;
   }

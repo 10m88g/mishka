@@ -23,10 +23,11 @@ gulp.task("style", function() {
 gulp.task("serve", ["style"], function() {
   server.init({
     server: ".",
+    ghostMode: false,
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false,
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);

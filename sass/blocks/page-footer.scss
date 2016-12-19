@@ -12,11 +12,12 @@
 .page-footer__html-academy {
   display: table;
   margin-left: 70px;
-  padding: 10px 0px;
+  padding: 12px 0px;
   user-select: none;
+  text-decoration: none;
 
-  &:active {
-    color: $active-black;
+  &:link, &:visited {
+    color: black;
   }
 }
 .page-footer__html-academy-title {
@@ -31,13 +32,15 @@
   margin-left: 20px;
   height: 50px;
   width: 40px;
-  opacity: 0.8;
 }
-.page-footer__html-academy:hover .page-footer__html-academy-logo {
-  opacity: 1;
+.page-footer__html-academy:hover .page-footer__logo-path {
+  fill: #46c1ae;
 }
-.page-footer__html-academy:active .page-footer__html-academy-logo {
-  opacity: 0.5;
+.page-footer__html-academy:active .page-footer__logo-path {
+  fill: #bde2dd;
+}
+.page-footer__html-academy:active .page-footer__html-academy-title {
+  color: $active-black
 }
 .page-footer__logo {
   display: none;
@@ -45,38 +48,40 @@
 
 @media (min-width: 768px) {
 
-    .page-footer {
-      position: relative;
-      width: 768px;
-      padding: 31px 50px;
-      text-align: center;
-    }
-    .page-footer__logo {
-      position: absolute;
-      display: block;
-      height: 35px;
-      width: 100px;
-      top: 55px;
-      left: 50px;
-      background: url("../img/logo-mobile.svg") no-repeat 50% 50%;
+  .page-footer {
+    position: relative;
+    width: 768px;
+    padding: 31px 50px;
+    text-align: center;
+  }
 
-      &:hover {
-        background-image: url("../img/logo-mobile--cyan.svg");
-      }
-      &:active {
-        opacity: 0.5;
-      }
+
+  .page-footer__logo {
+    position: absolute;
+    display: block;
+    height: 35px;
+    width: 100px;
+    top: 50px;
+    left: 50px;
+    background: url("../img/logo-footer.svg") no-repeat 50% 50%;
+
+    &:hover {
+      background-image: url("../img/logo-footer--cyan.svg");
     }
-    .page-footer__html-academy {
-      position: absolute;
-      padding: 0;
-      margin: 0;
-      top: 50px;
-      right: 45px;
+    &:active {
+      opacity: 0.5;
     }
-    .page-footer__social {
-      border: none;
-    }
+  }
+  .page-footer__html-academy {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 48px;
+    right: 45px;
+  }
+  .page-footer__social {
+    border: none;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -84,5 +89,11 @@
   .page-footer {
     width: 1150px;
   }
-
+  .page-footer__html-academy {
+    top: 45px;
+    right: 45px;
+  }
+  .page-footer .page-footer__social {
+    margin: 0 200px;
+  }
 }
