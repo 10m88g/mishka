@@ -3,7 +3,6 @@
   width: 320px;
   margin: 0 auto;
   box-sizing: border-box;
-  //outline: 1px solid red;
 }
 
 @mixin clearfix {
@@ -30,8 +29,8 @@
   position: absolute;
   width: 55px;
   height: 40px;
-  top: -2px;
-  left: -2px;
+  top: -6px;
+  left: -6px;
   background: url($url) no-repeat;
   background-position: 50% 50%;
 }

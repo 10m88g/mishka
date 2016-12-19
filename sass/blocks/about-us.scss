@@ -12,12 +12,13 @@
 .about-us__title {
   margin-top: 45px;
 }
-.about-us__item-caption {
+.about-us__caption {
   margin: 0;
+  line-height: 21px;
 }
 .about-us__item {
   position: relative;
-  padding-top: 54px;
+  padding-top: 50px;
   margin-bottom: 31px;
 
   &--1::before {
@@ -51,6 +52,7 @@
   .about-us__title {
     margin-top: 0;
     margin-bottom: 48px;
+    letter-spacing: -0.3px;
   }
 
 
@@ -58,12 +60,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .about-us__caption {
+    line-height: 23px;
+    letter-spacing: 0.2px;
   }
   .about-us__item {
     width: 334px;
     font-size: 20px;
-    margin-bottom: 52px;
-    line-height: 25px;
+    padding-top: 58px;
+    margin-bottom: 51px;
 
     // changing orders to set elements in two columns
     // without setting limited heigh for block
@@ -86,6 +93,10 @@
       order: 6;
     }
   }
+.about-us__item:before {
+  top: 0px;
+  left: -5px;
+}
 
 } // ends tablet styles
 
@@ -100,6 +111,8 @@
   .about-us__item {
     padding-top: 55px;
     width: 350px;
+  }
+  .about-us__caption {
     line-height: 24px;
   }
 
