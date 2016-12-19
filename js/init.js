@@ -1,8 +1,6 @@
 //initialise basic functions, that prepare page for js logic
 function init() {
   hideNavbar();
-  prepareCartButtons();
-  prepareCartLinks();
 }
 
 //add --hidden class to all menu elements excluding logo and menu open/close button
@@ -14,24 +12,6 @@ function hideNavbar() {
       element.classList.add("navbar__menu-item--hidden");
     }
   });
-}
-
-//removes action attribute of form to disable redirection to cart.html
-function prepareCartButtons() {
-  var form = document.getElementById("week-product-form");
-  try {
-    form.removeAttribute("action");
-  } catch (e) {
-    console.log("no forms on page");
-  }
-}
-
-//changes href of <a> to avoid redirection on click
-function prepareCartLinks() {
-  var buttonsList = document.getElementsByClassName("catalog-item__to-cart-link");
-  for (var i = 0; i < buttonsList.length; ++i) {
-    buttonsList[i].removeAttribute("href");
-  }
 }
 
 //adds --hidden class to modal window

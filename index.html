@@ -50,8 +50,8 @@
       </nav> <!-- end of menu -->
       <h1 class="title  page-header__main-header  page-header__main-header--index">Милые штуки ручной<br>работы для дома</h1>
       <div class="page-header__catalog-list">
-        <a class="button  page-header__button" href="catalog.html">Предметы интерьера</a>
-        <a class="button  page-header__button  page-header__button--right" href="catalog.html">Детские игрушки</a>
+        <a class="button  page-header__button" href="catalog.html#interior">Предметы интерьера</a>
+        <a class="button  page-header__button  page-header__button--right" href="catalog.html#toys">Детские игрушки</a>
       </div>
     </header>
     <!-- ENDS HEADER-->
@@ -80,8 +80,8 @@
         <img class="week-product__product-image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="изображение товара" width="260" height="315">
       </picture>
       <p class="week-product__price  title">Цена: 990 руб.</p>
-      <form id="week-product-form" action="modal.html">
-        <button class="button  button--big  week-product__button" onclick="return viewModal()">Заказать</button>
+      <form id="week-product-form" action="item-info.html">
+        <button class="button  button--big  week-product__button">Заказать</button>
       </form>
     </article>
     <div class="zigzag"></div>
@@ -124,7 +124,9 @@
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve"><polygon points="0,11.002 42.341,11.002 34.166,2.828 36.995,0 50,12.998 49.996,13.001 50,13.005 36.995,26.003 34.166,23.175 42.339,15.002 0,15.002 "/></svg>
         </button>
       </div>
-      <button class="button  button--big  feedback__button">Написать</button>
+      <form class="feedback__form" action="feedback.html">
+        <button class="button  button--big  feedback__button">Написать</button>
+      </form>
     </section>
     <!-- ENDS FEEDBACK-->
     <div class="zigzag zigzag--after-feedback"></div>
@@ -173,7 +175,7 @@
     <!-- ENDS FOOTER-->
 
     <!-- STARTS MODAL WINDOW-->
-    <!-- modal window unhides when "add to cart" button pressed-->
+    <!-- to unhide modal prompt "viewModal() in console"-->
     <div class="modal  modal--hidden" id="modal-window">
       <div class="modal__filter"></div> <!-- fullscreen white(rgba(255,255,255, 0.9)) css filter with fixed position -->
       <div class="modal__wrapper">
