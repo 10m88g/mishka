@@ -4,11 +4,6 @@
   padding: 0 30px;
   position: relative;
 }
-.week-product:after {
-  @include zigzag;
-  left: 0px;
-  bottom: -13px;
-}
 
 
 .week-product__description {
@@ -78,10 +73,6 @@
     padding: 0 50px;
     padding-bottom: 50px;
   }
-  .week-product:after {
-    height: 15px;
-    bottom: -16px;
-  }
 
 
   .week-product__product-image {
@@ -149,10 +140,6 @@
     width: 1150px;
     padding-left: 226px;
     padding-bottom: 75px;
-  }
-  .week-product:after {
-    height: 23px;
-    bottom: -20px;
   }
   .week-product__title {
     left: 94px;

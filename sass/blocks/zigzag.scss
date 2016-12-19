@@ -1,0 +1,42 @@
+.zigzag {
+  @include zigzag;
+  position: relative;
+  top: 5px;
+  margin-bottom: -6px;
+  background: url("../img/bg-zigzag-line.svg") 50% center;
+  background-repeat: repeat-x;
+  background-size: 320px 100%;
+
+  &--after-feedback {
+    top: -40px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .zigzag {
+    height: 15px;
+    margin-bottom: -15px;
+    background-size: 768px 100%;
+
+    &--after-feedback {
+      top: 0px;
+    }
+  }
+
+} //ends tablet styles
+
+@media (min-width: 1150px) {
+
+  .zigzag {
+    height: 23px;
+    top: 0;
+    margin-bottom: -23px;
+    background-size: 1150px 100%;
+
+    &--after-feedback {
+      top: -95px;
+    }
+  }
+
+} //ends desktop styles
