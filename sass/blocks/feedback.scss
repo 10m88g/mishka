@@ -141,8 +141,6 @@
     background-position-y: 20px;
     margin-bottom: 160px;
   }
-
-
   .feedback:after {
     bottom: -90px;
     height: 23px;
@@ -154,6 +152,10 @@
   .feedback__description {
     padding-right: 100px;
     margin-bottom: 35px;
+    letter-spacing: 0px;
+  }
+  .feedback__indent {
+    letter-spacing: 5px;
   }
 
 } //ends display styles

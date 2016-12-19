@@ -137,6 +137,10 @@
 
   @media (min-width: 768px) and (max-width: 1149px) {
 
+    .contacts__table {
+      width: 735px;
+      border-collapse: collapse;
+    }
     .contacts__table-row:nth-of-type(1){
       float: left;
       margin-left: 20px;

@@ -1,5 +1,5 @@
 .catalog-item {
-  margin-top: 32px;
+  margin-top: 30px;
   display: flex;
   flex-flow: row wrap;
   width: 260px;
@@ -17,9 +17,9 @@
   width: 100%;
   border: 1px solid $light-gray;
   border-top: none;
-  padding-top: 26px;
-  padding-right: 25px;
-  padding-bottom: 26px;
+  padding-top: 27px;
+  padding-right: 27px;
+  padding-bottom: 27px;
   padding-left: 28px;
 }
 
@@ -213,8 +213,8 @@
   }
   .catalog-item__description--narrow {
     margin: 0;
-    margin-left: -2px;
-    padding-right: 0;
+    margin-left: -4px;
+    padding-right: 0px;
     margin-bottom: 10px;
   }
   .catalog-item__button {
