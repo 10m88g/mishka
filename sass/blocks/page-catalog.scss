@@ -3,6 +3,9 @@
   padding: 0 30px;
   margin-bottom: 54px;
 }
+.page-catalog__header {
+  @include visuallyhidden;
+}
 
 @media (min-width: 768px) {
 
