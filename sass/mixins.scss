@@ -13,6 +13,7 @@
     clear: both;
   }
 }
+
 @mixin visuallyhidden {
   margin: -1px;
   padding: 0;
@@ -22,17 +23,6 @@
   clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
   position: absolute;
-}
-
-@mixin about-us-icon($url) {
-  content: "";
-  position: absolute;
-  width: 55px;
-  height: 40px;
-  top: -6px;
-  left: -6px;
-  background: url($url) no-repeat;
-  background-position: 50% 50%;
 }
 
 @mixin form-element($top, $left) {

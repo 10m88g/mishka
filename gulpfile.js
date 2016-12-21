@@ -39,6 +39,16 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
+//copy html files to build directory - needed to process html change event
+gulp.task("html", function() {
+  return gulp.src([
+    "*.html"
+  ], {
+    base: "."
+  })
+    .pipe(gulp.dest("build"));
+})
+
 gulp.task("symbols", function() {
   return gulp.src("build/img/icons-for-sprite/*.svg")
     .pipe(svgmin())
@@ -50,7 +60,7 @@ gulp.task("symbols", function() {
 });
 
 gulp.task("images", function() {
-  return gulp.src("img/**/*.{png,jpg,gif}")
+  return gulp.src("build/img/**/*.{png,jpg,gif}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.jpegtran({progressive: true})
@@ -68,8 +78,9 @@ gulp.task("serve", function() {
     ui: false,
   });
 
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+  gulp.watch("sass/**/*.scss", ["style"]);
+  gulp.watch("*.html", ["html"]); //watches for html in root directory and copy them to /build on changes
+  gulp.watch("build/*.html").on("change", server.reload); //watches for html in build directory
 });
 
 gulp.task("copy", function() {
@@ -88,6 +99,7 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+//deletes icons used to make svg sprite
 gulp.task("cleanSvg", function () {
   return del("build/img/icons-for-sprite");
 });

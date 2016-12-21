@@ -16,30 +16,41 @@
   margin: 0;
   line-height: 21px;
 }
+.about-us__item::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 40px;
+  top: -6px;
+  left: -6px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
 .about-us__item {
   position: relative;
   padding-top: 50px;
   margin-bottom: 31px;
 
   &--1::before {
-    @include about-us-icon("../img/icon-feature-1.svg");
+    background-image: url("../img/icon-feature-1.svg");
   }
   &--2::before {
-    @include about-us-icon("../img/icon-feature-3.svg");
+    background-image: url("../img/icon-feature-2.svg");
   }
   &--3::before {
-    @include about-us-icon("../img/icon-feature-5.svg");
+    background-image: url("../img/icon-feature-3.svg");
   }
   &--4::before {
-    @include about-us-icon("../img/icon-feature-2.svg");
+    background-image: url("../img/icon-feature-4.svg");
   }
   &--5::before {
-    @include about-us-icon("../img/icon-feature-4.svg");
+    background-image: url("../img/icon-feature-5.svg");
   }
   &--6::before {
-    @include about-us-icon("../img/icon-feature-6.svg");
+    background-image: url("../img/icon-feature-6.svg");
   }
 }
+
 
 @media (min-width: 768px) {
 
