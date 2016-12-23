@@ -164,7 +164,16 @@
 .form__checkbox-label:active.form__checkbox-label::before {
   border-color: $hover-gray;
 }
+.form__radio:disabled + .form__radio-label::before,
+.form__checkbox:disabled + .form__checkbox-label::before,
+.form__radio:disabled + .form__radio-label,
+.form__checkbox:disabled + .form__checkbox-label {
+  color: $hover-gray;
+
+  border-color: $hover-gray;
+}
 .form__text-input {
+
   &:hover {
     color: $hover-gray;
 
@@ -175,9 +184,13 @@
 
     border-bottom-color: $cyan;
   }
+  &:disabled {
+    background-color: $light-gray;
+    border: none;
+  }
 }
 .form__textarea {
-  &:hover {
+  &:hover:not(:disabled) {
     color: $hover-gray;
 
     border-color: $cyan;
@@ -188,20 +201,25 @@
     border-color: $cyan;
     outline: none;
   }
+  &:disabled {
+    background-color: $light-gray;
+  }
 }
 .form__text-input--tel {
-  &:hover {
+
+  &:hover:not(:disabled) {
     background-image: url("../img/icon-phone--cyan.svg");
   }
-  &:focus {
+  &:focus:not(:disabled) {
     background-image: url("../img/icon-phone--cyan.svg");
   }
 }
 .form__text-input--email {
-  &:hover {
+
+  &:hover:not(:disabled) {
     background-image: url("../img/icon-mail--cyan.svg");
   }
-  &:focus {
+  &:focus:not(:disabled) {
     background-image: url("../img/icon-mail--cyan.svg");
   }
 }
@@ -324,6 +342,10 @@
     padding-top: 0;
 
     background-color: $light-gray;
+
+    &:disabled {
+      background-color: $hover-gray;
+    }
   }
 
 
