@@ -1,33 +1,40 @@
 .about-us {
   @include width-container;
+
   padding: 0 30px;
 }
 .about-us__list {
+  padding: 0;
+
   font-weight: bold;
   font-size: 17px;
   list-style: none;
   text-align: left;
-  padding: 0;
 }
 .about-us__title {
   margin-top: 45px;
 }
 .about-us__caption {
   margin: 0;
+
   line-height: 21px;
 }
 .about-us__item::before {
-  content: "";
   position: absolute;
-  width: 55px;
-  height: 40px;
   top: -6px;
   left: -6px;
+
+  width: 55px;
+  height: 40px;
+
   background-position: 50% 50%;
   background-repeat: no-repeat;
+
+  content: "";
 }
 .about-us__item {
   position: relative;
+
   padding-top: 50px;
   margin-bottom: 31px;
 
@@ -56,13 +63,14 @@
 
   .about-us {
     width: 768px;
+    margin-top: 10px;
     padding: 0 50px;
     padding-top: 58px;
-    margin-top: 10px;
   }
   .about-us__title {
     margin-top: 0;
     margin-bottom: 48px;
+
     letter-spacing: -0.3px;
   }
 
@@ -79,9 +87,10 @@
   }
   .about-us__item {
     width: 334px;
-    font-size: 20px;
-    padding-top: 58px;
     margin-bottom: 51px;
+    padding-top: 58px;
+
+    font-size: 20px;
 
     // changing orders to set elements in two columns
     // without setting limited heigh for block
@@ -115,13 +124,13 @@
 
   .about-us {
     width: 1150px;
-    padding-left: 225px;
-    padding-right: 225px;
     padding-top: 70px;
+    padding-right: 225px;
+    padding-left: 225px;
   }
   .about-us__item {
-    padding-top: 55px;
     width: 350px;
+    padding-top: 55px;
   }
   .about-us__caption {
     line-height: 24px;

@@ -1,8 +1,9 @@
 .title {
-  font-weight: bold;
+  margin: 35px 0;
+
   font-size: 25px;
   line-height: 25px;
-  margin: 35px 0;
+  font-weight: bold;
   color: black;
 }
 
@@ -18,10 +19,11 @@
 @media (min-width: 1150px) {
 
   .title {
+    margin-left: -4px;
+
     font-size: 53px;
     line-height: 57px;
     letter-spacing: -0.3px;
-    margin-left: -4px;
   }
 
 }

@@ -1,10 +1,10 @@
-
 .social {
-  list-style: none;
-  text-align: center;
-  padding: 0;
   margin: 0 30px;
+  padding: 0;
 
+  text-align: center;
+
+  list-style: none;
 }
 .social__item {
   display: inline-block;
@@ -14,6 +14,7 @@
   width: 45px;
   height: 70px;
   padding: 5px 5px;
+
   line-height: 80px;
 }
 .social__link:hover path {

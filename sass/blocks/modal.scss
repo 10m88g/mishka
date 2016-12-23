@@ -2,11 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 .modal--hidden {
   display: none;
@@ -17,40 +18,45 @@
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
-  background-color: rgba(255,255,255, 0.9);
   z-index: 50;
+
+  background-color: rgba(255,255,255, 0.9);
 }
 .modal__wrapper {
   box-sizing: border-box;
   width: 320px;
   min-height: 336px;
-  padding: 30px;
   margin-left: -15px;
-  text-align: center;
-  z-index: 2;
-  background-color: white;
-  box-shadow: 0px 7px 10px 0px $icon-gray;
-  border: 1px solid #c6c6c6;
+  padding: 30px;
   z-index: 666;
+
+  text-align: center;
+
+  background-color: white;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0px 7px 10px 0px $icon-gray;
 }
 
 
 .modal__main-header {
-  padding-left: 50px;
-  padding-right: 50px;
   margin-top: 0;
   margin-bottom: 25px;
+  padding-right: 50px;
+  padding-left: 50px;
+
   line-height: 30px;
   text-transform: uppercase;
 }
 .modal__caption {
   display: block;
+  margin-bottom: 28px;
+
   font-size: 15px;
   line-height: 30px;
   color: $dark-gray;
-  margin-bottom: 28px;
 }
 
 
@@ -69,8 +75,10 @@
   display: block;
   min-width: 80px;
   padding: 16px 0px;
-  border: 2px solid $dark-border-gray;
+
   font-weight: bold;
+
+  border: 2px solid $dark-border-gray;
 
   &:hover {
     border-color: $hover-gray;
@@ -80,14 +88,17 @@
   }
 }
 .modal__button {
-  background-color: $cyan;
-  border-color: $cyan;
-  color: white;
   width: 100%;
   margin-bottom: 0;
 
+  color: white;
+
+  background-color: $cyan;
+  border-color: $cyan;
+
   &:hover, &:active {
     color: white;
+
     background-color: $cyan;
   }
 }
@@ -96,14 +107,15 @@
 
   .modal__wrapper {
     width: 566px;
-    padding-left: 105px;
     padding-right: 105px;
+    padding-left: 105px;
   }
   .modal__main-header {
-    font-size: 30px;
-    line-height: 57px;
     padding: 0;
     margin-bottom: 15px;
+
+    font-size: 30px;
+    line-height: 57px;
   }
   .modal__label {
     width: 110px;

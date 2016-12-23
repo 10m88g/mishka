@@ -1,7 +1,8 @@
 .page-catalog {
   @include width-container;
-  padding: 0 30px;
+
   margin-bottom: 54px;
+  padding: 0 30px;
 }
 .page-catalog__header {
   @include visuallyhidden;
@@ -11,8 +12,8 @@
 
   .page-catalog {
     width: 768px;
-    padding: 0 50px;
     margin-bottom: 55px;
+    padding: 0 50px;
   }
 
 }
@@ -20,12 +21,12 @@
 @media (min-width: 1150px) {
 
   .page-catalog {
-    width: 1150px;
-    margin-bottom: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: stretch;
+    width: 1150px;
+    margin-bottom: 0;
   }
 
 }

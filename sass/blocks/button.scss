@@ -1,5 +1,6 @@
 .button {
   font-weight: bold;
+
   background: none;
   border: 2px solid $dark-gray;
   outline: none;
@@ -7,15 +8,17 @@
 .button--big {
   width: 100%;
   min-height: 52px;
+  margin: 30px 0;
+
   font-size: 17px;
   text-transform: uppercase;
   color: $dark-gray;
-  margin: 30px 0;
+
   transition: 100ms ease-in-out;
 
   &:hover {
-    background-color: $dark-gray;
     color: white;
+    background-color: $dark-gray;
   }
   &:active {
     color: #7c7c7c;

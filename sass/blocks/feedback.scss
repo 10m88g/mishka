@@ -1,7 +1,10 @@
 .feedback {
   @include width-container;
+
   position: relative;
+
   padding: 0 30px;
+
   text-align: left;
 }
 
@@ -11,28 +14,32 @@
   margin-bottom: 25px;
 }
 .feedback__description {
+  margin-bottom: 5px;
+
   font-size: 15px;
   line-height: 30px;
   color: $dark-gray;
-  margin-bottom: 5px;
 }
 .feedback__customer-name {
   display: inline-block;
-  font-weight: bold;
+
   font-size: 18px;
   line-height: 28px;
+  font-weight: bold;
 }
 .feedback__customer-profile {
   font-weight: normal;
   color: $dark-gray;
 }
 .feedback__nav-buttons {
-  text-align: left;
   margin: 15px 0 26px 0;
+
+  text-align: left;
 }
 .feedback__nav-button {
   width: 50%;
   padding: 10px;
+
   border: 1px solid $light-gray;
 
   &:hover polygon {
@@ -43,8 +50,9 @@
   }
 }
 .feedback__nav-button--right {
-  width: 50%;
   float: right;
+  width: 50%;
+
   border-left: none;
 }
 .feedback__button {
@@ -61,11 +69,11 @@
     flex-wrap: wrap;
     align-items: center;
     align-content: flex-start;
-
     width: 768px;
-    padding: 50px;
-    margin-bottom: 68px;
     min-height: 457px;
+    margin-bottom: 68px;
+    padding: 50px;
+
     background-color: $light-gray;
     background: url("../img/review@1x.jpg") no-repeat 0% 0%;
     background-position: 2px;
@@ -79,52 +87,56 @@
 
 
   .feedback__title {
-    order: 1;
     margin-top: 40px;
     margin-bottom: 48px;
+    order: 1;
   }
   .feedback__description {
-    order: 3;
-    font-size: 17px;
-    line-height: 30px;
     margin: 0;
     margin-bottom: 55px;
+    order: 3;
+
+    font-size: 17px;
+    line-height: 30px;
   }
   .feedback__customer-name {
-    order: 4;
-    font-size: 17px;
     margin: 0;
+    order: 4;
+
+    font-size: 17px;
   }
   .feedback__customer-profile {
     order: 5;
+
     font-size: 17px;
   }
 
 
   .feedback__form {
-    order: 2;
     width: 175px;
     height: 52px;
     margin: 0;
     margin-top: -5px;
-    margin-left: auto;
     margin-bottom: 23px;
+    margin-left: auto;
+    order: 2;
   }
   .feedback__button {
     width: 100%;
     height: 100%;
   }
   .feedback__nav-buttons {
-    order: 6;
     align-self: flex-end;
     margin: 0;
     margin-top: 8px;
     margin-right: 8px;
     margin-left: auto;
+    order: 6;
   }
   .feedback__nav-button {
-    border: none;
     padding-left: 25px;
+
+    border: none;
   }
 
 } //ends tablet styles
@@ -134,18 +146,20 @@
   .feedback {
     width: 1150px;
     min-height: 475px;
+    margin-bottom: 160px;
     padding-left: 225px;
+
     background-position-x: 50px;
     background-position-y: 20px;
-    margin-bottom: 160px;
   }
   .feedback__form {
     margin-top: 0px;
     margin-right: -2px;
   }
   .feedback__description {
-    padding-right: 100px;
     margin-bottom: 35px;
+    padding-right: 100px;
+
     letter-spacing: 0px;
   }
   .feedback__indent {

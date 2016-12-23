@@ -4,23 +4,25 @@
 
 
 .contacts__title {
-  font-size: 18px;
-  line-height: 30px;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 30px;
+
+  font-size: 18px;
+  line-height: 30px;
 }
 .contacts__button {
+  width: 260px;
   margin-top: 38px;
   margin-bottom: 40px;
   margin-left: 30px;
-  width: 260px;
 }
 .contacts__map {
   height: 457px;
   width: 320px;
-  background-color: #eae6dd;
+
   background: url("../img/map-mobile@1x.jpg") no-repeat;
+  background-color: #eae6dd;
   background-size: cover;
 }
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -32,14 +34,16 @@
 .contacts__table {
   display: table;
   width: 290px;
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  font-size: 15px;
-  line-height: 30px;
-  color: $dark-gray;
   margin-bottom: 26px;
   margin-left: 30px;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 30px;
+  text-align: left;
+  color: $dark-gray;
+
+  list-style: none;
 }
 .contacts__table-row {
   display: table-row;
@@ -47,7 +51,9 @@
 .contacts__table-cell {
   display: table-cell;
   padding: 13px 0;
+
   text-decoration: none;
+
   &:link, :visited {
     color: $dark-gray;
   }
@@ -63,55 +69,58 @@
   padding-right: 50px;
 }
 .contacts__table-cell--email {
+
   &:hover {
     color: #46c1ae;
   }
   &:active {
     color: #46c1ae;
+
     opacity: 0.3;
   }
 }
 .contacts__table-cell--email span {
   display: inline-block;
   border-bottom: 1px solid $cyan;
-  pointer-events: none;
 
-  &:hover {
-    border-color: #46c1ae;
-  }
-  &:active {
-    border-color: $light-cyan;
-  }
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {
 
   .contacts {
     position: relative;
+
     width: 768px;
+    margin-top: 0px;
+    margin-bottom: 55px;
     padding: 0;
     padding-top: 85px;
-    margin-top: 0px;
+
     text-align: center;
-    margin-bottom: 55px;
   }
 
 
   .contacts::before{
     position: absolute;
-    content: "";
     top: 62px;
     right: 50px;
-    height: 80px;
+
     width: 50px;
+    height: 80px;
+
     background: url("../img/icon-flag.svg") no-repeat;
+
+    content: "";
   }
   .contacts__title {
     position: relative;
+
     margin: 0;
-    margin-left: 46px;
     margin-right: 130px;
     margin-bottom: 48px;
+    margin-left: 46px;
+
     font-size: 43px;
     text-align: left;
   }
@@ -120,9 +129,10 @@
     margin-bottom: 40px;
   }
   .contacts__map {
-    height: 457px;
     width: 768px;
+    height: 457px;
     margin-bottom: 58px;
+
     background-image: url("../img/map-tablet@1x.jpg");
   }
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -131,8 +141,8 @@
     }
   }
   .contacts__button {
-    margin: 0 auto;
     width: 228px;
+    margin: 0 auto;
   }
 
 }
@@ -141,24 +151,25 @@
 
     .contacts__table {
       width: 680px;
-      border-collapse: collapse;
       padding: 0;
+
+      border-collapse: collapse;
     }
     .contacts__table-row:nth-of-type(1){
       float: left;
+      margin-right: 0px;
       margin-left: 20px;
       padding-right:0px;
-      margin-right: 0px;
     }
     .contacts__table-row:nth-of-type(2){
       float: right;
     }
     .contacts__table-cell {
       width: 200px;
-      font-size: 17px;
-      line-height: 30px;
       padding-right: 0;
 
+      font-size: 17px;
+      line-height: 30px;
     }
     .contacts__table-row .contacts__table-cell:first-of-type {
       width: 65px;
@@ -176,17 +187,19 @@
     display: flex;
     flex-direction: column;
 
-    text-align: left;
-    min-height: 457px;
     width: 1150px;
+    min-height: 457px;
+    margin-bottom: 105px;
     padding-right: 600px;
     padding-left: 225px;
-    margin-bottom: 105px;
+
+    text-align: left;
   }
 
   .contacts__title {
-    margin-left: -2px;
     margin-bottom: 62px;
+    margin-left: -2px;
+
     font-size: 53px;
   }
   .contacts::before {
@@ -196,7 +209,9 @@
     position: absolute;
     top: 0px;
     right: 50px;
+
     width: 525px;
+
     background-image: url("../img/map-desktop@1x.jpg");
     background-size: contain;
   }
@@ -206,18 +221,19 @@
     }
   }
   .contacts__button {
+    width: 230px;
     margin: 0;
     margin-top: auto;
-    width: 230px;
   }
 
 
   .contacts__table {
     width: 350px;
     margin: 0;
+    margin-bottom: 76px; //fixes ie11 margin:auto bug
+
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 76px; //fixes ie11 margin:auto bug
   }
   .contacts__table-cell {
     padding: 0px;

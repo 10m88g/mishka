@@ -1,20 +1,25 @@
 .page-footer {
   @include width-container;
-  background-color: $light-gray;
+
   display: flex;
   flex-flow: row wrap;
+
+  background-color: $light-gray;
 }
 .page-footer__social {
-  margin: 0;
   width: 100%;
+  margin: 0;
+
   border-bottom: 1px solid #e5e5e5;
 }
 .page-footer__html-academy {
   display: table;
   margin-left: 70px;
   padding: 12px 0px;
-  user-select: none;
+
   text-decoration: none;
+
+  user-select: none;
 
   &:link, &:visited {
     color: black;
@@ -22,16 +27,18 @@
 }
 .page-footer__html-academy-title {
   display: table-cell;
-  vertical-align: middle;
-  font-weight: bold;
+
   font-size: 19px;
+  font-weight: bold;
+  vertical-align: middle;
 }
 .page-footer__html-academy-logo {
   display: table-cell;
-  vertical-align: middle;
-  margin-left: 20px;
-  height: 50px;
   width: 40px;
+  height: 50px;
+  margin-left: 20px;
+
+  vertical-align: middle;
 }
 .page-footer__html-academy:hover .page-footer__logo-path {
   fill: #46c1ae;
@@ -50,19 +57,22 @@
 
   .page-footer {
     position: relative;
+
     width: 768px;
     padding: 31px 50px;
+
     text-align: center;
   }
 
 
   .page-footer__logo {
     position: absolute;
-    display: block;
-    height: 35px;
-    width: 100px;
     top: 50px;
     left: 50px;
+
+    display: block;
+    width: 100px;
+    height: 35px;
     background: url("../img/logo-footer.svg") no-repeat 50% 50%;
 
     &:hover {
@@ -74,10 +84,11 @@
   }
   .page-footer__html-academy {
     position: absolute;
-    padding: 0;
-    margin: 0;
     top: 48px;
     right: 45px;
+
+    padding: 0;
+    margin: 0;
   }
   .page-footer__social {
     border: none;

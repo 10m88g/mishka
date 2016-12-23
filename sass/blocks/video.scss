@@ -7,25 +7,29 @@
   position: absolute;
   top: 50%;
   left: 50%;
+
+  width: 100px;
+  height: 80px;
   transform: translate(-50%, -50%);
 
-  height: 80px;
-  width: 100px;
-  border: none;
   font-size: 0;
+
   background-image: url("../img/icon-play.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  border: none;
   outline: none;
 }
 
 
 .video__play-button:hover {
+
   &:hover {
     transform: scale(1.2) translate(-40%, -40%);
   }
   &:active {
     transform: scale(0.8) translate(-60%, -60%);
+
     opacity: 0.7;
   }
 }
