@@ -42,16 +42,16 @@
     background-image: url("../img/icon-feature-1.svg");
   }
   &--2::before {
-    background-image: url("../img/icon-feature-2.svg");
-  }
-  &--3::before {
     background-image: url("../img/icon-feature-3.svg");
   }
+  &--3::before {
+    background-image: url("../img/icon-feature-5.svg");
+  }
   &--4::before {
-    background-image: url("../img/icon-feature-4.svg");
+    background-image: url("../img/icon-feature-2.svg");
   }
   &--5::before {
-    background-image: url("../img/icon-feature-5.svg");
+    background-image: url("../img/icon-feature-4.svg");
   }
   &--6::before {
     background-image: url("../img/icon-feature-6.svg");
@@ -70,8 +70,7 @@
   .about-us__title {
     margin-top: 0;
     margin-bottom: 48px;
-
-    letter-spacing: -0.3px;
+    margin-left: -2px;
   }
 
 

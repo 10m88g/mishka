@@ -66,6 +66,10 @@
   padding-left: 0px;
 
   border-bottom: 1px solid $light-gray;
+
+  &--narrow-font {
+    letter-spacing: -0.3px;
+  }
 }
 .week-product__table-row .week-product__table-cell:nth-child(2) {
   padding-left: 10px;
@@ -121,7 +125,7 @@
     line-height: 30px;
   }
   .week-product__table {
-    width: 289px;
+    width: 275px;
     margin-bottom: 55px;
 
     font-size: 15px;

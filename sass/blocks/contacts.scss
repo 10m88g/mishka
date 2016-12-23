@@ -230,7 +230,7 @@
 
 
   .contacts__table {
-    width: 350px;
+    width: 340px;
     margin: 0;
     margin-bottom: 76px; //fixes ie11 margin:auto bug
 
@@ -240,6 +240,9 @@
   .contacts__table-cell {
     padding: 0px;
   }
+  .contacts__table-row:nth-of-type(2) .contacts__table-cell{
+    padding-top: 28px;
+  }
   .contacts__table-row .contacts__table-cell:first-child {
     width: 50px;
     padding-right: 10px;
@@ -247,7 +250,7 @@
   .contacts__table-row .contacts__table-cell:nth-child(2) {
     width: 100px;
     padding-right: 10px;
-    padding-left: 0;
+    padding-left: 0px;
   }
   .contacts__table-cell--adress {
     padding-top: 30px;
