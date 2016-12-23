@@ -32,8 +32,10 @@
 .form__notice {
   display: inline-block;
 
+
   font-size: 14px;
   line-height: 16px;
+  vertical-align: middle;
   color: $dark-gray;
 }
 .form__button {

@@ -14,6 +14,7 @@
 
   font-weight: bold;
   font-size: 17px;
+  vertical-align: middle;
   text-align: left;
 
   border-bottom: 1px solid $dark-border-gray;
@@ -40,6 +41,7 @@
   display: inline-block;
 
   font-size: 17px;
+  vertical-align: middle;
   text-decoration: none;
 
   &:link,
@@ -269,6 +271,7 @@
 
   .navbar__menu-item--desktop-visible {
     display: inline-block;
+    vertical-align: middle;
   }
   .navbar__menu-link--desktop-visible {
     padding: 16px 30px;

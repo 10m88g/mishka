@@ -8,6 +8,8 @@
 }
 .social__item {
   display: inline-block;
+
+  vertical-align: middle;
 }
 .social__link {
   display: inline-block;
@@ -16,6 +18,7 @@
   padding: 5px 5px;
 
   line-height: 80px;
+  vertical-align: middle;
 }
 .social__link:hover path {
   fill: #46c1ae;
