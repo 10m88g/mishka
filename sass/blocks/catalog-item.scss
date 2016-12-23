@@ -24,7 +24,13 @@
   border: 1px solid $light-gray;
   border-top: none;
 }
+.catalog-item__info a {
 
+  &:link, &:visited {
+    text-decoration: none;
+    color: black;
+  }
+}
 
 .catalog-item__title {
   margin: 0;
@@ -35,6 +41,7 @@
   line-height: 24px;
 
   pointer-events: none;
+
 }
 .catalog-item__description {
   margin: 0;
