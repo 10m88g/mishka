@@ -1,6 +1,30 @@
-//initialise basic functions, that prepare page for js logic
+
 function init() {
   hideNavbar();
+
+  window.onresize = function(event) {
+    var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var button = document.getElementsByClassName("navbar__nav-button")[0];
+
+    if (viewportWidth < 768) {
+      var menuOpened = false;
+      var elements = document.getElementsByClassName("navbar__menu-item");
+
+      Array.prototype.forEach.call(elements, function(element) {
+        if (!element.classList.contains("navbar__logo-wrapper")) {
+          element.classList.add("navbar__menu-item--hidden");
+        }
+      });
+      } else {
+          var elements = document.getElementsByClassName("navbar__menu-item");
+          Array.prototype.forEach.call(elements, function(element) {
+            element.classList.remove("navbar__menu-item--hidden");
+            menuOpened = true;
+        });
+    };
+
+    (menuOpened) ? button.classList.add("navbar__menu-logo--close") : button.classList.remove("navbar__menu-logo--close");
+  }
 }
 
 function catalogInit() {
@@ -21,28 +45,21 @@ function catalogInit() {
   });
 }
 
+
 //add --hidden class to all menu elements excluding logo and menu open/close button
 function hideNavbar() {
-  var menuOpened = false;
-  var elements = document.getElementsByClassName("navbar__menu-item");
-  Array.prototype.forEach.call(elements, function(element) {
-    if (!element.classList.contains("navbar__logo-wrapper")) {
-      element.classList.add("navbar__menu-item--hidden");
-    }
-  });
-}
 
-//adds --hidden class to modal window
-function hideModal() {
-  var modal = document.getElementById("modal-window");
-  modal.classList.add("modal--hidden");
-}
+  var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
-//removes --hidden class of modal window
-function viewModal() {
-  var modal = document.getElementById("modal-window");
-  modal.classList.remove("modal--hidden");
-  return false;
+  if (viewportWidth < 768) {
+    var menuOpened = false;
+    var elements = document.getElementsByClassName("navbar__menu-item");
+    Array.prototype.forEach.call(elements, function(element) {
+      if (!element.classList.contains("navbar__logo-wrapper")) {
+        element.classList.add("navbar__menu-item--hidden");
+      }
+    });
+  }
 }
 
 //hides menu elements on menu button click and changes background of button
@@ -64,6 +81,19 @@ function navbarButtonClick() {
   }
 
   (menuOpened) ? button.classList.add("navbar__menu-logo--close") : button.classList.remove("navbar__menu-logo--close");
+}
+
+//adds --hidden class to modal window
+function hideModal() {
+  var modal = document.getElementById("modal-window");
+  modal.classList.add("modal--hidden");
+}
+
+//removes --hidden class of modal window
+function viewModal() {
+  var modal = document.getElementById("modal-window");
+  modal.classList.remove("modal--hidden");
+  return false;
 }
 
 function hoverClasses() {
