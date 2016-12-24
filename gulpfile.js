@@ -49,6 +49,16 @@ gulp.task("html", function() {
     .pipe(gulp.dest("build"));
 })
 
+//copy JS files to build directory - needed to process JS change event
+gulp.task("js", function() {
+  return gulp.src([
+    "js/*.js"
+  ], {
+    base: "."
+  })
+    .pipe(gulp.dest("build"));
+})
+
 gulp.task("symbols", function() {
   return gulp.src("build/img/icons-for-sprite/*.svg")
     .pipe(svgmin())
@@ -78,9 +88,13 @@ gulp.task("serve", function() {
     ui: false,
   });
 
+
   gulp.watch("sass/**/*.scss", ["style"]);
   gulp.watch("*.html", ["html"]); //watches for html in root directory and copy them to /build on changes
   gulp.watch("build/*.html").on("change", server.reload); //watches for html in build directory
+  gulp.watch("js/*.js", ["js"]); //watches for JS in root directory and copy them to /build on changes
+  gulp.watch("build/js/*.js").on("change", server.reload); //watches for JS in build directory
+
 });
 
 gulp.task("copy", function() {

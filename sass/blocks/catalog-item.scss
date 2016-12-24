@@ -86,6 +86,8 @@
 
   border: 1px solid $light-gray;
   border-bottom: none;
+
+  pointer-events: all;
 }
 .catalog-item__title--video:after {
   position: absolute;
@@ -164,20 +166,15 @@
     line-height: 24px;
   }
   .catalog-item__info--video {
+    z-index: 5;
+
+    background-color: white;
 
     &:hover, &:active {
       box-shadow: none;
     }
   }
-  .catalog-item--production-video {
 
-    &:hover {
-      box-shadow: 0px 7px 10px 0px $icon-gray;
-    }
-    &:active {
-      box-shadow: 0px 3px 5px -2px $icon-gray;
-    }
-  }
   .catalog-item__title--video:after {
     left: 25px;
   }
@@ -384,6 +381,5 @@
     margin: 0;
     margin-bottom: 60px;
   }
-
 
 } // ends desktop styles
