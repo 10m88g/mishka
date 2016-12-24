@@ -148,13 +148,18 @@
   @include form-element(14px, 0px);
 }
 .form__checkbox:checked + .form__checkbox-label::after {
-  @include form-element(20px, 10px);
+  position: absolute;
+  top: 20px;
+  left: 10px;
 
+  display: block;
   width: 22px;
   height: 24px;
 
   background: url("../img/icon-tick.svg") no-repeat 50% 50%;
   border: none;
+
+  content: "";
 }
 
 

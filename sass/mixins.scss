@@ -41,16 +41,3 @@
 
   content: "";
 }
-
-@mixin zigzag {
-  position: absolute;
-
-  width: 100%;
-  height: 6px;
-  transform: rotate(180deg);
-
-  background: url("../img/bg-zigzag-line.svg") 50% 0%;
-  background-size: cover;
-
-  content: "";
-}
