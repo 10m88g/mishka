@@ -82,9 +82,9 @@ function hoverClasses() {
 
 function hoverProcessing() {
 
-  var hover = {boxShadow: '0px 7px 10px 0px #d3d2d2'};
-  var active = {boxShadow: '0px 3px 5px -2px #d3d2d2'};
-  var initial = {boxShadow: 'none'};
+  var hover = {boxShadow: "0px 7px 10px 0px #d3d2d2"};
+  var active = {boxShadow: "0px 3px 5px -2px #d3d2d2"};
+  var initial = {boxShadow: "none"};
 
     $(".catalog-item--hover-element").hover(function() {
 
