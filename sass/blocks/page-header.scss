@@ -44,7 +44,7 @@
   width: 20px;
   height: 20px;
 
-  font-size: 0px;
+  font-size: 0;
 
   background-image: url("../img/icon-menu-open.svg");
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@
     transform: translateY(-5px);
   }
   &:active {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     padding-bottom: 28px;
     transform: translateY(0);
 
@@ -141,7 +141,7 @@
 
   .page-header__main-header {
     margin-top: -60px;
-    padding: 160px 130px 0px 130px;
+    padding: 160px 130px 0 130px;
 
     font-size: 43px;
     line-height: 48px;

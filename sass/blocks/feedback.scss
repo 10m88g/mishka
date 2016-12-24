@@ -153,14 +153,14 @@
     background-position-y: 20px;
   }
   .feedback__form {
-    margin-top: 0px;
+    margin-top: 0;
     margin-right: -2px;
   }
   .feedback__description {
     margin-bottom: 35px;
     padding-right: 100px;
 
-    letter-spacing: 0px;
+    letter-spacing: 0;
   }
 
   @-moz-document url-prefix() { //fixes wrong typography in firefox
