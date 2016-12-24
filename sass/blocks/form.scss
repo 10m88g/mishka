@@ -64,6 +64,7 @@
 
   border: none;
   border-bottom: 2px solid $dark-gray;
+  border-radius: 0;
 }
 .form__text-input--tel {
   padding-top: 5px;
@@ -90,6 +91,7 @@
   color: $dark-gray;
 
   border: 2px solid $dark-gray;
+  border-radius: 0;
 
   resize: none;
 }
