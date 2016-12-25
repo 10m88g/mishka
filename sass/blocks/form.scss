@@ -318,8 +318,8 @@
 
 
   .form__text-input {
-    flex-basis: 370px;
-    flex-grow: 2;
+    flex-basis: 65%;
+    flex-grow: 4;
     width: auto;
     margin-bottom: 25px;
     padding-top: 12px;
@@ -437,7 +437,7 @@
 
 
   .form__text-input {
-    flex-basis: 570px;
+    flex-basis: 75%;
   }
   .form__text-input--tel {
     background-position: 99% -10%;
