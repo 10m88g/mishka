@@ -1,7 +1,13 @@
 function initMap() {
+  var center = {lat: 59.936250, lng: 30.321751};
+
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 17,
-    center: {lat: 59.936250, lng: 30.321751}
+    center: center
+  });
+
+  google.maps.event.addDomListener(window, 'resize', function() {
+    map.setCenter(center);
   });
 
   var svg = [
@@ -19,4 +25,5 @@ function initMap() {
     map: map,
     optimized: false
   });
+
 }
