@@ -1,7 +1,9 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Антон Черепов](https://up.htmlacademy.ru/adaptive/9/user/184848).
-* Наставник: [Александр Оксанич](https://htmlacademy.ru/profile/id240096)
+* Наставник: [Александр Оксанич](https://htmlacademy.ru/profile/id240096).
+* Наставник: [Александр Оксанич](https://htmlacademy.ru/profile/id240096).
+
 
 ---
 
